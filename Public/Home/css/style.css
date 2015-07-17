@@ -1,0 +1,478 @@
+/*清空默认样式*/
+*{ padding: 0; margin: 0; list-style: none; border: 0;}
+body{font-family: "微软雅黑","宋体"; font-size: 12px; color: #999; background: url(../images/body_bg.png) repeat; position: relative;}
+
+a{color: #999999; text-decoration: none;}
+a:hover{color: #e60000; text-decoration: none;}
+
+
+/*-----------------------首页--------------------------*/
+/*-barOut-*/
+.barOut{width: 100%; height: 30px; background: #f2f2f2;}
+/*bar*/
+.bar{width: 1140px; height: auto; margin: 0 auto; position: relative;}
+/*barLeft*/
+.bar .barLeft{width: 290px; height: 30px; line-height: 30px; float: left; overflow: hidden;}
+.bar .barLeft p{float: left;}
+.bar .barLeft a{float: left; width: auto; line-height: 29px; padding-right: 5px;}
+.bar .barLeft a.DL{color: #E60000;}
+.bar .barLeft a.ZC{color: #39b7f9;}
+/*barRight*/
+.bar .barRight{float: right; width: 320px; height: 30px; line-height: 30px; overflow: hidden;}
+.bar .barRight p{float: left; width: 118px; height: 30px;margin-right: 30px;}
+.bar .barRight a{float: left; margin: 0 10px; width: 30px; height: 30px;}
+.bar .barRight a.sina{background: url(../images/iconForQWS.png) no-repeat 0 0;}
+.bar .barRight a.qq{background: url(../images/iconForQWS.png) no-repeat 0 -30px;}
+.bar .barRight a.wx{background: url(../images/iconForQWS.png) no-repeat 0 -60px;}
+/*鼠标划上效果*/
+.bar .sinaCode{width: 120px; height: 120px; text-align: center; background: url(../images/upQipao.png) no-repeat; padding-top: 15px; box-sizing: border-box; position: absolute; top: 30px; right: 88px; display: none;}
+.bar .qqCode{width: 120px; height: 120px; text-align: center; background: url(../images/upQipao.png) no-repeat; padding-top: 20px; box-sizing: border-box; position: absolute; top: 30px; right: 36px; display: none;}
+.bar .wxCode{width: 120px; height: 120px; text-align: center; background: url(../images/upQipao.png) no-repeat; padding-top: 15px; box-sizing: border-box; position: absolute; top: 30px; right: -12px; display: none;}
+
+
+/*-navOut-*/
+.navOut{width: 100%; height: 120px; background: #fff; border-bottom: 1px solid #eee;}
+/*nav*/
+.nav{width: 1140px; height: 120px; margin: auto;}
+/*navL*/
+.nav .navL{float: left; width: 380px; height: 60px; padding-top: 30px;}
+/*navR*/
+.nav .navR{float: right; width: 500px; height: 50px; text-align: center; overflow: hidden; padding-top: 55px;}
+.nav .navR li{float: left; width: 100px; height: 50px; font-size: 16px;}
+.nav .navR li a.cur{color: #E60000;}
+
+
+/*-banOut-*/
+.banOut{width: 100%; height: 380px; position: relative;}
+/*ban*/
+.ban{width: 100%; height: 380px; margin: auto; overflow: hidden; position: relative;}
+.ban li{float: left; width: 100%; height: 380px; position: absolute; top: 0; left: 0;}
+/*notice*/
+.noticeOut{width: 100%; height: 40px; background: rgba(0,0,0,0.3); position: absolute; bottom: 0; left: 0; z-index: 9;}
+.noticeIn{width: 1100px; height: 40px; margin: auto; background: url(../images/loudWithe.png) no-repeat left 10px; padding-left: 40px; position: relative; overflow: hidden;}
+.noticeIn .noticeCon{width: 1100px; height: 40px; position: absolute; top: 0; }
+.noticeIn .noticeCon li{width: 1100px; height: 40px; line-height: 40px; font-size: 14px; overflow: hidden;}
+.noticeIn .noticeCon li a{color: #fff;}
+.noticeIn .noticeCon li a:hover{color: #E60000;}
+/*按钮*/
+.banOut .banBtnL{width: 60px; height: 60px; position: absolute; top: 160px; left: 0; z-index: 9; cursor: pointer;}
+.banOut .banBtnR{width: 60px; height: 60px; position: absolute; top: 160px; right: 0; z-index: 9; cursor: pointer;}
+
+
+
+/*-ghcfdata-*/
+.dataOut{width: 100%; height: 110px; background: #fff; border-bottom: 1px solid #eee;}
+.dataIn{width: 1140px; height: 110px; margin: auto; /*overflow: hidden;*/ position: relative;}
+/*dataL*/
+.dataIn .dataL{float: left; width: 345px; height: 95px; padding-top: 15px; overflow: hidden;}
+.dataIn .dataL p{width: 75px; height: 95px; line-height: 36px; font-size: 18px; float: left;}
+.dataIn .dataL strong{width: 190px; height: 95px; line-height: 75px; font-size: 44px; color: #E60000; float: left; padding-left: 10px;}
+.dataIn .dataL span{width: auto; height: 95px; float: left; line-height: 110px; font-size: 16px;}
+/*dataC*/
+.dataIn .dataC{float: left; width: 345px; height: 95px; padding-top: 15px; overflow: hidden;}
+.dataIn .dataC p{width: 110px; height: 95px; line-height: 36px; font-size: 18px; float: left;}
+.dataIn .dataC strong{width: 160px; height: 95px; line-height: 75px; font-size: 44px; color: #E60000; float: left; padding-left: 10px;}
+.dataIn .dataC span{width: auto; height: 95px; float: left; line-height: 110px; font-size: 16px;}
+/*dataR*/
+.dataIn .dataR{float: right; width: 330px; height: 110px; overflow: hidden;}
+.dataIn .dataR li{float: left; width: 100px; height: 54px; border-left: 1px solid #eee; border-top: 1px solid #eee; line-height: 54px; font-size: 16px; padding-left: 60px;}
+/*li01*/
+.dataIn .dataR li.li01{background: #ff4e4e url(../images/fundBagWhite.png) no-repeat 16px center;}
+.dataIn .dataR li.li01 a{color: #fff;}
+/*li02*/
+.dataIn .dataR li.li02{background: #fff url(../images/weixin-32x25.png) no-repeat 16px center; border-right: 1px solid #eee;}
+/*li03*/
+.dataIn .dataR li.li03{background: #ff9525 url(../images/HoldingGoldWhite.png) no-repeat 10px center;}
+.dataIn .dataR li.li03 a{color: #fff;}
+/*li04*/
+.dataIn .dataR li.li04{background: #fff url(../images/sina-32x25.png) no-repeat 16px center; border-right: 1px solid #eee;}
+/*鼠标滑过官方微信效果*/
+.dataIn .wxCode2{width: 110px; height: 120px; position: absolute; top: -120px; right: 36px; z-index: 11; display: none;}
+
+
+
+/*-con-*/
+.con{width: 1140px; height: auto; margin:20px auto; overflow: hidden;}
+/*conL*/
+.con .conL{float: left; width: 850px; height: auto;}
+/*newHand-----新手专享*/
+.con .conL .newHand{width: 754px; height: 237px; border: 1px solid #eee; border-radius: 6px; background: #fff; padding: 0 47px;}
+/*top*/
+.con .conL .newHand .top{width: 100%; height: 110px; overflow: hidden;}
+.con .conL .newHand .top .tit{float: left; width: 245px; height: 110px; background: url(../images/forNewHand.png) no-repeat; padding-left: 99px;}
+.con .conL .newHand .top .tit h2{width: 100%; height: 50px; line-height: 50px; font-size: 24px; color: #555; font-weight: normal;}
+.con .conL .newHand .top .tit p{width: 100%; height: 32px; line-height: 32px; font-size: 18px;}
+.con .conL .newHand .top .button{float: right; width: 110px; height: 94px; padding-top: 16px; text-align: right;}
+.con .conL .newHand .top .button .details{display: inline-block; width: 60px; height: 23px; border: 1px solid #ec4040; border-radius: 30px; text-align: center; line-height: 23px; color: #ec4040; margin-bottom: 20px;}
+.con .conL .newHand .top .button .bid{display: inline-block; width: 108px; height: 40px; border-radius: 6px; text-align: center; line-height: 23px; color: #fff; background: #ff9523; font-size: 18px; line-height: 40px;}
+/*bot*/ 
+.con .conL .newHand .bot{width: 100%; height: 120px; overflow: hidden;}
+/*botL*/
+.con .conL .newHand .bot .botL{float: left; width: 250px; height: 100%;}
+.con .conL .newHand .bot .botL p{height: 75px; font-size: 18px; color: #999;}
+.con .conL .newHand .bot .botL p b{font-size: 48px;color: #E60000;}
+/*botC*/
+.con .conL .newHand .bot .botC{float: left; width: 250px; height: 100%;}
+.con .conL .newHand .bot .botC p{height: 75px; font-size: 18px; color: #999;}
+.con .conL .newHand .bot .botC p b{font-size: 48px;color: #E60000;}
+/*botR*/
+.con .conL .newHand .bot .botR{float: right; width: 180px; height: 90px; padding-top: 30px;}
+.con .conL .newHand .bot .botR p{height: 28px; font-size: 18px; color: #999;}
+.con .conL .newHand .bot .botR p b{font-size: 12px; color: #E60000; font-weight: normal; display: inline-block; width: 50%;}
+.con .conL .newHand .bot .botR p strong{font-size: 12px; font-weight: normal;text-align: right; display: inline-block; width: 50%;}
+.con .conL .newHand .bot .botR .out{width: 180px; height: 12px; background: #ccc;}
+.con .conL .newHand .bot .botR .out .in{width: 20%; height: 12px; background: #E60000;}
+/*-------------------------------------------------------------------------------*/
+/*proList---------产品列表*/
+.con .conL .proList{width: 850px; height: auto; margin: 20px 0 0;}
+/*proListTit*/
+.con .conL .proList .proListTit{width: 848px; height: 43px; border: 1px solid #eee; background: #fff; overflow: hidden; margin-bottom: 10px;}
+.con .conL .proList .proListTit li{width: 130px; height: 43px; line-height: 42px; float: left; border-right: 1px solid #eee; text-align: center; font-size: 14px; cursor: pointer;}
+.con .conL .proList .proListTit li.cur{background: #E60000; color: #fff;}
+/*proListCon*/
+.con .conL .proList .proListCon{width: 838px; height: auto; border: 1px solid #eee; padding: 5px; background: #fff;}
+.con .conL .proList .proListCon .list{width: 768px; height: 100px; border-bottom: 1px solid #eee; padding: 0 35px;}
+/*列表标题*/
+.con .conL .proList .proListCon .list h3 strong{font-weight: normal; font-size: 14px; height: 30px; line-height: 30px; display: inline-block; width: 70%; font-weight: normal;}
+.con .conL .proList .proListCon .list h3 span{display: inline-block; width: 28%; text-align: right; font-size: 12px;  font-weight: normal;}
+.con .conL .proList .proListCon .list h3 span b{ font-weight: normal;}
+/*列表内容*/
+.con .conL .proList .proListCon .list ul{overflow: hidden;}
+.con .conL .proList .proListCon .list ul li{float: left; width: auto; height: 50px; text-align: center; padding-top: 6px; padding: 6px 10px 0;}
+.con .conL .proList .proListCon .list ul li p{font-size: 20px; color: #E60000;}
+/*进度*/
+.con .conL .proList .proListCon .list ul li .num{height: 22px; color: #999; width: 180px;}
+.con .conL .proList .proListCon .list ul li .num b{font-size: 12px; color: #E60000; font-weight: normal; display: inline-block; width: 50%; text-align: left;}
+.con .conL .proList .proListCon .list ul li .num strong{font-size: 12px; font-weight: normal;text-align: right; display: inline-block; width: 50%;}
+.con .conL .proList .proListCon .list ul li .out{width: 180px; height: 6px; background: #ccc; border-radius: 30px;}
+.con .conL .proList .proListCon .list ul li .out .in{width: 26.7%; height: 6px; background: #E60000; border-radius: 30px;}
+.con .conL .proList .proListCon .list ul li .perc{color: #E60000;}
+/*按钮*/
+.con .conL .proList .proListCon .list ul li.last{float: right;}
+.con .conL .proList .proListCon .list ul li.last .btn{width: 120px; height: 30px; border-radius: 6px; border: 1px solid #E60000; color: #E60000; display: block; line-height: 30px; font-size: 14px;}
+/*==============================================================================*/
+/*conR*/
+.con .conR{float: right; width: 270px; height: auto;}
+.con .conR .news{width: 270px; height: auto; margin-bottom: 20px;}
+.con .conR .news p{margin-bottom: 10px; width: 270px; height: 182px;}
+.con .conR .news .newsCon{width: 268px; border: 1px solid #eee; background: #fff;  height: auto; border-bottom: none;}
+.con .conR .news .newsCon h2{font-weight: normal; height: 39px; line-height: 38px; border-bottom: 1px solid #eee; background: url(../images/loudRed.gif) no-repeat 10px center; overflow: hidden; padding: 0 10px 0 40px;}
+.con .conR .news .newsCon h2 strong{font-weight: normal; font-size: 18px; float: left;}
+.con .conR .news .newsCon h2 a{font-weight: normal; font-size: 14px; float: right;}
+.con .conR .news .newsCon ul li{width: 218px; height: 36px; line-height: 36px; border-bottom: 1px solid #eee; padding: 0 10px 0 40px; background: url(../images/loudWitheLittle.gif) no-repeat 10px center; font-size: 14px;}
+
+
+
+/*-ad 	广告-*/
+.ad{height: 100px; width: 100%; background: url(../images/conAd.png) no-repeat center top;}
+
+
+
+/*-fModular 	四模块-*/
+.fModular{width: 1140px; height: 345px; margin: 20px auto; overflow: hidden;}
+.fModular ul li{width: 246px; height: 185px; float: left; margin-right: 12px; border:  1px solid #eee; border-radius: 6px; background: #FFF url(../images/security.gif) no-repeat center 20px; padding: 125px 12px 0; position: relative;}
+.fModular ul li p{font-size: 14px; line-height: 24px;}
+.fModular ul li .btn{width: 150px; height: 30px; border-radius: 6px; background: #E60000; display: inline-block; color: #fff; text-align: center; line-height: 30px; font-size: 14px; position: absolute; left: 62px; bottom: -15px;}
+.fModular ul li.two{background: #fff url(../images/newhand.gif) no-repeat center 20px;}
+.fModular ul li.three{background: #fff url(../images/question.gif) no-repeat center 20px;}
+.fModular ul li.four{background: #fff url(../images/logo.gif) no-repeat center 20px;}
+
+
+
+/*-合作伙伴	part-*/
+.partO{width: 100%; height: auto; background: #fff; padding-bottom: 60px;}
+.part{width: 1140px; height: auto; margin: 0 auto 20px;}
+.part h3{border-bottom: 1px solid #eee; height: 60px; line-height: 80px; font-size: 18px; font-weight: normal; color: #555;}
+.part ul{overflow: hidden;}
+.part ul li{float: left; width: 178px; height: 42px; margin: 38px 60px 0 0;}
+.part ul li.last{margin:38px 0 0 0;}
+
+
+
+/*-立即体验		taste-*/
+.taste{width: 100%; height: 152px; background: url(../images/lijitiyan.gif) no-repeat center top; padding: 490px 0 0;}
+.taste a{display:block; width: 440px; height: 70px; background: url(../images/tasteBtn.gif) no-repeat; margin: auto;}
+
+
+
+/*-footer-*/
+.footerO{width: 100%; height: auto; background: #333;}
+.footer{width: 1140px; height: auto; padding-top: 40px; margin: auto; position: relative;}
+/*top*/
+.footer .top{overflow: hidden; padding: 0 10px 35px; border-bottom: 1px solid #fff;}
+.footer .top ul{float: left; overflow: hidden;}
+.footer .top ul li{float: left; width: auto; text-align: center; margin:0 40px; font-size: 14px;}
+.footer .top ul li h4{color: #fff; font-size: 16px; font-weight: normal; line-height: 36px;}
+.footer .top ul li p{line-height: 30px;}
+.footer .top ul li p a{color: #fff;}
+.footer .top ul li p a:hover{text-decoration: underline;}
+/*topR*/
+.footer .top .topR{float: right; width: 360px;}
+.footer .top .topR p{width: 305px; height: 35px; margin-bottom: 60px;}
+.footer .top .topR ul{overflow: hidden;}
+.footer .top .topR ul li{float: left; width: 84px; height: 84px; margin: 0 35px 0 0; cursor: pointer;}
+/*bot*/
+.footer .bot{height: auto; width: 100%; padding: 20px 0;}
+.footer .bot h4{color: #fff; font-size: 16px; font-weight: normal; line-height: 50px; padding-left: 20px;}
+.footer .bot ul{overflow: hidden;}
+.footer .bot ul li{float: left;width: auto; padding: 0 20px; font-size: 14px; line-height: 28px;}
+.footer .bot ul li a{color: #fff;}
+.footer .bot ul li a:hover{text-decoration: underline;}
+/*code*/
+.footer .qqCode{width: 110px; height: 120px; position: absolute; top: 15px; right: 275px; display: none;}
+.footer .wxCode{width: 110px; height: 120px; position: absolute; top: 15px; right: 35px; display: none;}
+
+
+
+/*-banquan-*/
+.bq{width: 100%; height: 60px; background: #434343; text-align: center; line-height: 60px; color: #b5b5b5; font-size: 14px;}
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------登录------------------------------------------------*/
+.loginO{width: 100%; height: 100%;  position: absolute; top: 0px; left: 0px; z-index: 100; display: none;}
+.login{width: 640px; height: 524px; background: rgba(0,0,0,0.2); box-shadow: 7px 5px 10px #999; padding: 12px; margin: 200px auto 0;}
+.loginIn{width: 640px; height: 524px; background: #fff;}
+.loginIn .loginT{height: 50px; border-bottom: 1px solid #eee; overflow: hidden;}
+.loginIn .loginT h2{float: left; width: auto;line-height: 50px; text-align: left; padding-left: 10px; font-size: 18px; font-weight: normal; color: #555;}
+.loginIn .loginT p{float: right; width: auto;line-height: 60px; padding-right: 10px; cursor: pointer;}
+/*输入*/
+.loginIn .loginB{width: 100%; height: auto; padding-top: 60px;}
+.loginIn .loginB dl{width: 365px; height: 52px; margin: 0 auto 40px; overflow: hidden;}
+.loginIn .loginB dl dt{float: left; width: 52px; height: 52px;}
+.loginIn .loginB dl dd{float: left;width: 310px; height: 50px; border: 1px solid #ccc; border-left: none; overflow: hidden;}
+.loginIn .loginB dl dd input{width: 290px; height: 40px; line-height: 40px; font-size: 14px; color: #999; padding:5px 10px;}
+.loginIn .loginB dl dd input.yzm{width: 140px; height: 40px; line-height: 40px; font-size: 14px; color: #999; padding:5px 10px;float: left;}
+.loginIn .loginB dl dd img{border-left: 1px solid #ccc; float: left; cursor: pointer;}
+.loginIn .loginB .loginBtn{width: 360px; height: 45px; background: url(../images/loginBtn.gif) no-repeat; margin: auto; display: block;}
+.loginIn .loginB p{text-align: center; line-height: 28px;}
+
+/*------------------------登录页---------------------------------*/
+.logO{width: 1000px; height: auto; margin: 30px auto 60px; overflow: hidden;}
+.log{ float: left; width: 300px; height: auto; border: 1px solid #eee; background: #fff; padding-bottom: 20px;}
+.log h3{line-height: 40px; padding-left: 30px; font-weight: normal; font-size: 16px;border-bottom: 1px solid #eee; margin-bottom: 30px;}
+.log dl{width: 240px; height: 35px; margin: 0 auto 25px; overflow: hidden;}
+.log dl dt{float: left; width: 35px; height: 35px;}
+.log dl dd{float: left;width: 200px; height: 33px; border: 1px solid #ccc; border-left: none; overflow: hidden;}
+.log dl dd input{width: 180px; height: 23px; line-height: 23px; font-size: 14px; color: #999; padding:5px 10px;}
+.log dl dd input.yzm{width: 110px; height: 23px; line-height: 23px; font-size: 14px; color: #999; padding:5px 10px;float: left;}
+.log dl dd img{ float: left; cursor: pointer;}
+.log .logBtn{width: 240px; height: 30px; background: #f67f27; margin: auto; display: block; color: #fff; font-size: 14px; cursor: pointer;}
+.log p{text-align: center; line-height: 28px;}
+/*logR*/
+.logR{float: right; width: 660px; height: auto; }
+.logR ul{position: relative; width: 100%; height: 330px;}
+.logR ul li{width: 660px;height: 330px;position: absolute;}
+
+
+
+/*---------------------注册-----------------------------------*/
+/*--register--*/
+.register{width: 1182px; height: auto; border: 1px solid #ddd; margin: 45px auto; background: #fff;}
+/*registerTop*/
+.register .registerTop{width: 100%; height: 57px; overflow: hidden; margin-bottom: 65px;}
+.register .registerTop img{float: left;}
+/*registerBot*/
+.register .registerBot{overflow: hidden;}
+/*registerBotL*/
+.register .registerBot .registerBotL{float: left; width: 590px; height: auto;}
+.register .registerBot .registerBotL dl{overflow: hidden; margin-bottom: 25px;}
+.register .registerBot .registerBotL dl dt{float: left; width: 154px; height: 42px; text-align: right; line-height: 42px; font-size: 18px;}
+.register .registerBot .registerBotL dl dt b{color: #E60000;}
+.register .registerBot .registerBotL dl dd{float: left; width: 290px; border: 1px solid #ddd; height: 42px; margin-left: 25px;}
+.register .registerBot .registerBotL dl dd input{width: 270px; height: 32px; line-height: 32px; padding: 5px 10px; float: left;}
+.register .registerBot .registerBotL dl dd input.registerYzm{width: 84px; height: 42px; border-left: 1px solid #ddd;padding: 0;}
+.register .registerBot .registerBotL p{width: 375px; height: 32px; text-align: center; line-height: 32px; font-size: 14px; color: #555; overflow: hidden; margin: auto;}
+.register .registerBot .registerBotL p .registerChe{float: left; margin: 10px 5px 0;}
+.register .registerBot .registerBotL p span{float: left;}
+.register .registerBot .registerBotL p span a{color: #E60000;}
+.register .registerBot .registerBotL p span a:hover{text-decoration: underline;}
+.register .registerBot .registerBotL .registerBtn{width: 290px; height: 42px; background: url(../images/registerBtn.png) no-repeat; margin: 5px auto 50px; display: block; cursor: pointer;}
+/*registerBotR*/
+.register .registerBot .registerBotR{float: right; width: 450px; height: 400px; background: url(../images/registerBotR.png) no-repeat left 40px;}
+.register .registerBot .registerBotR p{font-size: 18px; line-height: 32px; margin: 75px 0 0 235px;}
+.register .registerBot .registerBotR p a{color: #E60000;text-decoration: underline;}
+
+
+
+/*----------------------产品中心---------------------------------------*/
+/*sort01*/
+.sort01{ width: 100%; height: 55px; background: #f0f1f2; padding-top: 20px;}
+.sort01 .sort01In{ width: 1140px; height: 55px; margin: auto; overflow: hidden;}
+/*sort01L*/
+.sort01 .sort01In .sort01L{float: left;width: auto; height: 55px; overflow: hidden;}
+.sort01 .sort01In .sort01L li{float: left; width: 120px; height: 53px; border-top: 2px solid #f0f1f2; line-height: 53px; text-align: center; font-size: 18px; padding: 0 5px;}
+.sort01 .sort01In .sort01L li.cur{float: left; width: 120px; height: 53px; border-top: 2px solid #E60000; background: #fff;}
+.sort01 .sort01In .sort01L li a{color: #555; display: block;}
+/*sort01R*/
+.sort01 .sort01In .sort01R{float: right; width: 270px; height: 55px; overflow: hidden;}
+.sort01 .sort01In .sort01R input{float: right;}
+.sort01 .sort01In .sort01R .sort01Btn{width: 62px; height: 32px; background: url(../images/prodSort01Btn.gif) no-repeat; cursor: pointer;}
+.sort01 .sort01In .sort01R .sort01Txt{width: 180px; height: 20px; border: 1px solid #eee; border-radius: 15px 0 0 15px; padding: 5px 0 5px 20px;}
+/*----------------------------------------------------------*/
+/*sort02*/
+.sort02{width: 100%; height: 60px; background: #fff;}
+.sort02 .sort02In{width: 1140px; height: 60px; overflow: hidden; margin: auto; font-size: 14px; color: #555;}
+.sort02 .sort02In dt{float: left; width: 120px; height: 60px; line-height: 60px; text-align: center;}
+.sort02 .sort02In dd{float: left; width: auto; height: 30px; line-height: 30px;  color: #555; text-align: center; cursor: pointer; margin: 15px 5px; padding: 0 25px;}
+.sort02 .sort02In dd.cur{background: #E60000; border-radius: 15px; color: #fff;}
+/*sort03*/
+.sort03{width: 100%; height: 60px; background: #fff;}
+.sort03 .sort03In{width: 1140px; height: 60px; overflow: hidden; margin: auto; font-size: 14px; color: #555;}
+.sort03 .sort03In dt{float: left; width: 120px; height: 60px; line-height: 60px; text-align: center;}
+.sort03 .sort03In dd{float: left; width: auto; height: 30px; line-height: 30px;  color: #555; text-align: center; cursor: pointer; margin: 15px 5px; padding: 0 25px;}
+.sort03 .sort03In dd.cur{background: #E60000; border-radius: 15px; color: #fff;}
+/*sort04*/
+.sort04{width: 1140px; height: 30px; border: 1px solid #ddd; margin:25px auto 15px; background: #fff; overflow: hidden; line-height: 30px; font-size: 14px;}
+.sort04 dt{width: 88px; height: 30px; text-align: center; border-right: 1px solid #ddd; float: left;}
+.sort04 dd{width: 100px; height: 30px; text-align: center; border-right: 1px solid #ddd; float: left; cursor: pointer;}
+.sort04 dd.cur{color: #E60000;}
+/*-----------------------------------------------------------------*/
+/*prodCon*/
+.prod{ width: 1140px; height: auto; margin: 0 auto 25px; background: #fff; border: 1px solid #eee; border-bottom: none;}
+.prod .prodCon{width: 100%; height: auto; border-bottom: 1px solid #eee;}
+.prod .prodCon h3{ width: 100%; height: 50px; line-height: 50px; font-size: 14px; font-weight: normal; padding-left: 30px; box-sizing: border-box;}
+.prod .prodCon ul{overflow: hidden; padding-bottom: 30px;}
+.prod .prodCon ul li{float: left; width: auto; max-width: 250px; line-height: 22px; padding: 0 30px; text-align: center; overflow: hidden;}
+.prod .prodCon ul li p{font-size: 20px; color: #E60000;}
+.prod .prodCon ul li span{ float: left; line-height: 24px; overflow: hidden; width: 71%;}
+.prod .prodCon ul li span u{float: left; text-decoration: none;}
+.prod .prodCon ul li span b{float: right; font-weight: normal; color: #E60000;}
+.prod .prodCon ul li .out{width: 180px; height: 8px; float: left; background: #eee; border-radius: 6px;}
+.prod .prodCon ul li .out .in{width: 26.7%; height: 8px; float: left; background: #E60000; border-radius:6px;}
+.prod .prodCon ul li strong{font-weight: 100; float: left; line-height: 12px;}
+.prod .prodCon ul li .prodConBtn{width: 120px; height: 30px; line-height: 30px; color: #E60000; border: 1px solid #E60000; border-radius: 6px; background: rgba(255,255,255,0); text-align: center; cursor: pointer;}
+/*page*/
+.page {width: 1140px; height: auto; margin:0 auto 50px; overflow: hidden;}
+.page ul{float: right; overflow: hidden; width: 350px;}
+.page ul li{float: left; width: auto; padding: 8px; margin-left: 10px; background: #fff; border: 1px solid #eee;}
+
+
+/*--------------------转让中心----------------------------------------------------------*/
+/*-attorn-*/
+/*sort001*/
+.sort001{width: 100%; height: 60px; background: #fff; padding-top: 20px;}
+.sort001 .sort001In{width: 1140px; height: 60px; overflow: hidden; margin: auto; font-size: 14px; color: #555;}
+.sort001 .sort001In dt{float: left; width: 120px; height: 60px; line-height: 60px; text-align: center;}
+.sort001 .sort001In dd{float: left; width: auto; height: 30px; line-height: 30px;  color: #555; text-align: center; cursor: pointer; margin: 15px 5px; padding: 0 25px;}
+.sort001 .sort001In dd.cur{background: #E60000; border-radius: 15px; color: #fff;}
+/*sort002*/
+.sort002{width: 100%; height: 60px; background: #fff;}
+.sort002 .sort002In{width: 1140px; height: 60px; overflow: hidden; margin: auto; font-size: 14px; color: #555;}
+.sort002 .sort002In dt{float: left; width: 120px; height: 60px; line-height: 60px; text-align: center;}
+.sort002 .sort002In dd{float: left; width: auto; height: 30px; line-height: 30px;  color: #555; text-align: center; cursor: pointer; margin: 15px 5px; padding: 0 25px;}
+.sort002 .sort002In dd.cur{background: #E60000; border-radius: 15px; color: #fff;}
+/*sort003*/
+.sort003{width: 1140px; height: 30px; border: 1px solid #ddd; margin:25px auto 15px; background: #fff; overflow: hidden; line-height: 30px; font-size: 14px;}
+.sort003 dt{width: 88px; height: 30px; text-align: center; border-right: 1px solid #ddd; float: left;}
+.sort003 dd{width: 100px; height: 30px; text-align: center; border-right: 1px solid #ddd; float: left; cursor: pointer;}
+.sort003 dd.cur{color: #E60000;}
+/*-----------------------------------------------------------------*/
+/*attoCon*/
+.atto{ width: 1140px; height: auto; margin: 0 auto 25px; background: #fff; border: 1px solid #eee; border-bottom: none;}
+.atto .attoCon{width: 100%; height: auto; border-bottom: 1px solid #eee;}
+.atto .attoCon h3{ width: 100%; height: 50px; line-height: 50px; font-size: 14px; font-weight: normal; padding-left: 30px; box-sizing: border-box;}
+.atto .attoCon ul{overflow: hidden; padding-bottom: 30px;}
+.atto .attoCon ul li{float: left; width: auto; max-width: 250px; line-height: 22px; padding: 0 30px; text-align: center; overflow: hidden;}
+.atto .attoCon ul li p{font-size: 20px; color: #E60000;}
+.atto .attoCon ul li span{ float: left; line-height: 24px; overflow: hidden; width: 71%;}
+.atto .attoCon ul li span u{float: left; text-decoration: none;}
+.atto .attoCon ul li span b{float: right; font-weight: normal; color: #E60000;}
+.atto .attoCon ul li .out{width: 180px; height: 8px; float: left; background: #eee; border-radius: 6px;}
+.atto .attoCon ul li .out .in{width: 26.7%; height: 8px; float: left; background: #E60000; border-radius:6px;}
+.atto .attoCon ul li strong{font-weight: 100; float: left; line-height: 12px;}
+.atto .attoCon ul li .prodConBtn{width: 120px; height: 30px; line-height: 30px; color: #E60000; border: 1px solid #E60000; border-radius: 6px; background: rgba(255,255,255,0); text-align: center; cursor: pointer;}
+
+
+
+
+
+
+
+
+
+
+
+/*----------------个人中心---------------------------------*/
+.pc{ width: 1140px; height: auto; margin: 0 auto 60px; overflow: hidden; position: relative;}
+.pc .pcPic{width: 1140px; height: 100px; margin-bottom: 30px;}
+/*更换头像*/
+.pc .assDet01TC{width: 580px; height: 380px; background: rgba(0,0,0,0.3); position: absolute; top: 170px; left: 265px; padding: 10px; display: none;}
+.pc .assDet01TC .assDet01TCIn{ width: 520px; height: 320px; background: #fff; padding: 30px;}
+.pc .assDet01TC .assDet01TCIn p{width: 80px; height: 40px; border-radius: 6px 6px 0 0; background: #EC4040; line-height: 40px; text-align: center; color: #fff; font-size: 14px;}
+/*上传按钮样式*/
+.pc .assDet01TC .assDet01TCIn .inp{width: 520px; height: 35px; position: relative;}
+.pc .assDet01TC .assDet01TCIn .inp input[type=text] {width: 388px; height: 33px; border: 1px solid #EC4040; float: left; color: #999; padding-left: 10px;}
+.pc .assDet01TC .assDet01TCIn .inp input[type=button] {width: 120px; height: 35px; background: #EC4040; color: #fff; text-align: center; line-height: 35px; float: left;} 
+.pc .assDet01TC .assDet01TCIn .inp input[type=file] {filter:alpha(opacity=0); -moz-opacity:0; -khtml-opacity: 0; opacity:0; width: 520px; height: 35px; position: absolute; top: 0; left: 0; cursor: pointer;}
+/*上传与取消按钮样式*/
+.pc .assDet01TC .assDet01TCIn .btn{ width: 520px; height: 50px; overflow: hidden; margin: 50px 0;}
+.pc .assDet01TC .assDet01TCIn .btn input[type=button] {width: 80px; height: 30px; background: #aaa; text-align: center; line-height: 30px; color: #fff; float: left; margin: 0 15px 0 0; cursor: pointer;}
+
+/*pcL*/
+.pc .pcL{float: left; width: 160px; height: auto;}
+.pc .pcL ul{border: 1px solid #eee; border-bottom: none; background: #fff; width: 158px; height: auto; margin-bottom: 5px;}
+.pc .pcL ul li{width: 158px; height: 40px; border-bottom: 1px solid #eee; line-height: 40px; text-align: center; font-size: 14px;}
+.pc .pcL ul li h4{ font-size: 16px; color: #555; line-height: 40px; text-align: center; font-weight: normal; background: url(../images/pcLIcons.png) no-repeat 15px top; border-left: 4px solid #E60000;}
+/*pcR*/
+.pc .pcR{float: right; width: 958px; height: auto; border: 1px solid #eee; background: #fff; overflow: hidden; padding-bottom: 40px;}
+/*pcRTit*/
+.pc .pcR .pcRTit{line-height: 40px; height: 40px; border-bottom: 1px solid #eee; padding-left: 10px; font-size: 14px; color: #E60000;}
+/*assDet01*/
+.pc .pcR .assDet01{ width: 380px; height: 155px; float: left; padding: 35px 35px 0; border-right: 1px solid #eee; border-bottom: 1px solid #eee;}
+.pc .pcR .assDet01 dl{overflow: hidden;}
+.pc .pcR .assDet01 dl dt{float: left; width: 100px; height: 100px; cursor: pointer;}
+.pc .pcR .assDet01 dl dd{float: right; width: 245px; height: auto;}
+.pc .pcR .assDet01 dl dd p{line-height: 30px; font-size: 14px;}
+.pc .pcR .assDet01 dl dd ul{overflow: hidden;padding-top: 10px;}
+.pc .pcR .assDet01 dl dd ul li{float: left; width: 28px; height: 28px; padding-right: 15px;}
+/*assDet02*/
+.pc .pcR .assDet02{width: 437px; float: left; height: 155px; padding: 35px 35px 0; border-bottom: 1px solid #eee;}
+.pc .pcR .assDet02 p{line-height: 30px; font-size: 16px; text-align: right; overflow: hidden;}
+.pc .pcR .assDet02 p span{font-size: 30px; color: #E60000;}
+.pc .pcR .assDet02 p a{float: left; width: 140px; height: 40px; padding: 30px 38px 0;}
+/*assDet03*/
+.pc .pcR .assDet03{ width: 380px; height: 280px; float: left; padding: 35px 35px 0; border-right: 1px solid #eee; border-bottom: 1px solid #eee;}
+.pc .pcR .assDet03 p{overflow: hidden; padding-bottom: 5px;}
+.pc .pcR .assDet03 p span{font-size: 16px; float: left; width: 310px; height: 30px; line-height: 30px;}
+.pc .pcR .assDet03 p span b{color: #E60000; font-weight: normal;}
+.pc .pcR .assDet03 p a{float: right; width: 66px; height: 21px; padding-top: 4px;}
+.pc .pcR .assDet03 table{width: 100%; height: auto; margin: 30px 0 20px;}
+.pc .pcR .assDet03 table th{height: 25px; line-height: 25px; text-align: center; font-weight: normal; border: 1px solid #eee;}
+.pc .pcR .assDet03 table td{height: 55px; line-height: 55px; text-align: center; font-weight: normal; border: 1px solid #eee; border-top: none;}
+.pc .pcR .assDet03 h5{ font-weight: normal; font-size: 18px; height: 40px; line-height: 40px; padding-left: 10px; background: #e3e3e3; color: #333;}
+.pc .pcR .assDet03 h5 b{color: #E60000; font-weight: normal;}
+/*assDet04*/
+.pc .pcR .assDet04{width: 437px; float: left; height: 280px; padding: 35px 35px 0; border-bottom: 1px solid #eee;}
+.pc .pcR .assDet04 p{line-height: 30px; font-size: 18px; padding-bottom: 10px;}
+.pc .pcR .assDet04 p b{font-weight: normal; color: #E60000;}
+.pc .pcR .assDet04 h5{ font-weight: normal; font-size: 18px; height: 40px; line-height: 40px; padding-left: 10px; background: #e3e3e3; color: #333; margin-top: 82px;}
+.pc .pcR .assDet04 h5 b{color: #E60000; font-weight: normal;}
+/*assDet05*/
+.pc .pcR .assDet05{width: 888px; padding: 35px 35px 0; height: auto; float: left;}
+.pc .pcR .assDet05 p{font-size: 18px; line-height: 40px;}
+.pc .pcR .assDet05 table th{width: 175px; height: 35px; border: 1px solid #fff; background: #ededed; text-align: center; line-height: 35px; font-size: 14px; color: #333; font-weight: normal;}
+/*无交易数据时*/.pc .pcR .assDet05 table td{text-align: center; background: #f4f4f4; padding: 15px 0;}
+/*有交易数据时
+ * .pc .pcR .assDet05 table td{text-align: center; background: #f4f4f4; height: 40px; line-height:40px; border: 1px solid #fff;}
+ */
+
+
+
+
+
+
+
+
+
+
+ 

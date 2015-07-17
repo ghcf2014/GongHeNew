@@ -1,0 +1,61 @@
+	<block name="body"><extend name="Base/common"/>
+				<!--注册内容	register start-->
+		<div class="register">
+			<!--registerTop start-->
+			<div class="registerTop">
+				<img src="__PUBLIC__/Home/images/registerTopPic01.png"/>
+				<img src="__PUBLIC__/Home/images/registerTopPic02.png"/>
+				<img src="__PUBLIC__/Home/images/registerTopPic03.png"/>
+			</div>
+			<!--registerTop end-->
+			<!--registerBot start-->
+			<div class="registerBot">
+				<!--registerBotL start-->
+				<form action="{:U('User/login')}" method="post" id="form">
+					<div class="registerBotL">
+						<dl>
+							<dt><b>*</b> 用户名</dt>
+							<dd><input type="text" name="user_name" id="username" value="" /></dd>
+						</dl>
+						<dl>
+							<dt><b>*</b> 登录密码</dt>
+							<dd><input type="password" name="user_pass" id="userpass" value="" /></dd>
+						</dl>
+						<dl>
+							<dt><b>*</b> 确认密码</dt>
+							<dd><input type="password" name="repass" id="repass" value="" /></dd>
+						</dl>
+						<dl>
+							<dt><b>*</b> 手机号码</dt>
+							<dd><input type="text" name="user_phone" id="userphone" value="" /></dd>
+						</dl>
+						<dl>
+							<dt><b>*</b> 手机验证码</dt>
+							<dd><input type="text" name="verify" id="verify" value="" style="width: 185px;" /><input type="image" src="__PUBLIC__/Home/images/registerYzm.gif" class="registerYzm" /></dd>
+						</dl>
+						<dl>
+							<dt>推荐人</dt>
+							<dd><input type="text" name="friends" id="" value="" /></dd>
+						</dl>
+						
+						<p><input type="checkbox" name="xieyi" id="" value="1" class="registerChe" /><span>我已经阅读，并同意<a href="javascript:;">《网站服务协议》</a>和<a href="javascript:;">《使用条款》</a></span></p>
+						<input type="button" id="re_sub" value="" class="registerBtn"/>
+					</div>
+				</form>
+				
+				<!--registerBotL end-->
+				<!--registerBotR start-->
+				<div class="registerBotR">
+					<p>已有账号？<br /><a href="javascr"> 点击登录</a></p>
+				</div>
+				<!--registerBotR end-->
+			</div>
+			<!--registerBot end-->
+		</div>
+		<!--注册内容	register end-->
+<script type="text/javascript">
+	$('#re_sub').click(function(){
+		var name=$('#').val();
+	});
+</script>
+	</block>

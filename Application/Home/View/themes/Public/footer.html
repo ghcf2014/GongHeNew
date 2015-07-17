@@ -1,0 +1,126 @@
+<block name="footer">
+
+		
+		<!--footer	start-->
+		<div class="footerO">
+			<div class="footer">
+				<div class="top">
+					<ul>
+						<li>
+							<h4>关于我们</h4>
+							<p><a href="javasvript:;">公司简介</a></p>
+							<p><a href="javasvript:;">服务项目</a></p>
+							<p><a href="javasvript:;">核心优势</a></p>
+							<p><a href="javasvript:;">联系我们</a></p>
+						</li>
+						<li>
+							<h4>协议与规则</h4>
+							<p><a href="javasvript:;">交易服务协议</a></p>
+							<p><a href="javasvript:;">平台交易规则</a></p>
+							<p><a href="javasvript:;">信息发布规则</a></p>
+							<p><a href="javasvript:;">买家委托规则</a></p>
+						</li>
+						<li>
+							<h4>新手帮助</h4>
+							<p><a href="javasvript:;">风险提示</a></p>
+							<p><a href="javasvript:;">注册登录</a></p>
+							<p><a href="javasvript:;">账户安全</a></p>
+							<p><a href="javasvript:;">资费说明</a></p>
+						</li>
+					</ul>
+					<div class="topR">
+						<p><img src="__PUBLIC__/Home/images/call.gif"/></p>
+						<ul>
+							<li><img src="__PUBLIC__/Home/images/qq.gif"/></li>
+							<li><a href="http://weibo.com/u/5385565766?topnav=1&wvr=6&topsug=1"><img src="__PUBLIC__/Home/images/sina.gif"/></a></li>
+							<li><img src="__PUBLIC__/Home/images/weixin.gif"/></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bot">
+					<h4>友情链接</h4>
+					<ul>
+						<li><a href="javascript:;">经济参考报</a></li>
+						<li><a href="javascript:;">国信证劵</a></li>
+						<li><a href="javascript:;">中国企业家</a></li>
+						<li><a href="javascript:;">中国新能源网</a></li>
+						<li><a href="javascript:;">国际能源网</a></li>
+						<li><a href="javascript:;">全球节能环保网</a></li>
+						<li><a href="javascript:;">联合能源</a></li>
+						<li><a href="javascript:;">财经大全</a></li>
+						<li><a href="javascript:;">搜狐经济</a></li>
+					</ul>
+				</div>
+				
+				<!--鼠标滑过-->
+				<div class="qqCode"><img src="__PUBLIC__/Home/images/wxCode2.png"/></div>
+				<div class="wxCode"><img src="__PUBLIC__/Home/images/wxCode2.png"/></div>
+			</div>
+		</div>
+		<!--footer	end-->
+		
+		<!--banquan	start-->
+		<p class="bq">版权所有 © 2014 深圳市工合财富金融信息服务有限公司 www.ghcf.cn</p>
+		<!--banquan end-->
+		
+		
+		<!--登录	login start-->
+		<div class="loginO">		
+			<div class="login">
+				<div class="loginIn">
+					<div class="loginT">
+						<h2>欢迎登录工合财富</h2>
+						<p><img src="__PUBLIC__/Home/images/close.png"/></p>
+					</div>
+					<div class="loginB">
+						<!--用户名-->
+						<form action="{:U('User/index')}" method="post" id="form">
+							<dl>
+								<dt><img src="__PUBLIC__/Home/images/loginHead.gif"/></dt>
+								<dd><input type="text" name="username" id="name" value="" placeholder="请输入用户名"/></dd>
+							</dl>
+							<!--密码-->
+							<dl>
+								<dt><img src="__PUBLIC__/Home/images/loginPassword.gif"/></dt>
+								<dd><input type="password" name="password" id="pass" value="" placeholder="请输入密码"/></dd>
+							</dl>
+							<!--验证码-->
+							<dl>
+								<dt><img src="__PUBLIC__/Home/images/loginYzm.gif"/></dt>
+								<dd id="captcha-container">
+								<input name="verify" width="50%" height="50" class="yzm" placeholder="验证码" type="text">
+  								<img alt="验证码" src="{:U('User/verify',array())}" title="点击刷新">
+								<!-- <input type="text" name="verify" id="verify" value="" placeholder="请输入验证码" class="yzm"/><img id="user-verify" src="{:U('User/verify')}" title="点击刷新验证码" > -->
+								</dd>
+							</dl>
+							<input type="button" id="subbt" value="" class="loginBtn"/>
+						</form>
+						
+						
+						<p><a href="javascript:;" style="color: #E60000;">忘记密码？</a> | <a href="javascript:;">立即注册</a></p>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!--登录	login end-->
+<script type="text/javascript">
+	$('#subbt').click(function(){
+		var name=$('name').val();
+		var pass=$('pass').val();
+		var verify=$('verify').val();
+		$('#form').submit();
+	});
+</script>
+<script type="text/javascript">
+	var captcha_img = $('#captcha-container').find('img')  
+	var verifyimg = captcha_img.attr("src");  
+	captcha_img.attr('title', '点击刷新');  
+	captcha_img.click(function(){  
+	    if( verifyimg.indexOf('?')>0){  
+	        $(this).attr("src", verifyimg+'&random='+Math.random());  
+	    }else{  
+	        $(this).attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());  
+	    }  
+	});
+</script>
+</block>
