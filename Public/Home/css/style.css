@@ -7,23 +7,11 @@ a:hover{color: #e60000; text-decoration: none;}
 
 
 
-/*--------------------
-bar   		快捷通道
-nav     	导航栏
-ban     	轮播图
-notice  	网站公告（定位在轮播图上的公告）
-data    	平台数据显示
-con     	首页内容
-prolist 	首页产品列表
-
-
-
----------------------*/
 
 
 
 /*-----------------------首页--------------------------*/
-/*-barOut-*/
+/*-快捷通道	barOut-*/
 .barOut{width: 100%; height: 30px; background: #f2f2f2;}
 /*bar*/
 .bar{width: 1140px; height: auto; margin: 0 auto; position: relative;}
@@ -46,7 +34,7 @@ prolist 	首页产品列表
 .bar .wxCode{width: 120px; height: 120px; text-align: center; background: url(../images/upQipao.png) no-repeat; padding-top: 15px; box-sizing: border-box; position: absolute; top: 30px; right: -12px; display: none;}
 
 
-/*-navOut-*/
+/*-导航栏	navOut-*/
 .navOut{width: 100%; height: 120px; background: #fff; border-bottom: 1px solid #eee;}
 /*nav*/
 .nav{width: 1140px; height: 120px; margin: auto;}
@@ -58,12 +46,12 @@ prolist 	首页产品列表
 .nav .navR li a.cur{color: #E60000;}
 
 
-/*-banOut-*/
+/*-轮播图	banOut-*/
 .banOut{width: 100%; height: 380px; position: relative;}
 /*ban*/
 .ban{width: 100%; height: 380px; margin: auto; overflow: hidden; position: relative;}
 .ban li{float: left; width: 100%; height: 380px; position: absolute; top: 0; left: 0;}
-/*notice*/
+/*网站公告（定位在轮播图上的公告）	notice*/
 .noticeOut{width: 100%; height: 40px; background: rgba(0,0,0,0.3); position: absolute; bottom: 0; left: 0; z-index: 9;}
 .noticeIn{width: 1100px; height: 40px; margin: auto; background: url(../images/loudWithe.png) no-repeat left 10px; padding-left: 40px; position: relative; overflow: hidden;}
 .noticeIn .noticeCon{width: 1100px; height: 40px; position: absolute; top: 0; }
@@ -76,7 +64,7 @@ prolist 	首页产品列表
 
 
 
-/*-ghcfdata-*/
+/*-平台数据显示	ghcfdata-*/
 .dataOut{width: 100%; height: 110px; background: #fff; border-bottom: 1px solid #eee;}
 .dataIn{width: 1140px; height: 110px; margin: auto; /*overflow: hidden;*/ position: relative;}
 /*dataL*/
@@ -107,7 +95,7 @@ prolist 	首页产品列表
 
 
 
-/*-con-*/
+/*-首页内容	con-*/
 .con{width: 1140px; height: auto; margin:20px auto; overflow: hidden;}
 /*conL*/
 .con .conL{float: left; width: 850px; height: auto;}
@@ -139,7 +127,7 @@ prolist 	首页产品列表
 .con .conL .newHand .bot .botR .out{width: 180px; height: 12px; background: #ccc;}
 .con .conL .newHand .bot .botR .out .in{width: 20%; height: 12px; background: #E60000;}
 /*-------------------------------------------------------------------------------*/
-/*proList---------产品列表*/
+/*proList---------首页产品列表*/
 .con .conL .proList{width: 850px; height: auto; margin: 20px 0 0;}
 /*proListTit*/
 .con .conL .proList .proListTit{width: 848px; height: 43px; border: 1px solid #eee; background: #fff; overflow: hidden; margin-bottom: 10px;}
@@ -264,6 +252,9 @@ prolist 	首页产品列表
 .loginIn .loginB dl dd img{border-left: 1px solid #ccc; float: left; cursor: pointer;}
 .loginIn .loginB .loginBtn{width: 360px; height: 45px; background: url(../images/loginBtn.gif) no-repeat; margin: auto; display: block;}
 .loginIn .loginB p{text-align: center; line-height: 28px;}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++首页结束++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
 
 
 
@@ -291,8 +282,7 @@ prolist 	首页产品列表
 .logR{float: right; width: 660px; height: auto; }
 .logR ul{position: relative; width: 100%; height: 330px;}
 .logR ul li{width: 660px;height: 330px;position: absolute;}
-
-
+/*++++++++++++++++++++++++++++++++++++++++++++登录页结束+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 
@@ -328,7 +318,7 @@ prolist 	首页产品列表
 .register .registerBot .registerBotR{float: right; width: 450px; height: 400px; background: url(../images/registerBotR.png) no-repeat left 40px;}
 .register .registerBot .registerBotR p{font-size: 18px; line-height: 32px; margin: 75px 0 0 235px;}
 .register .registerBot .registerBotR p a{color: #E60000;text-decoration: underline;}
-
+/*++++++++++++++++++++++++++++++++++++++++++++++注册页结束+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 
@@ -340,7 +330,7 @@ prolist 	首页产品列表
 
 
 /*----------------------产品中心---------------------------------------*/
-/*sort01*/
+/*分类1   sort01*/
 .sort01{ width: 100%; height: 55px; background: #f0f1f2; padding-top: 20px;}
 .sort01 .sort01In{ width: 1140px; height: 55px; margin: auto; overflow: hidden;}
 /*sort01L*/
@@ -354,25 +344,25 @@ prolist 	首页产品列表
 .sort01 .sort01In .sort01R .sort01Btn{width: 62px; height: 32px; background: url(../images/prodSort01Btn.gif) no-repeat; cursor: pointer;}
 .sort01 .sort01In .sort01R .sort01Txt{width: 180px; height: 20px; border: 1px solid #eee; border-radius: 15px 0 0 15px; padding: 5px 0 5px 20px;}
 /*----------------------------------------------------------*/
-/*sort02*/
+/*分类2		sort02*/
 .sort02{width: 100%; height: 60px; background: #fff;}
 .sort02 .sort02In{width: 1140px; height: 60px; overflow: hidden; margin: auto; font-size: 14px; color: #555;}
 .sort02 .sort02In dt{float: left; width: 120px; height: 60px; line-height: 60px; text-align: center;}
 .sort02 .sort02In dd{float: left; width: auto; height: 30px; line-height: 30px;  color: #555; text-align: center; cursor: pointer; margin: 15px 5px; padding: 0 25px;}
 .sort02 .sort02In dd.cur{background: #E60000; border-radius: 15px; color: #fff;}
-/*sort03*/
+/*分类3		sort03*/
 .sort03{width: 100%; height: 60px; background: #fff;}
 .sort03 .sort03In{width: 1140px; height: 60px; overflow: hidden; margin: auto; font-size: 14px; color: #555;}
 .sort03 .sort03In dt{float: left; width: 120px; height: 60px; line-height: 60px; text-align: center;}
 .sort03 .sort03In dd{float: left; width: auto; height: 30px; line-height: 30px;  color: #555; text-align: center; cursor: pointer; margin: 15px 5px; padding: 0 25px;}
 .sort03 .sort03In dd.cur{background: #E60000; border-radius: 15px; color: #fff;}
-/*sort04*/
+/*分类4		sort04*/
 .sort04{width: 1140px; height: 30px; border: 1px solid #ddd; margin:25px auto 15px; background: #fff; overflow: hidden; line-height: 30px; font-size: 14px;}
 .sort04 dt{width: 88px; height: 30px; text-align: center; border-right: 1px solid #ddd; float: left;}
 .sort04 dd{width: 100px; height: 30px; text-align: center; border-right: 1px solid #ddd; float: left; cursor: pointer;}
 .sort04 dd.cur{color: #E60000;}
 /*-----------------------------------------------------------------*/
-/*prodCon*/
+/*内容		prodCon*/
 .prod{ width: 1140px; height: auto; margin: 0 auto 25px; background: #fff; border: 1px solid #eee; border-bottom: none;}
 .prod .prodCon{width: 100%; height: auto; border-bottom: 1px solid #eee;}
 .prod .prodCon h3{ width: 100%; height: 50px; line-height: 50px; font-size: 14px; font-weight: normal; padding-left: 30px; box-sizing: border-box;}
@@ -386,11 +376,11 @@ prolist 	首页产品列表
 .prod .prodCon ul li .out .in{width: 26.7%; height: 8px; float: left; background: #E60000; border-radius:6px;}
 .prod .prodCon ul li strong{font-weight: 100; float: left; line-height: 12px;}
 .prod .prodCon ul li .prodConBtn{width: 120px; height: 30px; line-height: 30px; color: #E60000; border: 1px solid #E60000; border-radius: 6px; background: rgba(255,255,255,0); text-align: center; cursor: pointer;}
-/*page*/
+/*分页		page*/
 .page {width: 1140px; height: auto; margin:0 auto 50px; overflow: hidden;}
 .page ul{float: right; overflow: hidden; width: 430px;}
 .page ul li{float: left; width: auto; padding: 8px; margin-left: 10px; background: #fff; border: 1px solid #eee;}
-
+/*++++++++++++++++++++++++++++++++++++++++++产品中心页结束+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 
@@ -402,7 +392,8 @@ prolist 	首页产品列表
 
 
 /*--------------------转让中心----------------------------------------------------------*/
-/*-attorn-*/
+/*-attorn（转让）-*/
+/*分类*/
 /*sort001*/
 .sort001{width: 100%; height: 60px; background: #fff; padding-top: 20px;}
 .sort001 .sort001In{width: 1140px; height: 60px; overflow: hidden; margin: auto; font-size: 14px; color: #555;}
@@ -421,6 +412,7 @@ prolist 	首页产品列表
 .sort003 dd{width: 100px; height: 30px; text-align: center; border-right: 1px solid #ddd; float: left; cursor: pointer;}
 .sort003 dd.cur{color: #E60000;}
 /*-----------------------------------------------------------------*/
+/*内容*/
 /*attoCon*/
 .atto{ width: 1140px; height: auto; margin: 0 auto 25px; background: #fff; border: 1px solid #eee; border-bottom: none;}
 .atto .attoCon{width: 100%; height: auto; border-bottom: 1px solid #eee;}
@@ -435,7 +427,7 @@ prolist 	首页产品列表
 .atto .attoCon ul li .out .in{width: 26.7%; height: 8px; float: left; background: #E60000; border-radius:6px;}
 .atto .attoCon ul li strong{font-weight: 100; float: left; line-height: 12px;}
 .atto .attoCon ul li .prodConBtn{width: 120px; height: 30px; line-height: 30px; color: #E60000; border: 1px solid #E60000; border-radius: 6px; background: rgba(255,255,255,0); text-align: center; cursor: pointer;}
-
+/*++++++++++++++++++++++++++++++++++++++++++++转让中心结束+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 
@@ -469,7 +461,7 @@ prolist 	首页产品列表
 .pc .pcL ul li{width: 158px; height: 40px; border-bottom: 1px solid #eee; line-height: 40px; text-align: center; font-size: 14px;}
 .pc .pcL ul li h4{ font-size: 16px; color: #555; line-height: 40px; text-align: center; font-weight: normal; background: url(../images/pcLIcons.png) no-repeat 15px top; border-left: 4px solid #E60000;}
 /*pcR*/
-.pc .pcR{float: right; width: 958px; height: auto; border: 1px solid #eee; background: #fff; overflow: hidden; padding-bottom: 40px;}
+.pc .pcR{float: right; width: 958px; height: auto; min-height: 762px; border: 1px solid #eee; background: #fff; overflow: hidden; padding-bottom: 40px;}
 /*pcRTit*/
 .pc .pcR .pcRTit{line-height: 40px; height: 40px; border-bottom: 1px solid #eee; padding-left: 10px; font-size: 14px; color: #E60000;}
 /*assDet01*/
@@ -510,7 +502,7 @@ prolist 	首页产品列表
 /*有交易数据时
  * .pc .pcR .assDet05 table td{text-align: center; background: #f4f4f4; height: 40px; line-height:40px; border: 1px solid #fff;}
  */
-
+/*+++++++++++++++++++++++++++++++++++++++++++++++++个人中心结束++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 
@@ -548,6 +540,431 @@ prolist 	首页产品列表
 .guideCon .question li{width: 1070px; height: auto; min-height: 60px; border-bottom: 1px solid #eee;}
 .guideCon .question li h3{font-weight: normal; font-size: 16px; line-height: 60px;  padding-left: 20px; cursor: pointer;}
 .guideCon .question li p{font-weight: normal; font-size: 14px; line-height: 28px;  padding:20px; display: none;}
+/*++++++++++++++++++++++++++++++++++++++++++新手指南结束+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+
+
+
+
+/*---------------个人中心的充值提现----------------------------------*/
+/*-标题内容-*/
+.pc .pcR .pcRTit .cztxTit{
+	overflow: hidden;
+}
+.pc .pcR .pcRTit .cztxTit li{
+	float: left;
+	border-right: 1px solid #eee;
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #999;
+	cursor: pointer;
+}
+.pc .pcR .pcRTit .cztxTit li.cur{
+	color: #E60000;
+}
+
+/*内容*/
+.pc .pcR .pcCzTx{
+	width: 888px;
+	height: auto;
+	padding: 35px;
+}
+/*-充值-*/
+.pc .pcR .pcCzTx .recharge{
+	width: 100%;
+	height: auto;
+}
+/*温馨提示*/
+.pc .pcR .pcCzTx .recharge .tips{
+	width: 824px;
+	padding: 32px;
+	height: auto;
+	background: #f1f1f1;
+	margin-bottom: 70px;
+}
+.pc .pcR .pcCzTx .recharge .tips p{
+	line-height: 30px;
+	font-size: 14px;
+	color: #555;
+}
+.pc .pcR .pcCzTx .recharge .rechargeCon{
+	width: 100%;
+	height: auto;
+	min-height: 26px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.pc .pcR .pcCzTx .recharge .rechargeCon dt{
+	width: 120px;
+	height: 26px;
+	text-align: right;
+	font-size: 16px;
+	line-height: 26px;
+	float: left;
+}
+.pc .pcR .pcCzTx .recharge .rechargeCon dd{
+	width: auto;
+	height: auto;
+	min-height: 26px;
+	float: left;
+	line-height: 26px;
+	padding-left: 25px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.pc .pcR .pcCzTx .recharge .rechargeCon dd .czMoney{
+	width: 165px;
+	height: 24px;
+	border: 1px solid #ddd;
+	line-height: 24px;
+	color: #999;
+	padding-left: 5px;
+}
+.pc .pcR .pcCzTx .recharge .rechargeCon dd label{
+	overflow: hidden;
+	margin-right: 30px;
+	float: left;
+}
+.pc .pcR .pcCzTx .recharge .rechargeCon dd label .czType{
+	float: left;
+	margin: 15px 15px 0 0;
+}
+.pc .pcR .pcCzTx .recharge .rechargeCon dd label img{
+	float: left;
+	cursor: pointer;
+}
+.pc .pcR .pcCzTx .recharge .czBtn{
+	width: 160px;
+	height: 40px;
+	background: #E60000;
+	font-size: 16px;
+	color: #fff;
+	margin: 60px 0 0 60px;
+	cursor: pointer;
+}
+
+/*-提现-*/
+.pc .pcR .pcCzTx .cash{
+	width: 100%;
+	height: auto;
+}
+/*温馨提示*/
+.pc .pcR .pcCzTx .cash .tips{
+	width: 824px;
+	padding: 32px;
+	height: auto;
+	background: #f1f1f1;
+	margin-bottom: 70px;
+}
+.pc .pcR .pcCzTx .cash .tips p{
+	line-height: 30px;
+	font-size: 14px;
+	color: #555;
+}
+.pc .pcR .pcCzTx .cash .cashCon{
+	width: 100%;
+	height: auto;
+	min-height: 26px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.pc .pcR .pcCzTx .cash .cashCon dt{
+	width: 120px;
+	height: 26px;
+	text-align: right;
+	font-size: 16px;
+	line-height: 26px;
+	float: left;
+}
+.pc .pcR .pcCzTx .cash .cashCon dt b{
+	color: #E60000;
+	font-weight: normal;
+}
+.pc .pcR .pcCzTx .cash .cashCon dd{
+	width: auto;
+	height: auto;
+	min-height: 26px;
+	float: left;
+	line-height: 26px;
+	padding-left: 25px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.pc .pcR .pcCzTx .cash .cashCon dd input{
+	width: 165px;
+	height: 24px;
+	border: 1px solid #ddd;
+	line-height: 24px;
+	color: #999;
+	padding-left: 5px;
+}
+.pc .pcR .pcCzTx .cash .cashCon dd label{
+	overflow: hidden;
+	margin-right: 30px;
+	float: left;
+}
+.pc .pcR .pcCzTx .cash .cashCon dd label .txBank{
+	float: left;
+	margin: 5px 5px 0 0;
+	width: auto;
+}
+.pc .pcR .pcCzTx .cash .cashCon dd label span{
+	float: left;
+	line-height: 32px;
+}
+
+.pc .pcR .pcCzTx .cash .txBtn{
+	width: 160px;
+	height: 40px;
+	background: #E60000;
+	font-size: 16px;
+	color: #fff;
+	margin: 30px 0 0 80px;
+	cursor: pointer;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+/*---------------个人中心的资金统计----------------------------------*/
+.pc .pcR .fundCount{
+	width: 888px;
+	padding: 35px;
+	height: auto;
+}
+/*购买产品统计*/
+.pc .pcR .fundCount .shopCount{
+	width: 100%;
+	height: auto;
+	margin-bottom: 75px;
+}
+.pc .pcR .fundCount .shopCount h3{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 36px;
+	height: 36px;
+	color: #555;
+}
+.pc .pcR .fundCount .shopCount table{
+	width: 100%;
+	height: auto;
+}
+.pc .pcR .fundCount .shopCount table th{
+	height: 35px;
+	border: 1px solid #fff;
+	background: #ededed;
+	font-weight: normal;
+	color: #333;
+	width: 147px;
+}
+.pc .pcR .fundCount .shopCount table td{
+	height: 45px;
+	border: 1px solid #fff;
+	background: #f4f4f4;
+	color: #333;
+	width: 147px;
+	text-align: center;
+}
+/*转让产品统计*/
+.pc .pcR .fundCount .attoCount{
+	width: 100%;
+	height: auto;
+}
+.pc .pcR .fundCount .attoCount h3{
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 36px;
+	height: 36px;
+	color: #555;
+}
+.pc .pcR .fundCount .attoCount table{
+	width: 100%;
+	height: auto;
+}
+.pc .pcR .fundCount .attoCount table th{
+	height: 35px;
+	border: 1px solid #fff;
+	background: #ededed;
+	font-weight: normal;
+	color: #333;
+	width: 221px;
+}
+.pc .pcR .fundCount .attoCount table td{
+	height: 45px;
+	border: 1px solid #fff;
+	background: #f4f4f4;
+	color: #333;
+	width: 221px;
+	text-align: center;
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+
+
+
+
+
+/*-----------------个人中心的投资收益-------------------------------------------------*/
+.pc .pcR .income{
+	width: 888px;
+	height: auto;
+	padding: 35px;
+}
+/*总收益一览*/
+.pc .pcR .income .allIncome{
+	width: 100%;
+	height: auto;
+	margin-bottom: 60px;
+}
+.pc .pcR .income .allIncome th{
+	height: 35px;
+	border: 1px solid #fff;
+	background: #ededed;
+	font-weight: normal;
+	color: #333;
+	width: 221px;
+}
+.pc .pcR .income .allIncome td{
+	height: 45px;
+	border: 1px solid #fff;
+	background: #f4f4f4;
+	color: #333;
+	width: 221px;
+	text-align: center;
+}
+/*收益详情*/
+/*分类查找条件01*/
+.pc .pcR .income .date{
+	width: 100%;
+	height: 35px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.pc .pcR .income .date dt{
+	float: left;
+	width: 100px;
+	margin-right: 35px;
+	height: 35px;
+	color: #999;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+}
+.pc .pcR .income .date dd{
+	float: left;
+	width: 100px;
+	height: 35px;
+	color: #999;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+}
+.pc .pcR .income .date dd.cur p{
+	background: #E60000;
+	color: #fff;
+}
+.pc .pcR .income .date dd.choose{
+	width: 500px;
+	float: right;
+	overflow: hidden;
+}
+.pc .pcR .income .date dd.choose p{
+	float:left;
+	width: auto;
+	padding: 0 10px;
+}
+.pc .pcR .income .date dd.choose input[type=text]{
+	width: 123px;
+	height: 33px;
+	float: left;
+	line-height: 33px;
+	border: 1px solid #eee;
+	margin: 0 10px;
+	padding-left: 10px;
+}
+.pc .pcR .income .date dd.choose input[type=button]{
+	float: left;
+	width: 65px;
+	height: 35px;
+	background: #555;
+	color: #fff;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.pc .pcR .income .date dd.choose span{
+	float: left;
+}
+/*分类查找条件02*/
+.pc .pcR .income .type{
+	overflow: hidden;
+}
+.pc .pcR .income .type dt{
+	float: left;
+	width: 100px;
+	margin-right: 35px;
+	height: 35px;
+	color: #999;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+}
+.pc .pcR .income .type dd{
+	float: left;
+	width: 100px;
+	height: 35px;
+	color: #999;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+}
+.pc .pcR .income .type dd.cur{
+	background: #E60000;
+	color: #fff;
+}
+.pc .pcR .income .incomeList{
+	margin: 20px 0;
+	width: 100%;
+}
+.pc .pcR .income .incomeList th{
+	font-weight: normal;
+	color: #333333;
+	background: #ededed;
+	width: 147px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	border: 1px solid #fff;
+}
+/*无交易数据时*/
+.pc .pcR .income .incomeList td{
+	text-align: center;
+	padding: 20px 0;
+	background: #f4f4f4;
+}
+/*有交易数据时*/
+/*.pc .pcR .income .incomeList td{
+	background: #f4f4f4;
+	width: 137px;
+	height: 35px;
+	padding: 5px;
+	line-height: 35px;
+	text-align: center;
+	border: 1px solid #fff;
+}*/
+
+
 
 
 

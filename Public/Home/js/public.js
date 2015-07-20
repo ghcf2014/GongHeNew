@@ -225,7 +225,23 @@ $(function(){
 
 
 
+//个人中心-充值提现页-充值与提现切换
+$(function(){
+	$('.pc .pcR .pcRTit .cztxTit li').each(function(index,element){
+		$(element).click(function(){
+			$('.pc .pcR .pcCzTx .tab').eq($(element).index()).show().siblings().hide();
+			$(element).addClass('cur').siblings().removeClass('cur');
+		});
+	});
+})
 
+
+
+//日期选择
+$(function() {
+	$( "#datepicker" ).datepicker();
+	$( "#datepicker2" ).datepicker();
+});
 
 
 
