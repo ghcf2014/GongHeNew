@@ -7,6 +7,7 @@ return array(
 	'DB_PWD'=>'root',//数据库密码
 	'DB_NAME'=>'gonghe_new',//数据库表名
 	'DB_PORT'=>'3306',//数据库端口
+	'DB_PREFIX' => 'gonghe_', // 数据库表前缀
 
     'DEFAULT_THEME'         =>  'themes',	// 默认模板主题名称
     'DEFAULT_MODULE'        =>  'Home',  // 默认模块

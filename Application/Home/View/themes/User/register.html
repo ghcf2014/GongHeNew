@@ -11,15 +11,15 @@
 			<!--registerBot start-->
 			<div class="registerBot">
 				<!--registerBotL start-->
-				<form action="{:U('User/login')}" method="post" id="form">
+				<form action="{:U('toRegist')}" method="post" id="form">
 					<div class="registerBotL">
 						<dl>
 							<dt><b>*</b> 用户名</dt>
-							<dd><input type="text" name="user_name" id="username" value="" /></dd>
+							<dd><input type="text" name="username" id="username" value="" /></dd>
 						</dl>
 						<dl>
 							<dt><b>*</b> 登录密码</dt>
-							<dd><input type="password" name="user_pass" id="userpass" value="" /></dd>
+							<dd><input type="password" name="password" id="userpass" value="" /></dd>
 						</dl>
 						<dl>
 							<dt><b>*</b> 确认密码</dt>
@@ -27,11 +27,13 @@
 						</dl>
 						<dl>
 							<dt><b>*</b> 手机号码</dt>
-							<dd><input type="text" name="user_phone" id="userphone" value="" /></dd>
+							<dd><input type="text" name="mobile" id="userphone" value="" /></dd>
 						</dl>
 						<dl>
-							<dt><b>*</b> 手机验证码</dt>
-							<dd><input type="text" name="verify" id="verify" value="" style="width: 185px;" /><input type="image" src="__PUBLIC__/Home/images/registerYzm.gif" class="registerYzm" /></dd>
+<!--							<dt><b>*</b> 手机验证码</dt>
+ 							<dd><input type="text" name="verify" id="verify" value="" style="width: 185px;" /><input type="image" src="__PUBLIC__/Home/images/registerYzm.gif" class="registerYzm" /></dd> -->
+ 							<dt><b>*</b> 验证码</dt>
+							<dd id="captcha-container"  ><input type="text" name="verify" id="verify" value="" style="width: 185px;" /><img type="image" src="{:U('User/verify',array())}" class="registerYzm" id="captcha-container" width="80" height="40" /></dd>
 						</dl>
 						<dl>
 							<dt>推荐人</dt>
@@ -55,7 +57,19 @@
 		<!--注册内容	register end-->
 <script type="text/javascript">
 	$('#re_sub').click(function(){
-		var name=$('#').val();
+		$('#form').submit();
+	});
+</script>
+<script type="text/javascript">
+	var captcha_img = $('#captcha-container').find('img')  
+	var verifyimg = captcha_img.attr("src");  
+	captcha_img.attr('title', '点击刷新');  
+	captcha_img.click(function(){  
+	    if( verifyimg.indexOf('?')>0){  
+	        $(this).attr("src", verifyimg+'&random='+Math.random());  
+	    }else{  
+	        $(this).attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());  
+	    }  
 	});
 </script>
 	</block>

@@ -74,7 +74,7 @@
 					</div>
 					<div class="loginB">
 						<!--用户名-->
-						<form action="{:U('User/index')}" method="post" id="form">
+						<form action="{:U('User/login')}" method="post" id="formlogin">
 							<dl>
 								<dt><img src="__PUBLIC__/Home/images/loginHead.gif"/></dt>
 								<dd><input type="text" name="username" id="name" value="" placeholder="请输入用户名"/></dd>
@@ -85,14 +85,13 @@
 								<dd><input type="password" name="password" id="pass" value="" placeholder="请输入密码"/></dd>
 							</dl>
 							<!--验证码-->
-							<dl>
+<!-- 							<dl>
 								<dt><img src="__PUBLIC__/Home/images/loginYzm.gif"/></dt>
 								<dd id="captcha-container">
 								<input name="verify" width="50%" height="50" class="yzm" placeholder="验证码" type="text">
   								<img alt="验证码" src="{:U('User/verify',array())}" title="点击刷新">
-								<!-- <input type="text" name="verify" id="verify" value="" placeholder="请输入验证码" class="yzm"/><img id="user-verify" src="{:U('User/verify')}" title="点击刷新验证码" > -->
 								</dd>
-							</dl>
+							</dl> -->
 							<input type="button" id="subbt" value="" class="loginBtn"/>
 						</form>
 						
@@ -108,7 +107,7 @@
 		var name=$('name').val();
 		var pass=$('pass').val();
 		var verify=$('verify').val();
-		$('#form').submit();
+		$('#formlogin').submit();
 	});
 </script>
 <script type="text/javascript">

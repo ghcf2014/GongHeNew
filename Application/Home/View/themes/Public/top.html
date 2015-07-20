@@ -3,11 +3,19 @@
 		<div class="barOut">
 			<div class="bar">
 				<!--barLeft start-->
+				<if condition="is_login()">
+				<div class="barLeft">
+					<p>欢迎来到工合财富！</p>
+					<a href="{:U('User/index')}">Hi, {:get_username()}</a>
+					<a href="{:U('User/logout')}" class="ZC">|安全退出</a>
+				</div>
+				<else/>
 				<div class="barLeft">
 					<p>欢迎来到工合财富！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请</p>
 					<a href="javascript:;" class="DL">[ 登录 ]</a>
 					<a href="{:U('User/register')}" class="ZC">[ 注册 ]</a>
 				</div>
+				</if>
 				<!--barLeft end-->
 				
 				<!--barRight start-->

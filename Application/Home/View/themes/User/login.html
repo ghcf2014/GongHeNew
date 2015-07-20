@@ -2,26 +2,28 @@
 		
 		<!--登录		log	start-->
 		<div class="logO">
+		<form action="{:U('login')}" method="post" id="form">
 			<div class="log">
 				<h3>登&nbsp;&nbsp;录</h3>
 				<!--用户名-->
 				<dl>
 					<dt><img src="__PUBLIC__/Home/images/loginHead.gif" width="35" height="35"/></dt>
-					<dd><input type="text" name="" id="" value="" placeholder="请输入用户名"/></dd>
+					<dd><input type="text" name="username" id="" value="" placeholder="请输入用户名"/></dd>
 				</dl>
 				<!--密码-->
 				<dl>
 					<dt><img src="__PUBLIC__/Home/images/loginPassword.gif" width="35" height="35"/></dt>
-					<dd><input type="password" name="" id="" value="" placeholder="请输入密码"/></dd>
+					<dd><input type="password" name="password" id="" value="" placeholder="请输入密码"/></dd>
 				</dl>
 				<!--验证码-->
-				<dl>
+<!-- 				<dl>
 					<dt><img src="__PUBLIC__/Home/images/loginYzm.gif" width="35" height="35"/></dt>
-					<dd><input type="text" name="" id="" value="" placeholder="请输入验证码" class="yzm"/><img src="__PUBLIC__/Home/images/loginYzmPic.gif" width="70px" height="33px"/></dd>
-				</dl>
-				<input type="button" id="" value="登&nbsp;&nbsp;录" class="logBtn"/>
+					<dd id="captcha-container"><input type="text" name="verify" id="" value="" placeholder="请输入验证码" class="yzm"/><img src="{:U('User/verify',array())}" width="70px" height="33px"/></dd>
+				</dl> -->
+				<input type="submit" id="" value="登&nbsp;&nbsp;录" class="logBtn"/>
 				<p><a href="javascript:;" style="color: #E60000;">忘记密码？</a> | <a href="javascript:;">立即注册</a></p>
 			</div>
+		</form>
 			<div class="logR">
 				<!--背景图部分-->
 				<ul>
@@ -37,6 +39,17 @@
 
 
 
-
+<script type="text/javascript">
+	var captcha_img = $('#captcha-container').find('img')  
+	var verifyimg = captcha_img.attr("src");  
+	captcha_img.attr('title', '点击刷新');  
+	captcha_img.click(function(){  
+	    if( verifyimg.indexOf('?')>0){  
+	        $(this).attr("src", verifyimg+'&random='+Math.random());  
+	    }else{  
+	        $(this).attr("src", verifyimg.replace(/\?.*$/,'')+'?'+Math.random());  
+	    }  
+	});
+</script>
 
 	</block>
