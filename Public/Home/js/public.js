@@ -127,6 +127,7 @@ $(function(){
 $(function(){
 	$('.con .conL .proList .proListTit li').each(function(index,element){
 		$(element).click(function(){
+			$(element).addClass('cur').siblings().removeClass('cur')
 			$('.con .conL .proList .proListCon .tab').eq($(element).index()).show().siblings().hide();
 		});
 	});
@@ -134,7 +135,7 @@ $(function(){
 
 
 
-//登录
+//弹窗-登录
 $(function(){
 	$('.bar .barLeft .DL').click(function(){
 		$('.loginO').show();
@@ -144,6 +145,18 @@ $(function(){
 	});
 })
 
+
+
+//注册
+//$(function(){
+//      $('.register .registerBot .registerBotL p .registerChe').bind("change",function() {
+//         if($(this).is(':checked')){
+//              $('.register .registerBot .registerBotL .registerBtn').prop( "disabled", false);
+//         }else{
+//              $('.register .registerBot .registerBotL .registerBtn').prop( "disabled", true);
+//         }
+//      });          
+//})
 
 
 
@@ -187,15 +200,28 @@ $(function(){
 
 
 
-
-
-
-
-
-
-
-
-
+//新手指南
+$(function(){
+	//tab	切换 
+	$('.guideTop li').each(function(index,element){
+		$(element).click(function(){
+			$('.guideCon .tab').eq($(element).index()).show().siblings().hide();
+			$(element).addClass('cur').siblings().removeClass('cur')
+		});
+	});
+	//内部问题切换
+	$('.guideCon .security li').each(function(index,element){
+		$(element).click(function(){
+			$(element).children('p').toggle();
+		});
+	});
+	
+	$('.guideCon .question li').each(function(index,element){
+		$(element).click(function(){
+			$(element).children('p').toggle();
+		});
+	});
+})
 
 
 

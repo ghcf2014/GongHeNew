@@ -6,6 +6,22 @@ a{color: #999999; text-decoration: none;}
 a:hover{color: #e60000; text-decoration: none;}
 
 
+
+/*--------------------
+bar   		快捷通道
+nav     	导航栏
+ban     	轮播图
+notice  	网站公告（定位在轮播图上的公告）
+data    	平台数据显示
+con     	首页内容
+prolist 	首页产品列表
+
+
+
+---------------------*/
+
+
+
 /*-----------------------首页--------------------------*/
 /*-barOut-*/
 .barOut{width: 100%; height: 30px; background: #f2f2f2;}
@@ -226,19 +242,12 @@ a:hover{color: #e60000; text-decoration: none;}
 
 /*-banquan-*/
 .bq{width: 100%; height: 60px; background: #434343; text-align: center; line-height: 60px; color: #b5b5b5; font-size: 14px;}
+/*------------------------------------------------------------------------------*/
 
 
 
 
-
-
-
-
-
-
-
-
-/*---------------------------登录------------------------------------------------*/
+/*---------------------------弹窗---------登录------------------------------------------*/
 .loginO{width: 100%; height: 100%;  position: absolute; top: 0px; left: 0px; z-index: 100; display: none;}
 .login{width: 640px; height: 524px; background: rgba(0,0,0,0.2); box-shadow: 7px 5px 10px #999; padding: 12px; margin: 200px auto 0;}
 .loginIn{width: 640px; height: 524px; background: #fff;}
@@ -256,6 +265,16 @@ a:hover{color: #e60000; text-decoration: none;}
 .loginIn .loginB .loginBtn{width: 360px; height: 45px; background: url(../images/loginBtn.gif) no-repeat; margin: auto; display: block;}
 .loginIn .loginB p{text-align: center; line-height: 28px;}
 
+
+
+
+
+
+
+
+
+
+
 /*------------------------登录页---------------------------------*/
 .logO{width: 1000px; height: auto; margin: 30px auto 60px; overflow: hidden;}
 .log{ float: left; width: 300px; height: auto; border: 1px solid #eee; background: #fff; padding-bottom: 20px;}
@@ -272,6 +291,14 @@ a:hover{color: #e60000; text-decoration: none;}
 .logR{float: right; width: 660px; height: auto; }
 .logR ul{position: relative; width: 100%; height: 330px;}
 .logR ul li{width: 660px;height: 330px;position: absolute;}
+
+
+
+
+
+
+
+
 
 
 
@@ -301,6 +328,14 @@ a:hover{color: #e60000; text-decoration: none;}
 .register .registerBot .registerBotR{float: right; width: 450px; height: 400px; background: url(../images/registerBotR.png) no-repeat left 40px;}
 .register .registerBot .registerBotR p{font-size: 18px; line-height: 32px; margin: 75px 0 0 235px;}
 .register .registerBot .registerBotR p a{color: #E60000;text-decoration: underline;}
+
+
+
+
+
+
+
+
 
 
 
@@ -353,8 +388,17 @@ a:hover{color: #e60000; text-decoration: none;}
 .prod .prodCon ul li .prodConBtn{width: 120px; height: 30px; line-height: 30px; color: #E60000; border: 1px solid #E60000; border-radius: 6px; background: rgba(255,255,255,0); text-align: center; cursor: pointer;}
 /*page*/
 .page {width: 1140px; height: auto; margin:0 auto 50px; overflow: hidden;}
-.page ul{float: right; overflow: hidden; width: 350px;}
+.page ul{float: right; overflow: hidden; width: 430px;}
 .page ul li{float: left; width: auto; padding: 8px; margin-left: 10px; background: #fff; border: 1px solid #eee;}
+
+
+
+
+
+
+
+
+
 
 
 /*--------------------转让中心----------------------------------------------------------*/
@@ -391,6 +435,7 @@ a:hover{color: #e60000; text-decoration: none;}
 .atto .attoCon ul li .out .in{width: 26.7%; height: 8px; float: left; background: #E60000; border-radius:6px;}
 .atto .attoCon ul li strong{font-weight: 100; float: left; line-height: 12px;}
 .atto .attoCon ul li .prodConBtn{width: 120px; height: 30px; line-height: 30px; color: #E60000; border: 1px solid #E60000; border-radius: 6px; background: rgba(255,255,255,0); text-align: center; cursor: pointer;}
+
 
 
 
@@ -475,4 +520,100 @@ a:hover{color: #e60000; text-decoration: none;}
 
 
 
- 
+
+/*--------------新手指南-----------------------------------------------*/
+.guide{width: 1140px; height: auto; padding: 40px 0; margin: 0 auto;}
+/*guideTop*/
+.guideTop{overflow: hidden;}
+.guideTop li{width: 140px; height: 40px; border: 1px solid #eee; margin-right: 20px; background: #fff; float: left; font-size: 18px; line-height: 40px; text-align: center; cursor: pointer;}
+.guideTop li.cur{border-bottom: 1px solid #fff; color: #E60000;}
+/*guideCon*/
+.guideCon{width: 1070px; height: auto; padding: 35px; background: #fff; border: 1px solid #eee;   margin-top: -1px;}
+/*新手指引*/
+.guideCon .new li{line-height: 40px; font-size: 14px; }
+.guideCon .new li a{color: #E60000; padding: 0 5px;}
+.guideCon .new li a:hover{text-decoration: underline;}
+.guideCon .new li b{ color: #E60000; font-weight: normal;}
+.guideCon .new li.one{background: url(../images/howtoregister.png) no-repeat; width: 1036px; height: 270px; padding: 60px 0 0 30px;}
+.guideCon .new li.two{background: url(../images/authenticate.png) no-repeat; width: 1036px; height: 275px; padding: 60px 0 0 30px;}
+..guideCon .new li p.three{background: url(../images/howtoPurchase.png) no-repeat; width: 1036px; height: 320px; padding: 35px 0 0 30px;}
+.guideCon .new li.four{background: url(../images/increase.png) no-repeat; width: 1036px; height: 200px; padding: 60px 0 0 30px;}
+.guideCon .new li.five{background: url(../images/order.png) no-repeat; width: 1036px; height: 280px; padding: 60px 0 0 30px;}
+.guideCon .new li.six{background: url(../images/Piggybank.png) no-repeat; width: 1036px; height: 300px; padding: 60px 0 0 30px;}
+/*安全保障*/
+.guideCon .security li{width: 1070px; height: auto; min-height: 60px; border-bottom: 1px solid #eee;}
+.guideCon .security li h3{font-weight: normal; font-size: 16px; line-height: 60px;  padding-left: 20px; cursor: pointer;}
+.guideCon .security li p{font-weight: normal; font-size: 14px; line-height: 28px;  padding:20px; display: none;}
+/*常见问题*/
+.guideCon .question li{width: 1070px; height: auto; min-height: 60px; border-bottom: 1px solid #eee;}
+.guideCon .question li h3{font-weight: normal; font-size: 16px; line-height: 60px;  padding-left: 20px; cursor: pointer;}
+.guideCon .question li p{font-weight: normal; font-size: 14px; line-height: 28px;  padding:20px; display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
