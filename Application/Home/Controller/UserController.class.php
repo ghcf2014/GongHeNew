@@ -18,11 +18,6 @@ class UserController extends Controller {
     $Verify->entry(0);
   }
   public function login($username = '', $password = '', $verify = '',$email = ''){
-    // 检查验证码  
-    // $verify = I('param.verify','');  
-    // if(!check_verify($verify)){  
-    //     $this->error("亲，验证码输错了哦！",$this->site_url,9);  
-    // }
     /* 获取用户数据 */
     if(IS_POST){ //登录验证
     // /* 检测验证码 */
@@ -37,10 +32,28 @@ class UserController extends Controller {
     $user = $user->where($map)->find();
       /* 验证用户密码 */
       if(md5($password) === $user['user_pass']){
-        //更新用户登录信息
+        
         if(!empty($user['id']))session('user_auth',$user['id']);
         if(!empty($user['id']))session('user_auth_sign',$user['id']);
         //登录成功，返回用户ID
+        //更新用户登录信息
+        $userlog = M('member_loginlog');
+        $datalog = array(
+          'uid' => $user['id'],
+          'add_time' => time(),
+          'add_ip'   => get_client_ip()
+          );
+        $userlog->add($datalog);
+        //消息提醒
+        $usermsg = M('member_massage');
+        $datamsg = array(
+          'uid' => $user['id'],
+          'add_time' => time(),
+          'add_ip'   => get_client_ip(),
+          'title'   => '登陆提醒',
+          'content'   => '发生时间'.date('Y-m-d H:i:s').'',
+          );
+        $usermsg->add($datamsg);
         $this->success ('登陆成功，欢迎回来！','Index');
       } else {
         $this->error('密码错误！'); //密码错误
@@ -97,6 +110,19 @@ class UserController extends Controller {
     } else {
       $this->redirect('User/login');
     }
+  }
+  public function msglist(){
+    $id=is_login();
+    $user = M('member_massage');
+    $date = $user->where(array('uid' => $id))->select();
+    $this->assign('conn', $date);
+    $this->display();
+  }
+  public function msgshow($id=0){
+    $user = M('member_massage');
+    $date = $user->where(array('id' => $id))->find($id);
+    $this->assign('conn', $date);
+    $this->display();
   }
 
 }

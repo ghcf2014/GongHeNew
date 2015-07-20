@@ -1,0 +1,88 @@
+	<block name="body"><extend name="Base/common"/>
+		
+		<!--个人中心  	PC start-->
+		<div class="pc">
+			<!--最顶部图片	pcPic start-->
+			<div class="pcPic">
+				<img src="__PUBLIC__/Home/images/pcPic.gif"/>
+			</div>
+			<!--最顶部图片	pcPic end-->
+			<!--左边栏	pcL start-->
+			<div class="pcL">
+				<!--资产管理-->
+				<ul>
+					<li><h4>资产管理</h4></li>
+					<li><a href="javascript:;">资产详情</a></li>
+					<li><a href="javascript:;">充值提现</a></li>
+					<li><a href="javascript:;">资金统计</a></li>
+					<li><a href="javascript:;">投资收益</a></li>
+				</ul>
+				
+				<!--安全中心-->
+				<ul>
+					<li><h4 style="background: url(__PUBLIC__/Home/images/pcLIcons.png) no-repeat 15px -40px;">安全中心</h4></li>
+					<li><a href="javascript:;">认证管理</a></li>
+					<li><a href="javascript:;">密码管理</a></li>
+				</ul>
+				
+				<!--产品中心-->
+				<ul>
+					<li><h4 style="background: url(__PUBLIC__/Home/images/pcLIcons.png) no-repeat 15px -80px;">产品中心</h4></li>
+					<li><a href="javascript:;">交易记录</a></li>
+					<li><a href="javascript:;">转让记录</a></li>
+				</ul>
+				
+				<!--消息中心-->
+				<ul>
+					<li><h4 style="background: url(__PUBLIC__/Home/images/pcLIcons.png) no-repeat 15px -120px;">消息中心</h4></li>
+					<li><a href="javascript:;">基本信息</a></li>
+					<li><a href="javascript:;">消息通知</a></li>
+					<li><a href="javascript:;">通知设置</a></li>
+				</ul>
+				
+				<!--推广管理-->
+				<ul>
+					<li><h4 style="background: url(__PUBLIC__/Home/images/pcLIcons.png) no-repeat 15px -160px;">推广管理</h4></li>
+					<li><a href="javascript:;">友情推广</a></li>
+					<li><a href="javascript:;">推广列表</a></li>
+					<li><a href="javascript:;">我的奖励</a></li>
+				</ul>
+			</div>
+			<!--左边栏	pcL end-->
+			
+			<!--双击更换头像-->
+			<div class="assDet01TC">
+				<div class="assDet01TCIn">
+					<p>本地图片</p>
+					<div class="inp">
+						<input type="text" id="" value="请选择图片" />
+						<input type="button" id="" value="上传本地文件" />
+						<input type="file" name="" id="" value="" />
+					</div>
+					<div class="btn">
+						<input type="button" id="" value="上&nbsp;传" />
+						<input type="button" id="" value="取&nbsp;消" class="closeBtn"/>
+					</div>
+				</div>
+			</div>
+			
+			<!--右边内容		pcR start-->
+			<div class="pcR">
+				<!--右边内容标题		pcRTit start-->
+				<div class="pcRTit">消息</div>
+				<!--右边内容标题		pcRTit end-->
+				
+				<!--资产详情		AssetDetails-->
+				<!--assDet01	start-->
+				<div>
+				    <ul>
+					    <volist name='conn' id='vo'>
+							<li><a href="{:U('User/msgshow?id='.$vo['id'])}">{$vo.title}</a></li>
+						</volist>
+					</ul>
+				</div>
+			</div>
+			<!--右边内容		pcR end-->
+		</div>
+		<!--个人中心  	PC end-->
+	</block>

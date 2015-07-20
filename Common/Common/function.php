@@ -19,6 +19,11 @@ function is_login() {
 		return $user;
 	}
 }
+function is_msg() {
+	$map['uid'] = session ( 'user_auth' );
+	$name = M ( 'member_massage' )->where($map)->count();
+	return $name;
+}
 /**
  * 根据用户ID获取用户名
  *
