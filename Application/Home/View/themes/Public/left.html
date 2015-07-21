@@ -1,13 +1,19 @@
 	<block name="left"><extend name="Base/common"/>
-					<!--左边栏	pcL start-->
+
+			<!--最顶部图片	pcPic start-->
+			<div class="pcPic">
+				<img src="__PUBLIC__/Home/images/pcPic.gif"/>
+			</div>
+			<!--最顶部图片	pcPic end-->
+			<!--左边栏	pcL start-->
 			<div class="pcL">
 				<!--资产管理-->
 				<ul>
 					<li><h4>资产管理</h4></li>
-					<li><a href="javascript:;">资产详情</a></li>
-					<li><a href="javascript:;">充值提现</a></li>
-					<li><a href="javascript:;">资金统计</a></li>
-					<li><a href="javascript:;">投资收益</a></li>
+					<li><a href="{:U('User/index')}">资产详情</a></li>
+					<li><a href="{:U('Property/withdraw')}">充值提现</a></li>
+					<li><a href="{:U('Property/moneyall')}">资金统计</a></li>
+					<li><a href="{:U('Property/asset_income')}">投资收益</a></li>
 				</ul>
 				
 				<!--安全中心-->
@@ -41,4 +47,5 @@
 				</ul>
 			</div>
 			<!--左边栏	pcL end-->
+					
 	</block>

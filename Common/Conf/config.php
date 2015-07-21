@@ -10,7 +10,7 @@ return array(
 	'DB_PREFIX' => 'gonghe_', // 数据库表前缀
 
     'DEFAULT_THEME'         =>  'themes',	// 默认模板主题名称
-    'DEFAULT_MODULE'        =>  'Admin',  // 默认模块
+    'DEFAULT_MODULE'        =>  'Home',  // 默认模块
 
 	'__TMPL__'      =>  APP_TMPL_PATH,  // 项目模板目录
 	'__ROOT__'      =>  __ROOT__,       // 当前网站地址

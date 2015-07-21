@@ -1,0 +1,75 @@
+	<block name="body">
+		<extend name="Base/common"/>
+					<!--右边内容		pcR start-->
+			<div class="pcR">
+				<!--右边内容标题		pcRTit start-->
+				<div class="pcRTit">投资收益</div>
+				<!--右边内容标题		pcRTit end-->
+				
+				<!--右边内容		投资收益		start-->
+				<div class="income">
+					<!--总收益-->					
+					<table border="0" cellspacing="0" cellpadding="0" class="allIncome">
+						<tr>
+							<th>总收益（元）</th>
+							<th>已收回总收益（元）</th>
+							<th>已收奖励（元）</th>
+							<th>其他收益（元）</th>
+						</tr>
+						<tr>
+							<td>0.00</td>
+							<td>0.00</td>
+							<td>0.00</td>
+							<td>0.00</td>
+						</tr>
+					</table>
+				
+					<!--根据搜索条件查找-->
+					<dl class="date">
+						<dt>交易日期</dt>
+						<dd class="cur" style="cursor: pointer;"><p>全部</p></dd>
+						<dd style="cursor: pointer;"><p>最近七天</p></dd>
+						<dd class="choose">
+							<p>选择日期</p>
+							<input type="text" id="datepicker" value="" readonly="readonly"/>
+							<span>-</span>
+							<input type="text" id="datepicker2" value="" readonly="readonly"/>
+							<input type="button" id="" value="搜索" />
+						</dd>
+					</dl>
+					<dl class="type">
+						<dt>类型</dt>
+						<dd class="cur">全部</dd>
+						<dd>购买</dd>
+						<dd>转让</dd>
+						<dd>赎回</dd>
+					</dl>			
+					<table border="0" cellspacing="0" cellpadding="0" class="incomeList">
+						<tr>
+							<th>交易时间</th>
+							<th>交易类型</th>
+							<th>交易详情</th>
+							<th>收入（元）</th>
+							<th>支出（元）</th>
+							<th>状态</th>
+						</tr>
+						<!--无交易数据时-->
+						<tr>
+							<td colspan="6"><img src="__PUBLIC__/Home/images/zanwujiaoyishuju.png"/></td>
+						</tr>
+						<!--有交易数据时
+						<tr>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+						</tr>
+						-->
+					</table>
+				</div>
+				<!--右边内容		资金统计		end-->				
+			</div>
+			<!--右边内容		pcR end-->
+	</block>

@@ -124,5 +124,10 @@ class UserController extends Controller {
     $this->assign('conn', $date);
     $this->display();
   }
-
+  public function withdraw(){
+    $this->display('User/withdraw');
+  }
+  public function moneyall(){
+    $this->display('User/moneyall');
+  }
 }
