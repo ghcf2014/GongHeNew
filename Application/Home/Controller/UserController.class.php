@@ -4,6 +4,7 @@ use Think\Controller;
 use Home\Model\UserModel;
 class UserController extends Controller {
   public function index(){
+    is_login() || $this->redirect('User/login');
     $id=is_login();
     $user = M('member_user');
     $date = $user->where(array('id' => $id))->find($id);
