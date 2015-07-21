@@ -2,6 +2,9 @@
 namespace Admin\Controller;
 use Think\Controller;
 class IndexController extends Controller {
+	public function _before_index(){
+		$this->redirect('User/login');
+	}
     public function index(){
         $this->display('Index/index');
     }
