@@ -239,9 +239,97 @@ $(function(){
 
 //日期选择
 $(function() {
+//	alert(1);
 	$( "#datepicker" ).datepicker();
 	$( "#datepicker2" ).datepicker();
 });
+
+
+
+//个人中心-认证管理
+$(function() {
+//	alert(1);
+	var Dd = $('.pc .pcR .auth .dd02');
+	//实名认证
+	if( Dd.eq(0).prev('dd').html() == '未认证'){
+		Dd.eq(0).children('a').click(function(){
+			$('.pc .pcR .auth .realN').toggle();
+		});				
+	}	
+	
+	//绑定邮箱
+	if( Dd.eq(1).prev('dd').html() == '未设置'){
+		Dd.eq(1).children('a').click(function(){
+			$('.pc .pcR .auth .bindingM').toggle();
+		});	
+	}
+	else{
+		//更换邮箱
+		Dd.eq(1).children('a').html('更换绑定邮箱');
+		Dd.eq(1).children('a').click(function(){
+			$('.pc .pcR .auth .replaceM').toggle();
+		});	
+	}
+	
+	//绑定银行卡
+	if( Dd.eq(2).prev('dd').html() == '未设置'){
+		Dd.eq(2).children('a').click(function(){
+			$('.pc .pcR .auth .boundBc').toggle();
+		});	
+	}
+	else{
+		
+		Dd.eq(2).children('a').html(' ');
+	}
+	
+	//更换绑定手机
+	
+	Dd.eq(3).children('a').click(function(){
+		$('.pc .pcR .auth .changePn').toggle();
+	});	
+	
+});
+
+
+
+//个人中心-密码管理
+$(function() {
+//	alert(1);
+	var Dd = $('.pc .pcR .password .dd02');
+	//修改登录密码
+	Dd.eq(0).children('a').click(function(){
+		$('.pc .pcR .password .loginP').toggle();
+	});					
+	
+	//设置交易密码
+	if( Dd.eq(1).prev('dd').html() == '未设置'){
+		Dd.eq(1).children('a').click(function(){
+			$('.pc .pcR .password .setTranPass').toggle();
+		});	
+	}
+	else{
+		//修改交易密码
+		Dd.eq(1).html('<a href="javascript:;" class="xg">修改</a> | <a href="javascript:;" class="zh">找回</a>');
+		$('.pc .pcR .password .dd02 .xg').click(function(){
+			$('.pc .pcR .password .modTranPass').toggle();
+			$('.pc .pcR .password .reTranPass').hide();
+			$('.pc .pcR .password .reTranPass2').hide();
+		});	
+		//找回交易密码
+		$('.pc .pcR .password .dd02 .zh').click(function(){
+			$('.pc .pcR .password .reTranPass').toggle();
+			$('.pc .pcR .password .modTranPass').hide();
+			$('.pc .pcR .password .reTranPass .btn').click(function(){
+				$('.pc .pcR .password .reTranPass').hide();
+				$('.pc .pcR .password .reTranPass2').toggle();
+			});
+		});	
+	}
+	
+});
+
+
+
 
 
 

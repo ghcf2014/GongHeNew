@@ -729,7 +729,7 @@ a:hover{color: #e60000; text-decoration: none;}
 	margin: 30px 0 0 80px;
 	cursor: pointer;
 }
-/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++++++++充值提现结束++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 
@@ -806,7 +806,7 @@ a:hover{color: #e60000; text-decoration: none;}
 	width: 221px;
 	text-align: center;
 }
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++资金统计结束++++++++++++++++++++++++++++++++++++++++++*/
 
 
 
@@ -964,6 +964,7 @@ a:hover{color: #e60000; text-decoration: none;}
 	border: 1px solid #fff;
 }*/
 
+/*+++++++++++++++++++++++++++++++++++++++++++++++++投资收益结束++++++++++++++++++++++++++++++++++++++++++*/
 
 
 
@@ -974,6 +975,285 @@ a:hover{color: #e60000; text-decoration: none;}
 
 
 
+/*--------------------个人中心的认证管理-------------------------------------*/
+.pc .pcR .auth{
+	width: 100%;
+	height: auto;
+	padding: 0 150px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #eee;
+}
+.pc .pcR .auth dl{
+	overflow: hidden;
+}
+.pc .pcR .auth dl dt{
+	float: left;
+	width: 155px;
+	height: 100px;
+	background: url(../images/verifiedNo.gif) no-repeat left center;
+	padding-left: 35px;
+	line-height: 100px;
+	font-size: 16px;
+}
+.pc .pcR .auth dl dd{
+	float: left;
+	width: 230px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 14px;
+}
+.pc .pcR .auth dl dd.dd02{
+	text-align: right;
+}
+.pc .pcR .auth dl dd b{
+	font-weight: normal;
+	color: #E60000;
+}
+.pc .pcR .auth dl dd a{
+	color: #E60000;
+}
+.pc .pcR .auth dl dd a:hover{
+	text-decoration: underline;
+}
+/*实名认证*/
+.pc .pcR .auth .realN{
+	display: none;
+	width: auto;
+	height: auto;
+	margin: auto;
+	padding: 25px 0;
+}
+.pc .pcR .auth .realN p{
+	line-height: 40px;
+	text-align: center;
+	color: #E60000;
+}
+.pc .pcR .auth .realN dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.pc .pcR .auth .realN dl dt{
+	float: left;
+	width: 20%;
+	height: 40px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 40px;
+	background: none;
+}
+.pc .pcR .auth .realN dl dd{
+	float: right;
+	width: 72%;
+	height: 40px;
+	line-height: 40px;
+}
+.pc .pcR .auth .realN dl dd input{
+	width: 200px;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #eee;
+	line-height: 32px;
+}
+.pc .pcR .auth .realN .btn{
+	width: 120px;
+	height: 30px;
+	background: #E60000;
+	color: #fff;
+	margin: 0 0 0 185px;
+	cursor: pointer;
+}
+/*绑定邮箱*/
+.pc .pcR .auth .bindingM{
+	display: none;
+	width: 100%;
+	height: auto;
+	padding: 25px 0;
+}
+.pc .pcR .auth .bindingM p{
+	line-height: 40px;
+	text-align: center;
+}
+.pc .pcR .auth .bindingM dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.pc .pcR .auth .bindingM dl dt{
+	float: left;
+	width: 20%;
+	height: 40px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 40px;
+	background: none;
+	padding-right: 15px;
+	padding-left: 0;
+}
+.pc .pcR .auth .bindingM dl dd{
+	width: 35%;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+}
+.pc .pcR .auth .bindingM dl dd input[type=text]{
+	width: 200px;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #eee;
+	line-height: 32px;
+}
+.pc .pcR .auth .bindingM dl dd .btn{
+	width: 80px;
+	height: 30px;
+	background: #E60000;
+	color: #fff;
+	cursor: pointer;
+}
+/*更换邮箱*/
+.pc .pcR .auth .replaceM{
+	display: none;
+	width: auto;
+	height: auto;
+	margin: auto;
+	padding: 25px 0;
+}
+.pc .pcR .auth .replaceM p{
+	line-height: 40px;
+	text-align: center;
+}
+.pc .pcR .auth .replaceM dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.pc .pcR .auth .replaceM dl dt{
+	float: left;
+	width: 20%;
+	height: 40px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 40px;
+	background: none;
+}
+.pc .pcR .auth .replaceM dl dd{
+	float: right;
+	width: 72%;
+	height: 40px;
+	line-height: 40px;
+}
+.pc .pcR .auth .replaceM dl dd input{
+	width: 200px;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #eee;
+	line-height: 32px;
+}
+.pc .pcR .auth .replaceM .btn{
+	width: 120px;
+	height: 30px;
+	background: #E60000;
+	color: #fff;
+	margin: 0 0 0 185px;
+	cursor: pointer;
+}
+/*绑定银行卡*/
+.pc .pcR .auth .boundBc{
+	display: none;
+	width: auto;
+	height: auto;
+	margin: auto;
+	padding: 25px 0;
+}
+.pc .pcR .auth .boundBc p{
+	line-height: 30px;
+	background: #fff2f2;
+	padding: 20px;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+.pc .pcR .auth .boundBc dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.pc .pcR .auth .boundBc dl dt{
+	float: left;
+	width: 20%;
+	height: 40px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 40px;
+	background: none;
+}
+.pc .pcR .auth .boundBc dl dd{
+	float: right;
+	width: 72%;
+	height: 40px;
+	line-height: 40px;
+}
+.pc .pcR .auth .boundBc dl dd input{
+	width: 200px;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #eee;
+	line-height: 32px;
+}
+.pc .pcR .auth .boundBc dl dd select{
+	width: 223px;
+	height: 32px;
+	padding: 0 5px;
+	border: 1px solid #eee;
+	font-size: 14px;
+}
+.pc .pcR .auth .boundBc .btn{
+	width: 120px;
+	height: 30px;
+	background: #E60000;
+	color: #fff;
+	margin: 0 0 0 185px;
+	cursor: pointer;
+}
+/*更换手机号*/
+.pc .pcR .auth .changePn{
+	display: none;
+	width: 100%;
+	height: auto;
+	padding: 25px 0;
+}
+.pc .pcR .auth .changePn dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.pc .pcR .auth .changePn dl dt{
+	float: left;
+	width: 20%;
+	height: 40px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 40px;
+	background: none;
+	padding-right: 15px;
+	padding-left: 0;
+}
+.pc .pcR .auth .changePn dl dd{
+	width: 35%;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+}
+.pc .pcR .auth .changePn dl dd input[type=text]{
+	width: 200px;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #eee;
+	line-height: 32px;
+}
+.pc .pcR .auth .changePn .btn{
+	width: 80px;
+	height: 30px;
+	background: #E60000;
+	color: #fff;
+	cursor: pointer;
+	margin: 0 0 0 147px;
+}
+/*++++++++++++++++++++++++++++++++个人中心-安全中心-认证管理结束+++++++++++++++++++++++++++++*/
 
 
 
@@ -981,36 +1261,260 @@ a:hover{color: #e60000; text-decoration: none;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*---------------------个人中心-安全中心-密码管理-------------------------------------------*/
+.pc .pcR .password{
+	width: 100%;
+	height: auto;
+	padding: 0 150px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #eee;
+}
+.pc .pcR .password dl{
+	overflow: hidden;
+}
+.pc .pcR .password dl dt{
+	float: left;
+	width: 155px;
+	height: 100px;
+	background: url(../images/passwordYes.gif) no-repeat left center;
+	padding-left: 35px;
+	line-height: 100px;
+	font-size: 16px;
+}
+.pc .pcR .password dl dd{
+	float: left;
+	width: 230px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 14px;
+}
+.pc .pcR .password dl dd.dd02{
+	text-align: right;
+}
+.pc .pcR .password dl dd b{
+	font-weight: normal;
+	color: #E60000;
+}
+.pc .pcR .password dl dd a{
+	color: #E60000;
+}
+.pc .pcR .password dl dd a:hover{
+	text-decoration: underline;
+}
+/*修改登录密码*/
+.pc .pcR .password .loginP{
+	display: none;
+	width: auto;
+	height: auto;
+	margin: auto;
+	padding: 25px 0;
+}
+.pc .pcR .password .loginP dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.pc .pcR .password .loginP dl dt{
+	float: left;
+	width: 20%;
+	height: 40px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 40px;
+	background: none;
+}
+.pc .pcR .password .loginP dl dd{
+	float: right;
+	width: 72%;
+	height: 40px;
+	line-height: 40px;
+}
+.pc .pcR .password .loginP dl dd input{
+	width: 200px;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #eee;
+	line-height: 32px;
+}
+.pc .pcR .password .loginP .btn{
+	width: 120px;
+	height: 30px;
+	background: #E60000;
+	color: #fff;
+	margin: 0 0 0 185px;
+	cursor: pointer;
+}
+/*设置交易密码*/
+.pc .pcR .password .setTranPass{
+	display: none;
+	width: auto;
+	height: auto;
+	margin: auto;
+	padding: 25px 0;
+}
+.pc .pcR .password .setTranPass dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.pc .pcR .password .setTranPass dl dt{
+	float: left;
+	width: 20%;
+	height: 40px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 40px;
+	background: none;
+}
+.pc .pcR .password .setTranPass dl dd{
+	float: right;
+	width: 72%;
+	height: 40px;
+	line-height: 40px;
+}
+.pc .pcR .password .setTranPass dl dd input{
+	width: 200px;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #eee;
+	line-height: 32px;
+}
+.pc .pcR .password .setTranPass .btn{
+	width: 120px;
+	height: 30px;
+	background: #E60000;
+	color: #fff;
+	margin: 0 0 0 185px;
+	cursor: pointer;
+}
+/*修改交易密码*/
+.pc .pcR .password .modTranPass{
+	display: none;
+	width: auto;
+	height: auto;
+	margin: auto;
+	padding: 25px 0;
+}
+.pc .pcR .password .modTranPass dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.pc .pcR .password .modTranPass dl dt{
+	float: left;
+	width: 20%;
+	height: 40px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 40px;
+	background: none;
+}
+.pc .pcR .password .modTranPass dl dd{
+	float: right;
+	width: 72%;
+	height: 40px;
+	line-height: 40px;
+}
+.pc .pcR .password .modTranPass dl dd input{
+	width: 200px;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #eee;
+	line-height: 32px;
+}
+.pc .pcR .password .modTranPass .btn{
+	width: 120px;
+	height: 30px;
+	background: #E60000;
+	color: #fff;
+	margin: 0 0 0 185px;
+	cursor: pointer;
+}
+/*找回交易密码*/
+/*第一步*/
+.pc .pcR .password .reTranPass{
+	display: none;
+	width: 100%;
+	height: auto;
+	padding: 25px 0;
+}
+.pc .pcR .password .reTranPass dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.pc .pcR .password .reTranPass dl dt{
+	float: left;
+	width: 20%;
+	height: 40px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 40px;
+	background: none;
+	padding-right: 15px;
+	padding-left: 0;
+}
+.pc .pcR .password .reTranPass dl dd{
+	width: 35%;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+}
+.pc .pcR .password .reTranPass dl dd input[type=text]{
+	width: 200px;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #eee;
+	line-height: 32px;
+}
+.pc .pcR .password .reTranPass .btn{
+	width: 80px;
+	height: 30px;
+	background: #E60000;
+	color: #fff;
+	cursor: pointer;
+	margin: 0 0 0 147px;
+}
+/*++++++++++
+/*第二步*/
+.pc .pcR .password .reTranPass2{
+	display: none;
+	width: auto;
+	height: auto;
+	margin: auto;
+	padding: 25px 0;
+}
+.pc .pcR .password .reTranPass2 dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.pc .pcR .password .reTranPass2 dl dt{
+	float: left;
+	width: 20%;
+	height: 40px;
+	text-align: right;
+	font-size: 14px;
+	line-height: 40px;
+	background: none;
+}
+.pc .pcR .password .reTranPass2 dl dd{
+	float: right;
+	width: 72%;
+	height: 40px;
+	line-height: 40px;
+}
+.pc .pcR .password .reTranPass2 dl dd input{
+	width: 200px;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #eee;
+	line-height: 32px;
+}
+.pc .pcR .password .reTranPass2 .btn{
+	width: 120px;
+	height: 30px;
+	background: #E60000;
+	color: #fff;
+	margin: 0 0 0 185px;
+	cursor: pointer;
+}
+/*++++++++++++++++++++++++++++++++个人中心-安全中心-密码管理结束+++++++++++++++++++++++++++++*/
 
 
 
