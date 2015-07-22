@@ -24,6 +24,17 @@ function is_msg() {
 	$name = M ( 'member_massage' )->where($map)->count();
 	return $name;
 }
+function is_logip() {
+	$map['uid'] = session ( 'user_auth' );
+	$name = M ( 'member_loginlog' )->order('id desc')->field( 'add_ip' )->where($map)->select();
+	return $name[1]['add_ip'];
+}
+function is_logtime() {
+	$map['uid'] = session ( 'user_auth' );
+	$name = M ( 'member_loginlog' )->order('id desc')->field( 'add_time' )->where($map)->select();
+	$name = date("Y-m-d H:i:s", $name[1]['add_time']);
+	return $name;
+}
 /**
  * 根据用户ID获取用户名
  *
@@ -42,5 +53,4 @@ function username($uid = 0) {
 	$name = M ( 'member_user' )->field ( 'user_name' )->find ($map);
 	return $name['user_name'];
 }
-
 ?>

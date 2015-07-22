@@ -6,8 +6,18 @@ class UserController extends Controller {
   public function index(){
     is_login() || $this->redirect('User/login');
     $id=is_login();
+    
+    $user_money = M('member_money');
+    $date_money = $user_money->where(array('uid' => $id))->find($id);
+    $this->assign('money', $date_money);
+
+    
+    $user_status = M('member_status');
+    $date_status = $user_status->where(array('uid' => $id))->find($id);
+    $this->assign('status', $date_status);
+
     $user = M('member_user');
-    $date = $user->where(array('id' => $id))->find($id);
+    $date = $user->where(array('uid' => $id))->find($id);
     $this->assign('conn', $date);
     $this->display('User/index');
   }
