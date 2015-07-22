@@ -1521,6 +1521,436 @@ a:hover{color: #e60000; text-decoration: none;}
 
 
 
+/*-------------------------个人中心-产品管理-----------------------------------------------*/
+/*交易记录*/
+.pc .pcR .tranRec{
+	width: 888px;
+	height: auto;
+	padding: 35px;
+}
+/*分类查找条件01*/
+.pc .pcR .tranRec .date{
+	width: 100%;
+	height: 35px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.pc .pcR .tranRec .date dt{
+	float: left;
+	width: 100px;
+	margin-right: 35px;
+	height: 35px;
+	color: #999;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+}
+.pc .pcR .tranRec .date dd{
+	float: left;
+	width: 100px;
+	height: 35px;
+	color: #999;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+}
+.pc .pcR .tranRec .date dd.cur p{
+	background: #E60000;
+	color: #fff;
+}
+.pc .pcR .tranRec .date dd.choose{
+	width: 500px;
+	float: right;
+	overflow: hidden;
+}
+.pc .pcR .tranRec .date dd.choose p{
+	float:left;
+	width: auto;
+	padding: 0 10px;
+}
+.pc .pcR .tranRec .date dd.choose input[type=text]{
+	width: 123px;
+	height: 33px;
+	float: left;
+	line-height: 33px;
+	border: 1px solid #eee;
+	margin: 0 10px;
+	padding-left: 10px;
+}
+.pc .pcR .tranRec .date dd.choose input[type=button]{
+	float: left;
+	width: 65px;
+	height: 35px;
+	background: #555;
+	color: #fff;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.pc .pcR .tranRec .date dd.choose span{
+	float: left;
+}
+/*分类查找条件02*/
+.pc .pcR .tranRec .type{
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.pc .pcR .tranRec .type dt{
+	float: left;
+	width: 100px;
+	margin-right: 35px;
+	height: 35px;
+	color: #999;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+}
+.pc .pcR .tranRec .type dd{
+	float: left;
+	width: 100px;
+	height: 35px;
+	color: #999;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+}
+.pc .pcR .tranRec .type dd.cur{
+	background: #E60000;
+	color: #fff;
+}
+/*分类查找条件03*/
+.pc .pcR .tranRec .name{
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.pc .pcR .tranRec .name dt{
+	float: left;
+	width: 100px;
+	margin-right: 35px;
+	height: 35px;
+	color: #999;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+}
+.pc .pcR .tranRec .name dd{
+	float: left;
+	width: 300px;
+	height: 35px;
+	color: #999;
+	line-height: 35px;
+	text-align: center;
+	font-size: 14px;
+	overflow: hidden;
+}
+.pc .pcR .tranRec .name dd input[type=text]{
+	float: left;
+	width: 180px;
+	padding: 0 10px;
+	border: 1px solid #eee;
+	height: 33px;
+	line-height: 32px;
+}
+.pc .pcR .tranRec .name dd .search{
+	float: left;
+	width: 85px;
+	height: 35px;
+	background: #333;
+	color: #fff;
+	cursor: pointer;
+}
+/*转让列表*/
+.pc .pcR .tranRec .tranRecordList{
+	margin: 20px 0;
+	width: 100%;
+}
+.pc .pcR .tranRec .tranRecordList th{
+	font-weight: normal;
+	color: #333333;
+	background: #ededed;
+	width: 90px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	border: 1px solid #fff;
+}
+/*无交易数据时*/
+.pc .pcR .tranRec .tranRecordList td{
+	text-align: center;
+	padding: 20px 0;
+	background: #f4f4f4;
+}
+/*有交易数据时*/
+/*.pc .pcR .tranRec .tranRecordList td{
+	background: #f4f4f4;
+	width: 80px;
+	height: 35px;
+	padding: 5px;
+	line-height: 35px;
+	text-align: center;
+	border: 1px solid #fff;
+}*/
+.pc .pcR .tranRec .recordList{
+	margin: 20px 0;
+	width: 100%;
+}
+.pc .pcR .tranRec .recordList th{
+	font-weight: normal;
+	color: #333333;
+	background: #ededed;
+	width: 112px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	border: 1px solid #fff;
+}
+/*无交易数据时*/
+.pc .pcR .tranRec .recordList td{
+	text-align: center;
+	padding: 20px 0;
+	background: #f4f4f4;
+}
+/*有交易数据时*/
+/*.pc .pcR .tranRec .recordList td{
+	background: #f4f4f4;
+	width: 102px;
+	height: 35px;
+	padding: 5px;
+	line-height: 35px;
+	text-align: center;
+	border: 1px solid #fff;
+}*/
+/*++++++++++++++++++++++++++++++++个人中心-产品管理结束+++++++++++++++++++++++++++++*/
+
+
+
+
+
+
+
+/*-------------个人中心-消息中心-------------------------------------*/
+.pc .pcR .basInf,.pc .pcR .messNoti{
+	width: 888px;
+	height: auto;
+	padding: 35px;
+}
+/*----------基本信息---------*/
+.pc .pcR .basInf dl{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.pc .pcR .basInf dl dt{
+	float: left;
+	text-align: right;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	width: 250px;
+}
+.pc .pcR .basInf dl dd{
+	float: right;
+	height: 40px;
+	overflow: hidden;
+	width: 600px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.pc .pcR .basInf dl dd label{
+	float: left;
+	width: 55px;
+}
+.pc .pcR .basInf dl dd input[type=text] , .pc .pcR .basInf dl dd .birth{
+	width: 170px;
+	height: 36px;
+	border: 1px solid #eee;
+	padding: 0 15px;
+	font-size: 16px;
+}
+.pc .pcR .basInf dl dd select{
+	float: left;
+	width: auto;
+	padding-left:  10px;
+	height: 36px;
+	border: 1px solid #eee;
+	margin-right: 10px;
+	font-size: 14px;
+	color: #555;
+}
+.pc .pcR .basInf dl dd input[type=button]{
+	width: 180px;
+	height: 45px;
+	background: #E60000;
+	color: #fff;
+	font-size: 16px;
+	line-height: 44px;
+	cursor: pointer;
+}
+/*----------消息通知---------*/
+
+.pc .pcR .messNoti dl{
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.pc .pcR .messNoti dl dt{
+	float: left;
+	text-align: center;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	width: 56px;
+	margin-right: 25px;
+}
+.pc .pcR .messNoti dl dt label{
+	overflow: hidden;
+}
+.pc .pcR .messNoti dl dt label input,.pc .pcR .messNoti dl dt label b{
+	float: left;
+	font-weight: normal;
+}
+.pc .pcR .messNoti dl dt label input{
+	margin: 10px 5px 0 0;
+}
+.pc .pcR .messNoti dl dd{
+	float: left;
+	height: 32px;
+	overflow: hidden;
+	width: auto;
+	padding: 0 10px;
+	line-height: 32px;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+}
+.pc .pcR .messNoti dl dd.cur{
+	color: #E60000;
+}
+.pc .pcR .messNoti table th{
+	height: 35px;
+	background: #ededed;
+	font-weight: normal;
+	line-height: 35px;
+	border: 1px solid #fff;
+	font-size: 14px;
+}
+.pc .pcR .messNoti table td{
+	height: auto;
+	min-height: 32px;
+	line-height: 32px;
+	border: 1px solid #eee;
+	text-align: center;
+}
+
+/*----------通知设置---------*/
+.pc .pcR .notiWay{
+	width: 958px;
+	height: auto;
+}
+.notiWay .notiWay01,.notiWay .notiWay02{
+	width: 888px;
+	height: 240px;
+	padding: 35px;
+	border-bottom: 1px solid #eee;
+}
+.notiWay .notiWay01 h4,.notiWay .notiWay02 h4{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #eee;
+	font-weight: normal;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+.notiWay .notiWay01 h4 label,.notiWay .notiWay02 h4 label{
+	float: left;
+	width: 100px;
+	overflow: hidden;
+}
+.notiWay .notiWay01 h4 p,.notiWay .notiWay02 h4 p{
+	float: left;
+	color: #E60000;
+}
+.notiWay .notiWay01 h4 label input,.notiWay .notiWay02 h4 label input,.notiWay .notiWay01 ul li label input,.notiWay .notiWay02 ul li label input{
+	float: left;
+	margin:15px 5px 0 0 ;
+}
+.notiWay .notiWay01 h4 label span,.notiWay .notiWay02 h4 label span,.notiWay .notiWay01 ul li label span,.notiWay .notiWay02 ul li label span{
+	float: left;
+}
+.notiWay .notiWay01 ul,.notiWay .notiWay02 ul,.notiWay .notiWay01 ul li label,.notiWay .notiWay02 ul li label{
+	overflow: hidden;	
+}
+.notiWay .notiWay01 ul li,.notiWay .notiWay02 ul li{
+	float: left;
+	width: auto;
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.notiWay .notiWay02{
+	border-bottom: none;
+	margin-top: 40px;
+}
+/*++++++++++++++++++++++++++++++++个人中心-消息中心结束+++++++++++++++++++++++++++++*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

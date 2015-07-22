@@ -330,6 +330,37 @@ $(function() {
 
 
 
+//个人中心-消息中心-全选-效果
+$(function(){
+	//	消息通知
+	$('#chkall').click(function () {
+        $('.pc .pcR .messNoti table input[type=checkbox]').prop('checked', $(this).is(':checked'));
+    });
+    var $subBox = $(".pc .pcR .messNoti table input[name='subBox']");
+    $subBox.click(function(){
+        $("#chkall").prop("checked",$subBox.length == $(".pc .pcR .messNoti table input[name='subBox']:checked").length ? true : false);
+    });
+   
+   //通知设置
+   $('#chkall2').click(function () {
+        $('.pc .pcR .notiWay .notiWay01 ul li input[type=checkbox]').prop('checked', $(this).is(':checked'));
+   });
+   var $subBox2 = $(".pc .pcR .notiWay .notiWay01 ul li input[name='subBox2']");
+    $subBox2.click(function(){
+        $("#chkall2").prop("checked",$subBox2.length == $(".pc .pcR .notiWay .notiWay01 ul li input[name='subBox2']:checked").length ? true : false);
+    });
+    
+   //通知方式
+   $('#chkall3').click(function () {
+        $('.pc .pcR .notiWay .notiWay02 ul li input[type=checkbox]').prop('checked', $(this).is(':checked'));
+   });
+   var $subBox3 = $(".pc .pcR .notiWay .notiWay02 ul li input[name='subBox3']");
+    $subBox3.click(function(){
+        $("#chkall3").prop("checked",$subBox3.length == $(".pc .pcR .notiWay .notiWay02 ul li  input[name='subBox3']:checked").length ? true : false);
+    });
+})
+
+
 
 
 
