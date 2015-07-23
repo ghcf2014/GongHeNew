@@ -141,4 +141,20 @@ class UserController extends Controller {
   public function moneyall(){
     $this->display('User/moneyall');
   }
+  public function jbxx(){
+    $this->display('User/jbxx');
+  }
+  public function tzsz(){
+    $this->display('User/tzsz');
+  }
+  public function xxtz(){
+    $id=is_login();
+    $user = M('member_massage');
+    $date = $user->where(array('uid' => $id))->select();
+    $this->assign('conn', $date);
+    $this->display('User/xxtz');
+  }
+  public function cpgl(){
+    $this->display('User/cpgl');
+  }
 }
