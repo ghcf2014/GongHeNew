@@ -109,6 +109,25 @@
 					<div class="proListCon">
 						<!--tab start-->
 						<div class="tab">
+						    <foreach name='pro' item='po'>
+							    <div class="list">
+									<h3>
+										<strong><a href="javascript:;">{$po.pname}</a></strong>
+										<span>发布时间：<b>{$po.add_time}</b></span>
+									</h3>
+									<ul>
+										<li><p>{$po.year_rate}</p>年化收益率( % )</li>
+										<li><p>{$po.complete}</p>锁定期限（天）</li>
+										<li><p>{$po.price}</p>发售价格( 元/块 )</li> 
+										<li>
+											<div class="num"><b>已投：245块</b><strong>可投：673块</strong></div>
+											<div class="out"><div class="in"></div></div>
+											<div class="perc">( 26.7% )</div>
+										</li> 
+										<li class="last"><a href="javascript:;" class="btn">查看详情</a></li>
+									</ul>
+								</div>
+						    </foreach>
 							<!--01-->
 							<div class="list">
 								<h3>
@@ -346,12 +365,9 @@
 					<div class="newsCon">
 						<h2><strong>网站公告</strong><a href="javascript:;">more</a></h2>
 						<ul>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
+						<foreach name='art' item='vo'>
+							<li><a href="javasvript:;">{$vo.title}</a></li>
+						</foreach>
 						</ul>
 					</div>
 				</div>
@@ -362,12 +378,9 @@
 					<div class="newsCon">
 						<h2><strong>行业新闻</strong><a href="javascript:;">more</a></h2>
 						<ul>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
-							<li><a href="javasvript:;">2015年7月1日0时注册红包更改...</a></li>
+						<foreach name='art' item='vo'>
+							<li><a href="javasvript:;">{$vo.title}</a></li>
+						</foreach>
 						</ul>
 					</div>
 				</div>

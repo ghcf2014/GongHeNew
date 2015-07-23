@@ -1,0 +1,55 @@
+	<block name="body"><extend name="Base/common"/>
+			
+			<!--右边内容		pcR start-->
+			<div class="pcR">
+				<!--右边内容标题		pcRTit start-->
+				<div class="pcRTit">消息通知</div>
+				<!--右边内容标题		pcRTit end-->
+				<!--消息通知		Message notification 	start-->
+				<div class="messNoti">
+					<dl>
+						<dt>类型</dt>
+						<dd class="cur">全部</dd>
+						<dd>购买产品通知</dd>
+						<dd>充值通知</dd>
+						<dd>提现通知</dd>
+						<dd>新产品上线通知</dd>
+						<dd>回购转让产品通知</dd>
+						<dd>站内信</dd>
+					</dl>
+					<dl>
+						<dt>
+							<label>
+								<input type="checkbox" name="" id="chkall" value="" />
+								<b>全部</b>
+							</label>
+							
+						</dt>
+						<dd>标记为已读</dd>
+						<dd>删  除</dd>
+					</dl>
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th style="width: 40px;"> </th>
+							<th style="width: 200px;">消息名称</th>
+							<th style="width: 110px;">消息类型</th>
+							<th style="width: 385px">摘要</th>
+							<th style="width: 80px;">时间</th>
+							<th style="width: 70px;">操作</th>
+						</tr>
+						<volist name='conn' id='vo'>
+						<tr>
+							<td><input type="checkbox" name="subBox" id="" value="" /></td>
+							<td>hjhfjts</td>
+							<td><a href="{:U('User/msgshow?id='.$vo['id'])}">{$vo.title}</a></td>
+							<td>fsdhjtyjgkhglfrkfr回购转让产品通知回购转让产品通知回购转让产品通知回购转让产品通知回购转让产品通知回购转让产品通知</td>
+							<td>2015-07-22</td>
+							<td><a href="{:U('User/msgshow?id='.$vo['id'])}">查看</a></td>
+						</tr>
+						</volist>
+					</table>
+				</div>
+				<!--消息通知		Message notification 	end-->                                    
+			</div>
+			<!--右边内容		pcR end-->
+</block>

@@ -1,0 +1,107 @@
+	<block name="body"><extend name="Base/common"/>
+			
+			<!--右边内容		pcR start-->
+			<div class="pcR">
+				<!--右边内容标题		pcRTit start-->
+				<div class="pcRTit">交易记录</div>
+				<!--右边内容标题		pcRTit end-->
+				
+				<!--右边内容		交易记录		Transaction Record	start-->
+				<div class="tranRec">
+					<!--根据搜索条件查找-->
+					<dl class="date">
+						<dt>交易日期</dt>
+						<dd class="cur" style="cursor: pointer;"><p>全部</p></dd>
+						<dd style="cursor: pointer;"><p>最近七天</p></dd>
+						<dd class="choose">
+							<p>选择日期</p>
+							<input type="text" id="datepicker" value="" readonly="readonly"/>
+							<span>-</span>
+							<input type="text" id="datepicker2" value="" readonly="readonly"/>
+							<input type="button" id="" value="搜索" />
+						</dd>
+					</dl>
+					<dl class="type">
+						<dt>类型</dt>
+						<dd class="cur">全部</dd>
+						<dd>购买</dd>
+						<dd>转让</dd>
+						<dd>回购</dd>
+					</dl>
+					<dl class="name">
+						<dt>产品名称</dt>
+						<dd>
+							<input type="text" name="" id="" placeholder="请输入产品名称" />
+							<input type="button" id="" value="搜 索" class="search"/>
+						</dd>
+					</dl>
+					<!--交易记录列表-->
+					<table border="0" cellspacing="0" cellpadding="0" class="recordList">
+						<tr>
+							<th>产品名称</th>
+							<th>创建时间</th>
+							<th>数量</th>
+							<th>单价</th>
+							<th>年化收益</th>
+							<th>金额</th>
+							<th>状态</th>
+							<th>操作</th>
+						</tr>
+						<!--无交易数据时-->
+						<tr>
+							<td colspan="8"><img src="images/zanwujiaoyishuju.png"/></td>
+						</tr>
+						<!--有交易数据时
+						<tr>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+						</tr>
+						-->
+					</table>
+					
+					
+					<!--当点击左边栏的“转让记录” 或 “产品管理页”的“类型”-“转让” 时 ，显示一下列表-->
+					<!--转让记录列表		Transfer records list-->
+					<!--<table border="0" cellspacing="0" cellpadding="0" class="tranRecordList">
+						<tr>
+							<th>产品名称</th>
+							<th>转让时间</th>
+							<th>转让数量</th>
+							<th>单价</th>
+							<th>年化收益</th>
+							<th>转让费</th>
+							<th>金额</th>
+							<th>实际收款</th>
+							<th>状态</th>
+							<th>操作</th>
+						</tr>-->
+						<!--无交易数据时-->
+						<!--<tr>
+							<td colspan="10"><img src="images/zanwujiaoyishuju.png"/></td>
+						</tr>-->
+						<!--有交易数据时
+						<tr>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+							<td>4</td>
+						</tr>
+						-->
+					<!--</table>-->
+				</div>
+				<!--右边内容		交易记录		end-->				
+			</div>
+			<!--右边内容		pcR end-->
+</block>

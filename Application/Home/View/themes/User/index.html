@@ -29,13 +29,13 @@
 						<dt><img src="__PUBLIC__/Home/images/pcRHead.gif" alt="用户头像" title="双击更换头像"/></dt>
 						<dd>
 							<p>{$conn.id|get_username}</p>
-							<p>上次登录：2015-07-03 16:56:33</p>
+							<p>上次登录：{:is_logtime()} ip:{:is_logip()}</p>
 							<ul>
-								<li><a href="javascript:;"><img src="__PUBLIC__/Home/images/bankNo.gif" alt="银行卡未绑定" title="银行卡未绑定"/></a></li>
-								<li><a href="javascript:;"><img src="__PUBLIC__/Home/images/verifiedNo.gif" alt="未实名认证" title="未实名认证"/></a></li>
-								<li><a href="javascript:;"><img src="__PUBLIC__/Home/images/phoneYes.gif" alt="手机已验证" title="手机已验证"/></a></li>
-								<li><a href="javascript:;"><img src="__PUBLIC__/Home/images/passwordNo.gif" alt="未设置支付密码" title="未设置支付密码"/></a></li>
-								<li><a href="javascript:;"><img src="__PUBLIC__/Home/images/emailNo.gif" alt="未绑定邮箱" title="未绑定邮箱"/></a></li>
+								<if condition="$status.live_status eq 1"><li><a href="javascript:;"><img src="__PUBLIC__/Home/images/bankYes.gif" alt="银行卡已绑定" title="银行卡已绑定"/></a></li><else/><li><a href="javascript:;"><img src="__PUBLIC__/Home/images/bankNo.gif" alt="银行卡未绑定" title="银行卡未绑定"/></a></li></if>
+								<if condition="$status.idcard_status eq 1"><li><a href="javascript:;"><img src="__PUBLIC__/Home/images/verifiedYes.gif" alt="已实名认证" title="已实名认证"/></a></li><else/><li><a href="javascript:;"><img src="__PUBLIC__/Home/images/verifiedNo.gif" alt="未实名认证" title="未实名认证"/></a></li></if>
+								<if condition="$status.phone_status eq 1"><li><a href="javascript:;"><img src="__PUBLIC__/Home/images/phoneYes.gif" alt="手机已验证" title="手机已验证"/></a></li><else/><li><a href="javascript:;"><img src="__PUBLIC__/Home/images/phoneYes.gif" alt="手机未验证" title="手机未验证"/></a></li></if>
+								<if condition="$status.video_status eq 1"><li><a href="javascript:;"><img src="__PUBLIC__/Home/images/passwordYes.gif" alt="已设置支付密码" title="已设置支付密码"/></a></li><else/><li><a href="javascript:;"><img src="__PUBLIC__/Home/images/passwordNo.gif" alt="未设置支付密码" title="未设置支付密码"/></a></li></if>
+								<if condition="$status.email_status eq 1"><li><a href="javascript:;"><img src="__PUBLIC__/Home/images/emailYes.gif" alt="已绑定邮箱" title="已绑定邮箱"/></a></li><else/><li><a href="javascript:;"><img src="__PUBLIC__/Home/images/emailNo.gif" alt="未绑定邮箱" title="未绑定邮箱"/></a></li></if>
 							</ul>
 						</dd>
 					</dl>
@@ -44,19 +44,19 @@
 				
 				<!--assDet02	start-->
 				<div class="assDet02">
-					<p>可用余额：&nbsp;&nbsp;&nbsp;&nbsp;<span>0.00</span>&nbsp;&nbsp;元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-					<p><a href="javascript:;"><img src="__PUBLIC__/Home/images/congzhiBtn.gif"/></a><a href="javascript:;"><img src="__PUBLIC__/Home/images/tixianBtn.gif"/></a></p>
+					<p>可用余额：&nbsp;&nbsp;&nbsp;&nbsp;<span>{$money.all_money|default="0.00"}</span>&nbsp;&nbsp;元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					<p><a href="{:U('Property/withdraw')}"><img src="__PUBLIC__/Home/images/congzhiBtn.gif"/></a><a href="{:U('Property/withdraw')}"><img src="__PUBLIC__/Home/images/tixianBtn.gif"/></a></p>
 				</div>
 				<!--assDet02	end-->
 				
 				<!--assDet03	start-->
 				<div class="assDet03">
 					<p>
-						<span>积分：&nbsp;&nbsp;<b>0</b>分</span>
+						<span>积分：&nbsp;&nbsp;<b>{$money.all_money|default="0.00"}</b>分</span>
 						<a href="javascript:;"><img src="__PUBLIC__/Home/images/jifenduihuanBtn.gif"/></a>
 					</p>
 					<p>
-						<span>红包：&nbsp;&nbsp;<b>0</b>元</span>
+						<span>红包：&nbsp;&nbsp;<b>{$money.all_money|default="0.00"}</b>元</span>
 						<a href="javascript:;"><img src="__PUBLIC__/Home/images/lijishiyongBtn.gif"/></a>
 					</p>
 					<table cellpadding="0" cellspacing="0">
@@ -67,22 +67,22 @@
 							<th>推广资金</th>
 						</tr>
 						<tr>
-							<td>0.00</td>
-							<td>0.00</td>
-							<td>0.00</td>
-							<td>0.00</td>
+							<td>{$money.all_money|default="0.00"}</td>
+							<td>{$money.all_money|default="0.00"}</td>
+							<td>{$money.all_money|default="0.00"}</td>
+							<td>{$money.all_money|default="0.00"}</td>
 						</tr>
 					</table>
-					<h5>总资产：&nbsp;&nbsp;&nbsp;<b>0.00</b>&nbsp;&nbsp;元</h5>
+					<h5>总资产：&nbsp;&nbsp;&nbsp;<b>{$money.all_money|default="0.00"}</b>&nbsp;&nbsp;元</h5>
 				</div>
 				<!--assDet03	end-->
 				
 				<!--assDet04	start-->
 				<div class="assDet04">
-					<p>日收益：&nbsp;&nbsp;&nbsp;<b>0.00</b>&nbsp;元</p>
-					<p>投资收益：&nbsp;&nbsp;&nbsp;<b>0.00</b>&nbsp;元</p>
-					<p>推荐奖励：&nbsp;&nbsp;&nbsp;<b>0.00</b>&nbsp;元</p>
-					<h5>总收益：&nbsp;&nbsp;&nbsp;<b>0.00</b>&nbsp;&nbsp;元</h5>
+					<p>日收益：&nbsp;&nbsp;&nbsp;<b>{$money.all_money|default="0.00"}</b>&nbsp;元</p>
+					<p>投资收益：&nbsp;&nbsp;&nbsp;<b>{$money.all_money|default="0.00"}</b>&nbsp;元</p>
+					<p>推荐奖励：&nbsp;&nbsp;&nbsp;<b>{$money.all_money|default="0.00"}</b>&nbsp;元</p>
+					<h5>总收益：&nbsp;&nbsp;&nbsp;<b>{$money.all_money|default="0.00"}</b>&nbsp;&nbsp;元</h5>
 				</div>
 				<!--assDet04	end-->
 				

@@ -4,9 +4,20 @@ use Think\Controller;
 use Home\Model\UserModel;
 class UserController extends Controller {
   public function index(){
+    is_login() || $this->redirect('User/login');
     $id=is_login();
+    
+    $user_money = M('member_money');
+    $date_money = $user_money->where(array('uid' => $id))->find($id);
+    $this->assign('money', $date_money);
+
+    
+    $user_status = M('member_status');
+    $date_status = $user_status->where(array('uid' => $id))->find($id);
+    $this->assign('status', $date_status);
+
     $user = M('member_user');
-    $date = $user->where(array('id' => $id))->find($id);
+    $date = $user->where(array('uid' => $id))->find($id);
     $this->assign('conn', $date);
     $this->display('User/index');
   }
@@ -129,5 +140,21 @@ class UserController extends Controller {
   }
   public function moneyall(){
     $this->display('User/moneyall');
+  }
+  public function jbxx(){
+    $this->display('User/jbxx');
+  }
+  public function tzsz(){
+    $this->display('User/tzsz');
+  }
+  public function xxtz(){
+    $id=is_login();
+    $user = M('member_massage');
+    $date = $user->where(array('uid' => $id))->select();
+    $this->assign('conn', $date);
+    $this->display('User/xxtz');
+  }
+  public function cpgl(){
+    $this->display('User/cpgl');
   }
 }
