@@ -2,6 +2,9 @@
 namespace Admin\Controller;
 use Think\Controller;
 class EmailController extends Controller {
+    
+	
+    
     public function mailbox(){
         $this->display('Email/mailbox');
     }
