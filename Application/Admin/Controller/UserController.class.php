@@ -4,30 +4,35 @@ use Admin\Logic\UserinfoService;
 use Think\Controller;
 
 class UserController extends Controller {
-	/*用户登录*/
+/**
+     * @author shuangshuang
+     *  2015/7/24
+     */
     public function login(){
-    	if(IS_POST){
+        if(IS_POST){
             if(isset($_SESSION['username'])==''){
                 session_start();
             }
-    		$data['username']=$_POST['username'];
-            $data['password']=$_POST['password'];
+            $username=$_POST['username'];
+            $password=$_POST['password'];
             $UserInfo=new UserinfoLogic;
-            $result=$UserInfo->login($data);
-            dump($result);
-            // if(is_null($resut)){
-            //     $this->error('账户名或密码错误');
-            // }else{
-            //     $_SESSION['username']=$_POST['username'];
-            //     $this->display('Index/index');
-            // }
-    	}else{
-    		$this->display('User/login');
-    	}
-    }
-    /*用户注册*/
+            $result=$UserInfo->login($username,$password);
+            if(empty($result)){
+                
+                $this->error('用户名或者密码错误');
+            }else{
+                $_SESSION['username']=$_POST['username'];
+                $this->redirect('Index/index');
+            }
+        }else{
+            $this->display('User/login');
+        }
+    } 
+    /*
+     * 
+     * */
     public function register(){
-    	if(IS_POST){
+        if(IS_POST){
             $param['username']=strtolower($_POST['username']);
             $param['nickname']=$_POST['nickname'];
             $param['password']=md5($_POST['password']);
@@ -41,14 +46,14 @@ class UserController extends Controller {
             }else{
                 $this->error('注册失败');
             }
-    	}else{
-    		$this->error('非法数据请求！');
-    	}
-    	
+        }else{
+            $this->error('非法数据请求！');
+        }
+        
     }
     /*用户注销账户*/
     public function logout(){
-    	unset($_SESSION['username']);
+        unset($_SESSION['username']);
         $this->redirect('User/login');
     }
 

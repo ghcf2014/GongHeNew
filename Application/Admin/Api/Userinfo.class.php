@@ -6,7 +6,7 @@ interface Userinfo{
 	//用户注册
 	public function addUserinfo($data);
 	//用户登录
-	public function login($username,$password,$verify);
+	public function login($username,$password);
 	//用户注
 	public function logout();
 

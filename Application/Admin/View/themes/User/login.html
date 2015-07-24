@@ -55,9 +55,9 @@
 <div class="login_frame"></div>
 <div class="LoginWindow">
 	<div>
-	<form action="{:U('User/login')}" method="post" onsubmit="return logchk()">
+	<form action="{:U('User/login')}" method="post">
 		<div class="login">
-			<p><input type="text" name="name" id="name" placeholder="用户名" ></p>
+			<p><input type="text" name="username" id="name" placeholder="用户名" ></p>
 			<p><input type="password" name="password" id="pass" placeholder="密码"></p>
 			<p class="login-submit"><button type="submit" class="login-button" id ="submit">登录</button></p>
 		</div>
@@ -66,7 +66,7 @@
 	<p class="registration  btn" id="regiest"><a>快速注册</a></p>
 	</div>
 </div>
-<script type="text/javascript">
+<!-- /*<script type="text/javascript">
 	$('#submit').click(function(){
 		var name=$('#name').val();
 		var pass=$('#pass').val();
@@ -84,7 +84,7 @@
 			}
 		}
 	});	
-</script>	
+</script>*/	 -->
 <div class="box">
 	<form action="{:U('User/register')}" method="post" onsubmit="return check()">
 		<div class="regiest">
