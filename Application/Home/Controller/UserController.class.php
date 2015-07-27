@@ -157,4 +157,13 @@ class UserController extends Controller {
   public function cpgl(){
     $this->display('User/cpgl');
   }
+  public function yqtg(){
+    $this->display('User/yqtg');
+  }
+  public function tglb(){
+    $this->display('User/tglb');
+  }
+  public function wdjl(){
+    $this->display('User/wdjl');
+  }
 }
