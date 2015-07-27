@@ -1,7 +1,9 @@
 <?php
 namespace Admin\Controller;
-use Admin\Logic\UserinfoService;
+use Admin\Logic\UserinfoLogic;
 use Think\Controller;
+use Think\Session\Driver;
+use Think\Cache\Driver\Memcache;
 
 class UserController extends Controller {
 /**
@@ -18,14 +20,22 @@ class UserController extends Controller {
             $UserInfo=new UserinfoLogic;
             $result=$UserInfo->login($username,$password);
             if(empty($result)){
-                
                 $this->error('用户名或者密码错误');
             }else{
-                $_SESSION['username']=$_POST['username'];
+                $_SESSION['username']=$result['username'];
+                $_SESSION['nickname']=$result['nickname'];
+                $_SESSION['id']=$result['id'];
                 $this->redirect('Index/index');
             }
         }else{
-            $this->display('User/login');
+        	$name=get_nickname();
+
+			if(!empty($name)){
+				$this->redirect("Index/index");
+			}else{
+				$this->display('User/login');
+			}
+            
         }
     } 
     /*
@@ -53,9 +63,137 @@ class UserController extends Controller {
     }
     /*用户注销账户*/
     public function logout(){
-        unset($_SESSION['username']);
+        session_destroy();
         $this->redirect('User/login');
     }
+	public function memberlist(){
+		$this->display('User/memberlist');
+	}
+	public function adminlist(){
+		$this->display('User/adminlist');
+	}
+    public function systemlog(){
+    	$this->display('User/systemlog');
+    }
 
+    public function infomanage(){
+    	$this->display('User/infomanage');
+    }
+    public function teamlist(){
+    	$this->display('User/teamlist');
+    }
+    public function friendlist(){
+    	$this->display('User/friendlist');
+    }
+
+    
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

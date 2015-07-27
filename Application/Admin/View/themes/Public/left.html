@@ -11,7 +11,7 @@
                             </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                                 <span class="clear">
-                                    <span class="block m-t-xs"> <strong class="font-bold">Beaut-zihan</strong>
+                                    <span class="block m-t-xs"> <strong class="font-bold">{:get_nickname()}</strong>
                                     </span>
                                     <span class="text-muted text-xs block">
                                         超级管理员 <b class="caret"></b>
@@ -55,19 +55,22 @@
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">用户列表</a>
+                                <a href="{:U('User/memberlist')}">注册会员管理</a>
                             </li>
                             <li>
-                                <a href="#">操作日志</a>
+                                <a href="{:U('User/adminlist')}">后台管理员列表</a>
                             </li>
                             <li>
-                                <a href="#">认证管理</a>
+                                <a href="{:U('User/systemlog')}">系统操作日志</a>
                             </li>
                             <li>
-                                <a href="#">团队管理</a>
+                                <a href="{:U('User/infomanage')}">信息认证管理</a>
                             </li>
                             <li>
-                                <a href="#">好友管理</a>
+                                <a href="{:U('User/teamlist')}">团队管理</a>
+                            </li>
+                            <li>
+                                <a href="{:U('User/friendlist')}">好友管理</a>
                             </li>
                         </ul>
                     </li>
@@ -79,16 +82,16 @@
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="#">账户列表</a>
+                                <a href="{:U('Fund/accountlist')}">账户列表</a>
                             </li>
                             <li>
-                                <a href="#">充值记录</a>
+                                <a href="{:U('Fund/rechargelog')}">充值记录</a>
                             </li>
                             <li>
-                                <a href="#">提现记录</a>
+                                <a href="{:U('Fund/withdraw')}">提现管理</a>
                             </li>
                             <li>
-                                <a href="#">资金统计</a>
+                                <a href="{:U('Fund/statistics')}">资金统计</a>
                             </li>
                         </ul>
                     </li>

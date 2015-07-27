@@ -1,0 +1,789 @@
+<block name="body"><extend name="Base/common"/>
+	<div id="page-wrapper" class="gray-bg dashbard-1">
+			<include file="Public:top"/>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-sm-4">
+                    <h2>提现管理</h2>
+                    <div>
+                        <button data-toggle="button" class="btn btn-primary" type="button"><a href="#" style="color:white">提现申请</a></button>
+                        <button data-toggle="button" class="btn btn-primary" type="button"><a href="#" style="color:white">提现记录</a></button>
+                    </div>
+                </div>
+            </div>
+            <!-- 提现申请- start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="wrapper wrapper-content animated fadeInUp">
+
+                        <div class="ibox">
+                            <div class="ibox-title">
+                                <h5>所有项目</h5>
+                                <div class="ibox-tools">
+                                    <a href="projects.html" class="btn btn-primary btn-xs">创建新项目</a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row m-b-sm m-t-sm">
+                                    <div class="col-md-1">
+                                        <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> 刷新</button>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <div class="input-group">
+                                            <input type="text" placeholder="请输入项目名称" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project-list">
+
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            <tr>
+                                                <td class="project-status">
+                                                    <span class="label label-primary">进行中
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html">LIKE－一款能够让用户快速获得认同感的兴趣社交应用</a>
+                                            <br/>
+                                            <small>创建于 2014.08.15</small>
+                                        </td>
+                                        <td class="project-completion">
+                                                <small>当前进度： 48%</small>
+                                                <div class="progress progress-mini">
+                                                    <div style="width: 48%;" class="progress-bar"></div>
+                                                </div>
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a3.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a1.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a2.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a4.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a5.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html">米莫说｜MiMO Show</a>
+                                            <br/>
+                                            <small>创建于 2014.08.15</small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>当前进度： 28%</small>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 28%;" class="progress-bar"></div>
+                                            </div>
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a7.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a6.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a3.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-default">已取消
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html">商家与购物用户的交互试衣应用</a>
+                                            <br/>
+                                            <small>创建于 2014.08.15</small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>当前进度： 8%</small>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 8%;" class="progress-bar"></div>
+                                            </div>
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a5.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a3.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html">天狼---智能硬件项目</a>
+                                            <br/>
+                                            <small>创建于 2014.08.15</small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>当前进度： 83%</small>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 83%;" class="progress-bar"></div>
+                                            </div>
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a2.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a3.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a1.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a7.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html">乐活未来</a>
+                                            <br/>
+                                            <small>创建于 2014.08.15</small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>当前进度： 97%</small>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 97%;" class="progress-bar"></div>
+                                            </div>
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a4.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html">【私人医生项目】</a>
+                                            <br/>
+                                            <small>创建于 2014.08.15</small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>当前进度： 48%</small>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 48%;" class="progress-bar"></div>
+                                            </div>
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a1.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a2.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a4.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a5.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html">快狗家居</a>
+                                            <br/>
+                                            <small>创建于 2014.08.15</small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>当前进度： 28%</small>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 28%;" class="progress-bar"></div>
+                                            </div>
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a7.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a6.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a3.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-default">已取消
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html">线下超市+线上商城+物流配送互联系统</a>
+                                            <br/>
+                                            <small>创建于 2014.08.15</small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>当前进度： 8%</small>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 8%;" class="progress-bar"></div>
+                                            </div>
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a5.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a3.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html">P司机汽车省钱专家</a>
+                                            <br/>
+                                            <small>创建于 2014.08.15</small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>当前进度： 83%</small>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 83%;" class="progress-bar"></div>
+                                            </div>
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a2.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a3.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a1.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html">左左 靠谱男同交友</a>
+                                            <br/>
+                                            <small>创建于 2014.08.15</small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>当前进度： 97%</small>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 97%;" class="progress-bar"></div>
+                                            </div>
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a4.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="project-status">
+                                            <span class="label label-primary">进行中
+                                        </td>
+                                        <td class="project-title">
+                                            <a href="project_detail.html">程序员私活圈</a>
+                                            <br/>
+                                            <small>创建于 2014.08.15</small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>当前进度： 28%</small>
+                                            <div class="progress progress-mini">
+                                                <div style="width: 28%;" class="progress-bar"></div>
+                                            </div>
+                                        </td>
+                                        <td class="project-people">
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a7.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a6.jpg"></a>
+                                            <a href="projects.html"><img alt="image" class="img-circle" src="__PUBLIC__/Admin/img/a3.jpg"></a>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-folder"></i> 查看 </a>
+                                            <a href="projects.html#" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+			<!-- 提现申请 - end-->
+			
+			<!-- 提现记录 - start-->
+			<div class="wrapper wrapper-content  animated fadeInRight" style="display:none">
+			    <div class="row">
+			        <div class="col-lg-12">
+			            <div class="ibox ">
+			                
+			                <div class="ibox-content">
+			                    <h4 class="m-t">系统日志列表</h4>
+			
+			
+			                    <div class="jqGrid_wrapper">
+			                        <table id="table_list_2"></table>
+			                        <div id="pager_list_2"></div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			 </div>
+			 <!-- 提现记录  -end-->
+        <div class="footer">
+            <div class="pull-right">
+                By：<a href="http://www.zi-han.net" target="_blank">zihan's blog</a>
+            </div>
+            <div>
+                <strong>Copyright</strong> H+ &copy; 2014
+            </div>
+        </div>
+
+        </div>
+    <script>
+        $(document).ready(function(){
+
+            $('#loading-example-btn').click(function () {
+                btn = $(this);
+                simpleLoad(btn, true)
+
+                // Ajax example
+//                $.ajax().always(function () {
+//                    simpleLoad($(this), false)
+//                });
+
+                simpleLoad(btn, false)
+            });
+        });
+
+        function simpleLoad(btn, state) {
+            if (state) {
+                btn.children().addClass('fa-spin');
+                btn.contents().last().replaceWith(" Loading");
+            } else {
+                setTimeout(function () {
+                    btn.children().removeClass('fa-spin');
+                    btn.contents().last().replaceWith(" Refresh");
+                }, 2000);
+            }
+        }
+    </script>	
+    <script>
+        $(document).ready(function () {
+            // Examle data for jqGrid
+            var mydata = [
+                {
+                    id: "1",
+                    invdate: "2010-05-24",
+                    name: "test",
+                    note: "note",
+                    tax: "10.00",
+                    total: "2111.00"
+                },
+                {
+                    id: "2",
+                    invdate: "2010-05-25",
+                    name: "test2",
+                    note: "note2",
+                    tax: "20.00",
+                    total: "320.00"
+                },
+                {
+                    id: "3",
+                    invdate: "2007-09-01",
+                    name: "test3",
+                    note: "note3",
+                    tax: "30.00",
+                    total: "430.00"
+                },
+                {
+                    id: "4",
+                    invdate: "2007-10-04",
+                    name: "test",
+                    note: "note",
+                    tax: "10.00",
+                    total: "210.00"
+                },
+                {
+                    id: "5",
+                    invdate: "2007-10-05",
+                    name: "test2",
+                    note: "note2",
+                    tax: "20.00",
+                    total: "320.00"
+                },
+                {
+                    id: "6",
+                    invdate: "2007-09-06",
+                    name: "test3",
+                    note: "note3",
+                    tax: "30.00",
+                    total: "430.00"
+                },
+                {
+                    id: "7",
+                    invdate: "2007-10-04",
+                    name: "test",
+                    note: "note",
+                    tax: "10.00",
+                    total: "210.00"
+                },
+                {
+                    id: "8",
+                    invdate: "2007-10-03",
+                    name: "test2",
+                    note: "note2",
+                    amount: "300.00",
+                    tax: "21.00",
+                    total: "320.00"
+                },
+                {
+                    id: "9",
+                    invdate: "2007-09-01",
+                    name: "test3",
+                    note: "note3",
+                    amount: "400.00",
+                    tax: "30.00",
+                    total: "430.00"
+                },
+                {
+                    id: "11",
+                    invdate: "2007-10-01",
+                    name: "test",
+                    note: "note",
+                    amount: "200.00",
+                    tax: "10.00",
+                    total: "210.00"
+                },
+                {
+                    id: "12",
+                    invdate: "2007-10-02",
+                    name: "test2",
+                    note: "note2",
+                    amount: "300.00",
+                    tax: "20.00",
+                    total: "320.00"
+                },
+                {
+                    id: "13",
+                    invdate: "2007-09-01",
+                    name: "test3",
+                    note: "note3",
+                    amount: "400.00",
+                    tax: "30.00",
+                    total: "430.00"
+                },
+                {
+                    id: "14",
+                    invdate: "2007-10-04",
+                    name: "test",
+                    note: "note",
+                    amount: "200.00",
+                    tax: "10.00",
+                    total: "210.00"
+                },
+                {
+                    id: "15",
+                    invdate: "2007-10-05",
+                    name: "test2",
+                    note: "note2",
+                    amount: "300.00",
+                    tax: "20.00",
+                    total: "320.00"
+                },
+                {
+                    id: "16",
+                    invdate: "2007-09-06",
+                    name: "test3",
+                    note: "note3",
+                    amount: "400.00",
+                    tax: "30.00",
+                    total: "430.00"
+                },
+                {
+                    id: "17",
+                    invdate: "2007-10-04",
+                    name: "test",
+                    note: "note",
+                    amount: "200.00",
+                    tax: "10.00",
+                    total: "210.00"
+                },
+                {
+                    id: "18",
+                    invdate: "2007-10-03",
+                    name: "test2",
+                    note: "note2",
+                    amount: "300.00",
+                    tax: "20.00",
+                    total: "320.00"
+                },
+                {
+                    id: "19",
+                    invdate: "2007-09-01",
+                    name: "test3",
+                    note: "note3",
+                    amount: "400.00",
+                    tax: "30.00",
+                    total: "430.00"
+                },
+                {
+                    id: "21",
+                    invdate: "2007-10-01",
+                    name: "test",
+                    note: "note",
+                    amount: "200.00",
+                    tax: "10.00",
+                    total: "210.00"
+                },
+                {
+                    id: "22",
+                    invdate: "2007-10-02",
+                    name: "test2",
+                    note: "note2",
+                    amount: "300.00",
+                    tax: "20.00",
+                    total: "320.00"
+                },
+                {
+                    id: "23",
+                    invdate: "2007-09-01",
+                    name: "test3",
+                    note: "note3",
+                    amount: "400.00",
+                    tax: "30.00",
+                    total: "430.00"
+                },
+                {
+                    id: "24",
+                    invdate: "2007-10-04",
+                    name: "test",
+                    note: "note",
+                    amount: "200.00",
+                    tax: "10.00",
+                    total: "210.00"
+                },
+                {
+                    id: "25",
+                    invdate: "2007-10-05",
+                    name: "test2",
+                    note: "note2",
+                    amount: "300.00",
+                    tax: "20.00",
+                    total: "320.00"
+                },
+                {
+                    id: "26",
+                    invdate: "2007-09-06",
+                    name: "test3",
+                    note: "note3",
+                    amount: "400.00",
+                    tax: "30.00",
+                    total: "430.00"
+                },
+                {
+                    id: "27",
+                    invdate: "2007-10-04",
+                    name: "test",
+                    note: "note",
+                    amount: "200.00",
+                    tax: "10.00",
+                    total: "210.00"
+                },
+                {
+                    id: "28",
+                    invdate: "2007-10-03",
+                    name: "test2",
+                    note: "note2",
+                    amount: "300.00",
+                    tax: "20.00",
+                    total: "320.00"
+                },
+                {
+                    id: "29",
+                    invdate: "2007-09-01",
+                    name: "test3",
+                    note: "note3",
+                    amount: "400.00",
+                    tax: "30.00",
+                    total: "430.00"
+                }
+            ];
+
+            // Configuration for jqGrid Example 1
+            $("#table_list_1").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 250,
+                autowidth: true,
+                shrinkToFit: true,
+                rowNum: 14,
+                rowList: [10, 20, 30],
+                colNames: ['序号', '日期', '客户', '金额', '运费', '总额', '备注'],
+                colModel: [
+                    {
+                        name: 'id',
+                        index: 'id',
+                        width: 60,
+                        sorttype: "int"
+                    },
+                    {
+                        name: 'invdate',
+                        index: 'invdate',
+                        width: 90,
+                        sorttype: "date",
+                        formatter: "date"
+                    },
+                    {
+                        name: 'name',
+                        index: 'name',
+                        width: 100
+                    },
+                    {
+                        name: 'amount',
+                        index: 'amount',
+                        width: 80,
+                        align: "right",
+                        sorttype: "float",
+                        formatter: "number"
+                    },
+                    {
+                        name: 'tax',
+                        index: 'tax',
+                        width: 80,
+                        align: "right",
+                        sorttype: "float"
+                    },
+                    {
+                        name: 'total',
+                        index: 'total',
+                        width: 80,
+                        align: "right",
+                        sorttype: "float"
+                    },
+                    {
+                        name: 'note',
+                        index: 'note',
+                        width: 150,
+                        sortable: false
+                    }
+                ],
+                pager: "#pager_list_1",
+                viewrecords: true,
+                caption: "jqGrid 示例1",
+                hidegrid: false
+            });
+
+            // Configuration for jqGrid Example 2
+            $("#table_list_2").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 450,
+                autowidth: true,
+                shrinkToFit: true,
+                rowNum: 20,
+                rowList: [10, 20, 30],
+                colNames: ['序号', '日期', '客户', '金额', '运费', '总额', '备注'],
+                colModel: [
+                    {
+                        name: 'id',
+                        index: 'id',
+                        editable: true,
+                        width: 60,
+                        sorttype: "int",
+                        search: true
+                    },
+                    {
+                        name: 'invdate',
+                        index: 'invdate',
+                        editable: true,
+                        width: 90,
+                        sorttype: "date",
+                        formatter: "date"
+                    },
+                    {
+                        name: 'name',
+                        index: 'name',
+                        editable: true,
+                        width: 100
+                    },
+                    {
+                        name: 'amount',
+                        index: 'amount',
+                        editable: true,
+                        width: 80,
+                        align: "right",
+                        sorttype: "float",
+                        formatter: "number"
+                    },
+                    {
+                        name: 'tax',
+                        index: 'tax',
+                        editable: true,
+                        width: 80,
+                        align: "right",
+                        sorttype: "float"
+                    },
+                    {
+                        name: 'total',
+                        index: 'total',
+                        editable: true,
+                        width: 80,
+                        align: "right",
+                        sorttype: "float"
+                    },
+                    {
+                        name: 'note',
+                        index: 'note',
+                        editable: true,
+                        width: 100,
+                        sortable: false
+                    }
+                ],
+                pager: "#pager_list_2",
+                viewrecords: true,
+                caption: "jqGrid 示例2",
+                add: true,
+                edit: true,
+                addtext: 'Add',
+                edittext: 'Edit',
+                hidegrid: false
+            });
+
+            // Add selection
+            $("#table_list_2").setSelection(4, true);
+
+
+            // Setup buttons
+            $("#table_list_2").jqGrid('navGrid', '#pager_list_2', {
+                edit: true,
+                add: true,
+                del: true,
+                search: true
+            }, {
+                height: 200,
+                reloadAfterSubmit: true
+            });
+
+            // Add responsive to jqGrid
+            $(window).bind('resize', function () {
+                var width = $('.jqGrid_wrapper').width();
+                $('#table_list_1').setGridWidth(width);
+                $('#table_list_2').setGridWidth(width);
+            });
+        });
+    </script>
+</block>
+
