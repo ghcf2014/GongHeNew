@@ -84,10 +84,9 @@ class UserController extends Controller {
     }
     public function friendlist(){
     	$this->display('User/friendlist');
-    }
 
-    
-
+        
+    } 
 }
 
 
