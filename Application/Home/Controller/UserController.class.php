@@ -31,7 +31,7 @@ class UserController extends Controller {
   public function login($username = '', $password = '', $verify = '',$email = ''){
     /* 获取用户数据 */
     if(IS_POST){ //登录验证
-    // /* 检测验证码 */
+    /* 检测验证码 */
     // if(!check_verify($verify)){
     // $this->error('验证码错误！');
     // }
@@ -89,27 +89,31 @@ class UserController extends Controller {
     //   $this->redirect('User/Index/index');
     // }
     /* 检测验证码 */
-    if(!check_verify($verify)){
-    $this->error('验证码错误！');
-    }
-    $user = M('member_user');
-    $data = array(
-      'user_name' => $username,
-      'user_pass' => md5($password),
-      'user_email'    => $email,
-      'user_phone'   => $mobile,
-      );
-    //验证手机
-    // if(empty($data['mobile'])) unset($data['mobile']);
+    if(IS_POST){
+      // if(!check_verify($verify)){
+      // dump(check_verify($verify));
+      // exit();
+      // $this->error('验证码错误！');
+      // }
+      $user = M('member_user');
+      $data = array(
+        'user_name' => $username,
+        'user_pass' => md5($password),
+        'user_email'    => $email,
+        'user_phone'   => $mobile,
+        );
+      //验证手机
+      // if(empty($data['mobile'])) unset($data['mobile']);
 
-    /* 添加新用户 */
-    $res = $user->add($data);
-    if($res>0){
-      if(!empty($res))session('user_auth',$res);
-      if(!empty($res))session('user_auth_sign',$res);
-      $this->success ('注册成功！','Index'); //错误详情见自动验证注释
-    } else {
-     $this->display('register');
+      /* 添加新用户 */
+      $res = $user->add($data);
+      if($res>0){
+        if(!empty($res))session('user_auth',$res);
+        if(!empty($res))session('user_auth_sign',$res);
+        $this->success ('注册成功！','Index'); //错误详情见自动验证注释
+      } else {
+       $this->display('register');
+      }
     }
   }
   /* 退出登录 */

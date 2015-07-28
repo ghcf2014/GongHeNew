@@ -23,7 +23,7 @@
 			<dl class="sort02In">
 				<dt>产品类型</dt>
 				<dd class="cur">全部</dd>
-				<dd>美橙系列</dd>
+				<dd data="1" onClick="queryGoods(this,3);"><a href="#" >美橙系列</a></dd>
 				<dd>美桔系列</dd>
 				<dd>美柚系列</dd>
 				<dd>金桔系列</dd>
@@ -206,5 +206,90 @@
 				<li><a href="javascript:;">尾页</a></li>
 			</ul>
 		</div>
+					<script type="text/javascript">
+			function queryGoods(obj,mark){
+	var params = new Array();
+	params.push("c1Id="+$("#c1Id").val());
+	params.push("c2Id="+$("#c2Id").val());
+	params.push("c3Id="+$("#c3Id").val());
+	params.push("bs="+$("#bs").val());
+	if(mark==8){
+		var sj = $("#sj").val();
+		if(sj==2){
+			$("#sj").val(1);
+			$("#msort").val(8);
+		}else{
+			$("#sj").val(2);
+			$("#msort").val(9);
+		}		
+	}else{
+		$("#sj").val(0);
+		$("#msort").val(mark);
+	}	
+	params.push("msort=" + $("#msort").val());
+	params.push("sj=" + $("#sj").val());	
+	if(mark==1){
+		var areaId3 = $(obj).attr("data");
+		params.push("areaId3="+areaId3);
+	}else if(mark==2){
+		var areaId3 = $("#wst-areas").find(".searched").attr("data");
+		var communityId = $(obj).attr("data");
+		communityId = communityId?communityId:'';
+		params.push("areaId3="+areaId3);
+		params.push("communityId="+communityId);
+	}else if(mark==3){
+		var areaId3 = $("#wst-areas").find(".searched").attr("data");
+		var communityId = $("#wst-communitys").find(".searched").attr("data");
+		var brandId = $(obj).attr("data");
+		communityId = communityId?communityId:'';
+		params.push("areaId3="+areaId3);
+		params.push("communityId="+communityId);
+		params.push("brandId="+brandId);
+	}else if(mark==4){
+		var areaId3 = $("#wst-areas").find(".searched").attr("data");
+		var communityId = $("#wst-communitys").find(".searched").attr("data");
+		var brandId = $("#wst-brand").find(".searched").attr("data");
+		var prices = $(obj).attr("data");
+		params.push("areaId3="+areaId3);
+		params.push("communityId="+communityId);
+		params.push("brandId="+brandId);
+		params.push("prices="+prices);
+	}else if(mark==5){
+		var areaId3 = $("#wst-areas").find(".searched").attr("data");
+		var communityId = $("#wst-communitys").find(".searched").attr("data");
+		var brandId = $("#wst-brand").find(".searched").attr("data");
+		var prices = $("#wst-price").find(".searched").attr("data");
+		var shopId = $(obj).attr("data");
+		communityId = communityId?communityId:'';
+		params.push("areaId3="+areaId3);
+		params.push("communityId="+communityId);
+		params.push("brandId="+brandId);
+		params.push("prices="+prices);
+	}else{
+		var areaId3 = $("#wst-areas").find(".searched").attr("data");
+		var communityId = $("#wst-communitys").find(".searched").attr("data");
+		var brandId = $("#wst-brand").find(".searched").attr("data");
+		if(mark==12){
+			var prices = $("#sprice").val()+"_"+$("#eprice").val();
+			
+		}else{
+			var prices = $("#wst-price").find(".searched").attr("data");
+		}
+		
+		var shopId = $("#wst-shop").attr("data");
+		params.push("mark="+mark);
+		communityId = communityId?communityId:'';
+		params.push("areaId3="+areaId3);
+		params.push("communityId="+communityId);
+		params.push("brandId="+brandId);
+		params.push("prices="+prices);
+	}
+	
+	var keyword = $.trim($("#keyword").val());
+	if(keyword!=""){
+		params.push("keyWords="+keyword);
+	}
+	window.location = domainURL  + '/index.php/Home/goods/getGoodsList/?' + (params.join("&"));
+}</script>
 		<!--产品中心		prod end-->
 <include file="Public:footer"/>

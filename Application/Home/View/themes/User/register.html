@@ -35,7 +35,7 @@
 <!--							<dt><b>*</b> 手机验证码</dt>
  							<dd><input type="text" name="verify" id="verify" value="" style="width: 185px;" /><input type="image" src="__PUBLIC__/Home/images/registerYzm.gif" class="registerYzm" /></dd> -->
  							<dt><b>*</b> 验证码</dt>
-							<dd id="captcha-container"  ><input type="text" name="verify" id="verify" value="" style="width: 185px;" /><img type="image" src="{:U('User/verify',array())}" class="registerYzm" id="captcha-container" width="80" height="40" /></dd>
+							<dd id="captcha-container_r"  ><input type="text" name="verify" id="verify" value="" style="width: 185px;" /><img type="image" src="{:U('User/verify',array())}" class="registerYzm" id="captcha-container" width="80" height="40" /></dd>
 						</dl>
 						<dl>
 							<dt>推荐人</dt>
@@ -63,7 +63,7 @@
 	});
 </script>
 <script type="text/javascript">
-	var captcha_img = $('#captcha-container').find('img')  
+	var captcha_img = $('#captcha-container_r').find('img')  
 	var verifyimg = captcha_img.attr("src");  
 	captcha_img.attr('title', '点击刷新');  
 	captcha_img.click(function(){  

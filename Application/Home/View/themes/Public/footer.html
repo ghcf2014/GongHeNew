@@ -85,13 +85,13 @@
 								<dd><input type="password" name="password" id="pass" value="" placeholder="请输入密码"/></dd>
 							</dl>
 							<!--验证码-->
-<!-- 							<dl>
+							<dl>
 								<dt><img src="__PUBLIC__/Home/images/loginYzm.gif"/></dt>
-								<dd id="captcha-container">
+								<dd id="captcha-container_f">
 								<input name="verify" width="50%" height="50" class="yzm" placeholder="验证码" type="text">
   								<img alt="验证码" src="{:U('User/verify',array())}" title="点击刷新">
 								</dd>
-							</dl> -->
+							</dl>
 							<input type="button" id="subbt" value="" class="loginBtn"/>
 						</form>
 						
@@ -104,14 +104,12 @@
 		<!--登录	login end-->
 <script type="text/javascript">
 	$('#subbt').click(function(){
-		var name=$('name').val();
-		var pass=$('pass').val();
-		var verify=$('verify').val();
 		$('#formlogin').submit();
 	});
 </script>
+
 <script type="text/javascript">
-	var captcha_img = $('#captcha-container').find('img')  
+	var captcha_img = $('#captcha-container_f').find('img')  
 	var verifyimg = captcha_img.attr("src");  
 	captcha_img.attr('title', '点击刷新');  
 	captcha_img.click(function(){  

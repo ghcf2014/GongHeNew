@@ -6,6 +6,7 @@ function check_verify($code, $id = ""){
     $verify = new \Think\Verify();  
     return $verify->check($code, $id);  
 }
+
 /**
  * 检测用户是否登录
  *
@@ -45,7 +46,7 @@ function is_logtime() {
 function get_username() {
 	$map = session ( 'user_auth' );
 	$name = M ( 'member_user' )->field ( 'user_name' )->find ($map);
-	session ( 'user_auth.username',$name['user_name']);
+	// session ( 'user_auth.username',$name['user_name']);
 	return $name['user_name'];
 }
 function username($uid = 0) {
