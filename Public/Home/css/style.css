@@ -1991,35 +1991,258 @@ a:hover{color: #e60000; text-decoration: none;}
 
 
 
+/*-------------------产品详情	Product Details	  start-----------------------*/
+.prodDet{
+	width: 1140px;
+	height: auto;
+	margin: auto;
+	padding: 35px 0;
+}
+.prodDet .top{
+	width: 100%;
+	height: 125px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.prodDet .top li{
+	width: auto;
+	float: left;
+	margin-right: 10px;
+	height: 125px;
+}
+.prodDet .top li.last{
+	width: 500px;
+	margin-right: 0;
+	border: 1px solid #eee;
+	height: 103px;
+	background: #fff;
+	padding: 10px;
+}
+.prodDet .top li.last h3{
+	width: 475px;
+	height: 40px;
+	border-bottom: 1px solid #eee;
+	line-height: 36px;
+	font-size: 18px;
+	background: url(../images/lightBulb.png) no-repeat left center;
+	padding-left: 25px;
+	font-weight: normal;
+}
+.prodDet .top li.last ul{
+	overflow: hidden;
+}
+.prodDet .top li.last ul li{
+	width: 230px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	margin-right: 0;
+	padding: 0 10px;
+}
+/*prodDetConT*/
+.prodDet .prodDetConT{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+/*prodDetConT  prodDetConTL*/
+.prodDet .prodDetConT .prodDetConTL{
+	float: left;
+	width: 690px;
+	border: 1px solid #eee;
+	height: 280px;
+	padding: 30px 0;
+	background: #fff;
+}
+.prodDet .prodDetConT .prodDetConTL h2{
+	width: 615px;
+	height: 55px;
+	line-height: 55px;
+	margin: 0 30px;
+	padding-left: 15px;
+	font-weight: normal;
+	font-size: 18px;
+	color: #E60000;
+	border-bottom: 1px solid #eee;
+}
+.prodDet .prodDetConT .prodDetConTL .ul01{
+	overflow: hidden;
+	padding-top: 30px;
+}
+.prodDet .prodDetConT .prodDetConTL .ul01 li{
+	float: left;
+	width: auto;
+	width: 230px;
+	height: 80px;
+}
+.prodDet .prodDetConT .prodDetConTL .ul01 li span{
+	display: block;
+	line-height: 30px;
+	font-size: 24px;
+	color: #E60000;
+	text-align: center;
+}
+.prodDet .prodDetConT .prodDetConTL .ul01 li p{
+	line-height: 24px;
+	font-size: 14px;
+	text-align: center;
+}
+.prodDet .prodDetConT .prodDetConTL .ul02{
+	overflow:hidden;
+	width: 630px;
+	height: auto;
+	margin: 0 30px;
+	background: #eee;
+	padding: 15px 0;
+}
+.prodDet .prodDetConT .prodDetConTL .ul02 li{
+	width: 200px;
+	float: left;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	padding-left: 10px;
+	color: #888;
+}
+.prodDet .prodDetConT .prodDetConTL .ul02 li b{
+	font-weight: normal;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*prodDetConT  prodDetConTR*/
+.prodDet .prodDetConT .prodDetConTR{
+	width: 440px;
+	float: right;
+	border: 1px solid #eee;
+	background: #fff;
+	height: 340px;
+}
+.prodDet .prodDetConT .prodDetConTR h3{
+	font-weight: normal;
+	font-size: 16px;
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid #eee;
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+.prodDet .prodDetConT .prodDetConTR dl{
+	overflow: hidden;
+	padding: 0 20px;
+}
+.prodDet .prodDetConT .prodDetConTR dl dt{
+	float: left;
+	width: 90px;
+	font-size: 16px;
+	height: 40px;
+	line-height: 40px;
+}
+.prodDet .prodDetConT .prodDetConTR dl dd{
+	width: 310px;
+	float: left;
+	overflow: hidden;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+}
+.prodDet .prodDetConT .prodDetConTR dl dd input{
+	float: left;
+	color: #E60000;
+	background: #fff;
+	text-align: center;
+	margin-top: 7px;
+	border: 1px solid #eee;
+	height: 28px;
+	margin-right: 5px;
+}
+/*.prodDet .prodDetConT .prodDetConTR dl dd input[type=button]{
+	width: 28px;
+	color: #999;
+	cursor: pointer;
+}*/
+.prodDet .prodDetConT .prodDetConTR dl dd input[type=text]{
+	width: 100px;
+	margin-top: 6px;
+}
+.prodDet .prodDetConT .prodDetConTR dl dd b{
+	float: left;
+	font-weight: normal;
+}
+.prodDet .prodDetConT .prodDetConTR dl dd span{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	margin-right: 5px;
+	color: #E60000;
+}
+.prodDet .prodDetConT .prodDetConTR p{
+	padding: 0 20px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+}
+.prodDet .prodDetConT .prodDetConTR p input{
+	float: left;
+	margin-top: 5px;
+}
+.prodDet .prodDetConT .prodDetConTR p a{
+	float: left;
+	color: #E60000;
+}
+.prodDet .prodDetConT .prodDetConTR p a:hover{
+	text-decoration: underline;
+}
+.prodDet .prodDetConT .prodDetConTR .btn{
+	width: 200px;
+	height: 30px;
+	background: #E60000;
+	color: #fff;
+	margin: 15px 55px;
+	cursor: pointer;
+}
+/*底部*/
+.prodDet .prodDetConB{
+	width: 1140px;
+	margin-top: 35px;
+	height: auto;
+}
+.prodDet .prodDetConB ul{
+	width: 303px;
+	overflow: hidden;
+	border-right: 1px solid #eee;
+}
+.prodDet .prodDetConB ul li{
+	float: left;
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+	text-align: center;
+	line-height: 40px;
+	width: 100px;
+	height: 40px;
+	font-size: 14px;
+	background: #f2f2f2;
+	cursor: pointer;
+}
+.prodDet .prodDetConB ul li.cur{
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+.prodDet .prodDetConB .prodDetConBTab{
+	width: 1138px;
+	height: auto;
+	margin-top: -1px;
+	background: #fff;
+	border: 1px solid #eee;
+}
+.prodDet .prodDetConB .prodDetConBTab .tab{	
+	width: 1078px;
+	height: auto;
+	padding: 30px;
+}
+.prodDet .prodDetConB .prodDetConBTab .tab p{
+	line-height: 26px;
+}
 
 
 

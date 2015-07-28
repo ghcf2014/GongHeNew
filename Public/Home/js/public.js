@@ -358,7 +358,62 @@ $(function(){
     $subBox3.click(function(){
         $("#chkall3").prop("checked",$subBox3.length == $(".pc .pcR .notiWay .notiWay02 ul li  input[name='subBox3']:checked").length ? true : false);
     });
+});
+
+
+
+
+//产品详情
+$(function(){
+	//底部tab切换
+	$('.prodDet .prodDetConB ul li').each(function(index,element){
+		$(element).click(function(){
+			$('.prodDet .prodDetConB .prodDetConBTab .tab').eq($(element).index()).show().siblings().hide();
+			$(element).addClass('cur').siblings().removeClass('cur');
+		});
+	});
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
