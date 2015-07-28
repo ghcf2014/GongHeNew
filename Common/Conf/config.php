@@ -21,7 +21,7 @@ return array(
 	'__URL__'       =>  __URL__,
 	'../Public'     =>  APP_TMPL_PATH.'Public',// 项目公共模板目录
 	'__PUBLIC__'    =>  __ROOT__.'/Public',// 站点公共目录
-
+	'__FILE__'		=>__FILE__,
 	'DEFAULT_TIMEZONE'      => 'PRC', // 默认时区
 	
 

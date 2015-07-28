@@ -13,7 +13,9 @@ class UserController extends Controller {
     public function login(){
         if(IS_POST){
             if(isset($_SESSION['username'])==''){
-                session_start();
+	           $lifetime='3600';
+	           session_set_cookie_params($lifetime);
+	           session_start();
             }
             $username=$_POST['username'];
             $password=$_POST['password'];
@@ -70,13 +72,22 @@ class UserController extends Controller {
 		$this->display('User/memberlist');
 	}
 	public function adminlist(){
+		$selectdata=new UserinfoLogic;
+		$table='admin_user';
+		$data="";
+		$result=$selectdata->selectUserinfo($data, $table);
+		$this->assign('userdata',$result);
 		$this->display('User/adminlist');
 	}
     public function systemlog(){
     	$this->display('User/systemlog');
     }
 
+    /*用户信息认证管理 */
     public function infomanage(){
+    	
+    	
+    	
     	$this->display('User/infomanage');
     }
     public function teamlist(){
@@ -86,7 +97,8 @@ class UserController extends Controller {
     	$this->display('User/friendlist');
 
         
-    } 
+    }
+ 
 }
 
 
