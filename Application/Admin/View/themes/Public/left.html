@@ -103,16 +103,31 @@
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="{:U('Product/product_launch')}">产品发布</a>
+                                <a href="{:U('Productinfo/product_launch')}">产品发布</a>
                             </li>
                             <li>
-                                <a href="#">产品列表</a>
+                                <a href="{:U('Productinfo/product_list')}">产品列表</a>
                             </li>
                             <li>
-                                <a href="#">转让列表</a>
+                                <a href="{:U('Productinfo/product_turnlist')}">转让列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="index.html#">
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span class="nav-label">订单管理</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{:U('Orderinfo/order_list')}">订单列表</a>
                             </li>
                             <li>
-                                <a href="#">产品搜索</a>
+                                <a href="{:U('Orderinfo/works_list')}">订单业绩表</a>
+                            </li>
+                            <li>
+                                <a href="{:U('Orderinfo/order_going')}">订单跟踪</a>
                             </li>
                         </ul>
                     </li>
@@ -145,23 +160,23 @@
                     </li>
 
                     <li>
-                        <a href="mailbox.html">
+                        <a href="{:U('Email/mailbox')}">
                             <i class="fa fa-envelope"></i>
                             <span class="nav-label">邮件管理</span>
                             <span class="label label-warning pull-right">16</span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="mail_compose.html">发邮件</a>
+                                <a href="{:U('Email/mail_compose')}">发邮件</a>
                             </li>
                             <li>
-                                <a href="#">已发送</a>
+                                <a href="{:U('Email/mail_send')}">已发送</a>
                             </li>
                             <li>
-                                <a href="mailbox.html">收件箱</a>
+                                <a href="{:U('Email/mailbox')}">收件箱</a>
                             </li>
                             <li>
-                                <a href="mail_detail.html">查看邮件</a>
+                                <a href="{:U('Email/mail_detail')}">查看邮件</a>
                             </li>
                         </ul>
                     </li>

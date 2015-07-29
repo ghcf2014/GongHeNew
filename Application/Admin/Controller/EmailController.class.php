@@ -17,4 +17,7 @@ class EmailController extends Controller {
     public function mail_compose(){
         $this->display('Email/mail_compose');
     }
+    public function mail_send(){
+        $this->display('Email/mail_send');
+    }
 }

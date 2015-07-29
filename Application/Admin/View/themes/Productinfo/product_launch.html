@@ -1,0 +1,272 @@
+<block name="body"><extend name="Base/common" />
+<div id="wrapper">
+	<div id="page-wrapper" class="gray-bg dashbard-1">
+		<include file="Public:top" />
+		<div class="row wrapper border-bottom white-bg page-heading">
+			<div class="col-lg-10">
+				<h2>产品发布</h2>
+				<ol class="breadcrumb">
+					<li>
+						<a href="index.html">主页</a>
+					</li>
+					<li>
+						<strong>产品信息提交</strong>
+					</li>
+				</ol>
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+		<div class="wrapper wrapper-content animated fadeInRight">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<h5>产品信息填写</h5>
+							<div class="ibox-tools">
+								<a class="collapse-link">
+									<i class="fa fa-chevron-up"></i>
+								</a>
+								<a class="dropdown-toggle" data-toggle="dropdown"
+									href="form_wizard.html#">
+									<i class="fa fa-wrench"></i>
+								</a>
+								<ul class="dropdown-menu dropdown-user">
+									<li>
+										<a href="form_wizard.html#">选项1</a>
+									</li>
+									<li>
+										<a href="form_wizard.html#">选项2</a>
+									</li>
+								</ul>
+								<a class="close-link">
+									<i class="fa fa-times"></i>
+								</a>
+							</div>
+						</div>
+						<form method="get" class="form-horizontal">
+						<div class="ibox-content">
+							<p>这是一个简单的步骤条示例</p>
+							<div id="wizard">
+							
+								<h1>第一步</h1>
+								<div class="step-content">
+									<div class="text-center m-t-md">
+										<h2>产品信息</h2>
+										<p>带<label style="color:red;">*</label>号的必填</p>
+										<div class="ibox-content">
+											<div class="form-group">
+												<label class="col-sm-2 control-label"><label style="color:red;">*</label>产品名称：</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="hr-line-dashed"></div>
+											<div class="form-group">
+												<label class="col-sm-2 control-label"><label style="color:red;">*</label>产品类型：</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="hr-line-dashed"></div>
+											
+
+										</div>	
+										
+										
+									</div>
+								</div>
+
+								<h1>第二步</h1>
+								<div class="step-content">
+									<div class="text-center m-t-md">
+										<h2>第二步</h2>
+										<p>这是第二步的内容</p>
+
+										<div class="form-group">
+												<label class="col-sm-2 control-label"><label style="color:red;">*</label>产品价格：</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="hr-line-dashed"></div>
+											<div class="form-group">
+												<label class="col-sm-2 control-label"><label style="color:red;">*</label>产品份额：</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="hr-line-dashed"></div>
+											<div class="form-group">
+												<label class="col-sm-2 control-label"><label style="color:red;">*</label>最低购买份额：</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="hr-line-dashed"></div>
+											<div class="form-group">
+												<label class="col-sm-2 control-label"><label style="color:red;">*</label>最高购买份额：</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control">
+												</div>
+											</div>
+											<div class="hr-line-dashed"></div>
+									</div>
+								</div>
+
+								<h1>第三步</h1>
+								<div class="step-content">
+									<div class="text-center m-t-md">
+										<h2>第三步</h2>
+										<p>这是第三步的内容</p>
+						                
+				                        
+									</div>
+								</div>
+							</div>
+						</div>
+						</form>
+					</div>
+											</div><div class="row">
+						                    <div class="col-lg-12">
+						                        <div class="ibox float-e-margins">
+						                            <div class="ibox-title">
+						                                <h5>编辑/保存为html代码示例</h5>
+						                                <button id="edit" class="btn btn-primary btn-xs m-l-sm" onclick="edit()" type="button">编辑</button>
+						                                <button id="save" class="btn btn-primary  btn-xs" onclick="save()" type="button">保存</button>
+						                                <div class="ibox-tools">
+						                                    <a class="collapse-link">
+						                                        <i class="fa fa-chevron-up"></i>
+						                                    </a>
+						                                    <a class="dropdown-toggle" data-toggle="dropdown" href="form_editors.html#">
+						                                        <i class="fa fa-wrench"></i>
+						                                    </a>
+						                                    <ul class="dropdown-menu dropdown-user">
+						                                        <li><a href="form_editors.html#">选项1</a>
+						                                        </li>
+						                                        <li><a href="form_editors.html#">选项2</a>
+						                                        </li>
+						                                    </ul>
+						                                    <a class="close-link">
+						                                        <i class="fa fa-times"></i>
+						                                    </a>
+						                                </div>
+						                            </div>
+						                            <div class="ibox-content" id="eg">
+
+						                                <div class="click2edit wrapper">
+						                                    <h3>你好，子涵 </h3>
+						                                    <p>H+是一个完全响应式，基于Bootstrap3.4.0最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术，她提供了诸多的强大的可以重新组合的UI组件，并集成了最新的jQuery版本(v2.1.1)，当然，也集成了很多功能强大，用途广泛的就jQuery插件，她可以用于所有的Web应用程序，如<b>网站管理后台</b>，<b>网站会员中心</b>，<b>CMS</b>，<b>CRM</b>，<b>OA</b>等等，当然，您也可以对她进行深度定制，以做出更强系统。</p>
+						                                    <p>
+						                                        <b>当前版本：</b>v1.7
+						                                    </p>
+						                                    <p>
+						                                        <b>定价：</b><span class="label label-warning">¥768（不开发票）</span>
+						                                    </p>
+						                                	</div>
+						                            	</div>
+						                        	</div>
+						                    	</div>
+						                	</div>
+			</div>
+		<include file="Public:footer"/>
+		</div>
+											
+
+	</div>
+    <script>
+        $(document).ready(function () {
+
+            $('.summernote').summernote({
+                lang: 'zh-CN'
+            });
+
+        });
+        var edit = function () {
+            $("#eg").addClass("no-padding");
+            $('.click2edit').summernote({
+                lang: 'zh-CN',
+                focus: true
+            });
+        };
+        var save = function () {
+            $("#eg").removeClass("no-padding");
+            var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
+            $('.click2edit').destroy();
+        };
+    </script>
+<script>
+        $(document).ready(function () {
+            $("#wizard").steps();
+            $("#form").steps({
+                bodyTag: "fieldset",
+                onStepChanging: function (event, currentIndex, newIndex) {
+                    // Always allow going backward even if the current step contains invalid fields!
+                    if (currentIndex > newIndex) {
+                        return true;
+                    }
+
+                    // Forbid suppressing "Warning" step if the user is to young
+                    if (newIndex === 3 && Number($("#age").val()) < 18) {
+                        return false;
+                    }
+
+                    var form = $(this);
+
+                    // Clean up if user went backward before
+                    if (currentIndex < newIndex) {
+                        // To remove error styles
+                        $(".body:eq(" + newIndex + ") label.error", form).remove();
+                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                    }
+
+                    // Disable validation on fields that are disabled or hidden.
+                    form.validate().settings.ignore = ":disabled,:hidden";
+
+                    // Start validation; Prevent going forward if false
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex) {
+                    // Suppress (skip) "Warning" step if the user is old enough.
+                    if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                        $(this).steps("next");
+                    }
+
+                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                    if (currentIndex === 2 && priorIndex === 3) {
+                        $(this).steps("previous");
+                    }
+                },
+                onFinishing: function (event, currentIndex) {
+                    var form = $(this);
+
+                    // Disable validation on fields that are disabled.
+                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                    form.validate().settings.ignore = ":disabled";
+
+                    // Start validation; Prevent form submission if false
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex) {
+                    var form = $(this);
+
+                    // Submit form input
+                    form.submit();
+                }
+            }).validate({
+                errorPlacement: function (error, element) {
+                    element.before(error);
+                },
+                rules: {
+                    confirm: {
+                        equalTo: "#password"
+                    }
+                }
+            });
+        });
+    </script> 
+
+
+
+
+    </block>
+
