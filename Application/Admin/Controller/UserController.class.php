@@ -69,6 +69,11 @@ class UserController extends Controller {
 		$this->redirect ( 'User/login' );
 	}
 	public function memberlist() {
+		$user = new UserinfoLogic ();
+		$table = "member_user";
+		$data = "";
+		$result = $user->selectUserinfo ( $data, $table );
+		$this->assign ( 'memberdata', $result );
 		$this->display ( 'User/memberlist' );
 	}
 	public function adminlist() {
@@ -76,7 +81,7 @@ class UserController extends Controller {
 		$table = 'admin_user';
 		$data = "";
 		$result = $selectdata->selectUserinfo ( $data, $table );
-		$this->assign ( 'userdata', $result );
+		$this->assign ( 'admindata', $result );
 		$this->display ( 'User/adminlist' );
 	}
 	public function systemlog() {

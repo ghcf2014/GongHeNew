@@ -18,7 +18,8 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 define('APP_DEBUG',True);
 //定义公共模块路径
 define('COMMON_PATH','./Common/');
-
+//定义默认模块
+define('BIND_MODULE','Admin'); 
 //定义runtime目录
 define('RUNTIME_PATH','./Runtime/');
 // 定义应用目录

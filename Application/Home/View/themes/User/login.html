@@ -1,5 +1,7 @@
-	<block name="body"> <extend name="Base/common"/>
-		
+<include file="Public:head"/>
+<include file="Public:top"/>
+	<div class="pc">
+
 		<!--登录		log	start-->
 		<div class="logO">
 		<form action="{:U('login')}" method="post" id="form">
@@ -52,4 +54,9 @@
 	});
 </script>
 
-	</block>
+		
+	</div>
+	
+
+	<!-- 底部 -->
+	<include file="Public:footer"/>
