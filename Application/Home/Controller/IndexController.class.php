@@ -18,4 +18,10 @@ class IndexController extends Controller {
     public function newguide(){
     	$this->display('Index/newguide');
     }
+    public function me(){
+      $this->display('Index/me');
+    }
+    public function newdetail(){
+      $this->display('Index/newdetail');
+    }
 }

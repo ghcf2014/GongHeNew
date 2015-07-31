@@ -32,7 +32,7 @@ return array(
 	'MODULE_ALLOW_LIST'=>'Admin,Home',
 	
 	//显示调试信息
-	'SHOW_PAGE_TRACE'=>false,
+	'SHOW_PAGE_TRACE'=>true,
 
 	 /* 错误设置 */
     'ERROR_MESSAGE'         =>  '页面错误！请稍后再试～',//错误显示信息,非调试模式有效
@@ -44,10 +44,15 @@ return array(
 
 
 
+    //关闭缓存
+	'TMPL_CACHE_ON'   => false,  // 默认开启模板编译缓存 false 的话每次都重新编译模板
 
+	'ACTION_CACHE_ON'  => false,  // 默认关闭Action 缓存
 
+	'HTML_CACHE_ON'   => false,   // 默认关闭静态缓存
 
-
-
+	'APP_DEBUG'=>true,
+	'DB_FIELD_CACHE'=>false,
+	'HTML_CACHE_ON'=>false,
 
 );

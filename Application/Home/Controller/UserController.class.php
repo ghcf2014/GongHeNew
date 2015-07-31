@@ -170,4 +170,7 @@ class UserController extends Controller {
   public function wdjl(){
     $this->display('User/wdjl');
   }
+  public function zhaohuidenglumima(){
+    $this->display('User/zhaohuidenglumima');
+  }
 }
