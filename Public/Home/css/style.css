@@ -2254,6 +2254,325 @@ a:hover{color: #e60000; text-decoration: none;}
 
 
 
+/*-----------有关公司---------------------------------------*/
+.about{
+	width: 1140px;
+	height: auto;
+	margin: 25px auto 50px;
+	overflow: hidden;
+}
+/*aboutL*/
+.about .aboutL{
+	float: left;
+	width: 200px;
+	height: auto;
+}
+.about .aboutL li{
+	width: 195px;
+	height: 60px;
+	border: 1px solid #eee;
+	border-left: 5px solid #E60000;
+	margin-bottom: 5px;
+	background: #fff;
+	line-height: 60px;
+	text-align: center;
+	font-size: 18px;
+}
+.about .aboutL li.cur{
+	border: 1px solid #E60000;
+	border-left: 5px solid #E60000;
+}
+.about .aboutL li a{
+	display: block;
+}
+.about .aboutL li.cur a{
+	color: #E60000;
+}
+/*aboutR*/
+.about .aboutR{
+	float: right;
+	width: 830px;
+	height: auto;
+	padding: 35px;
+	border: 1px solid #eee;
+	background: #fff;
+}
+/*网站公告---新闻动态---行业新闻*/
+.about .aboutR .aboutList li{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	border-bottom: 1px dashed #eee;
+}
+.about .aboutR .aboutList li a{
+	display: block;
+	overflow: hidden;
+}
+.about .aboutR .aboutList li a strong{
+	float: left;
+	width: 85%;
+	font-weight: normal;
+}
+.about .aboutR .aboutList li a b{
+	float: right;
+	width: 12%;
+	font-weight: normal;
+}
+/*关于我们*/
+.about .aboutR .aboutUs h2{
+	font-size: 20px;
+	font-weight: normal;line-height: 60px;
+}
+.about .aboutR .aboutUs p{
+	line-height: 30px;
+	font-size: 16px;
+	margin-bottom: 60px;
+}
+.about .aboutR .aboutCompany p{
+	line-height: 30px;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-------------新闻详情页------------------------*/
+.about .aboutR .newsDetails{
+	padding: 10px;
+}
+.about .aboutR .newsDetails h3{
+	text-align: center;
+	height: 70px;
+	line-height: 50px;
+	font-weight: normal;
+	font-size: 18px;
+}
+.about .aboutR .newsDetails .time{
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-weight: normal;
+	font-size: 14px;
+}
+.about .aboutR .newsDetails p{
+	line-height: 34px;
+	font-weight: normal;
+	font-size: 14px;
+	text-indent: 2em;
+}
+.about .aboutR .upDown{
+	overflow: hidden;
+	height: 30px;
+	padding: 10px 0;
+}
+.about .aboutR .upDown a{
+	display: block;
+	width: 48%;
+	height: 30px;
+	line-height: 30px;
+	color: #E60000;
+}
+.about .aboutR .upDown a:hover{
+	text-decoration: underline;
+}
+.about .aboutR .upDown .up{
+	float: left;
+}
+.about .aboutR .upDown .down{
+	float: right;
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+/*----------------找回登录密码-----------------------------------*/
+.forgPass{
+	width: 860px;
+	height: 400px;
+	margin: 25px auto 50px;
+	border: 1px solid #eee;
+	background: #fff;
+	padding: 0 20px;
+}
+.forgPass h3{
+	border-bottom: 1px solid #eee;
+	height: 50px;
+	line-height: 50px;
+	font-weight: normal;
+	font-size: 18px;
+	color: #E60000;
+	padding-left: 15px;
+	width: 845px;
+	margin-bottom: 60px;
+}
+/*找回方式*/
+.forgPass .forgPassWay{
+	width: 100%;
+	height: auto;
+}
+.forgPass .forgPassWay input[type=button]{
+	width: 240px;
+	height: 60px;
+	border-radius: 6px;
+	color: #fff;
+	line-height: 60px;
+	font-size: 16px;
+	display: block;
+	margin: 0 auto 15px;
+	cursor: pointer;
+}
+.forgPass .forgPassWay .byPhone{
+	background: #E60000 url(../images/byPhone.png) no-repeat 20px center;
+}
+.forgPass .forgPassWay .byEmail{	
+	background: #E60000 url(../images/byEmail.png) no-repeat 20px center;
+}
+/*通过手机号找回*/
+.forgPass .forgPassForPhone div{
+	width: 370px;
+	height: auto;
+	margin: auto;
+	overflow: hidden;
+}
+.forgPass .forgPassForPhone div p{
+	float: left;
+	line-height: 40px;
+	font-size: 14px;
+}
+.forgPass .forgPassForPhone div p span{
+	color: #E60000;
+}
+.forgPass .forgPassForPhone div input[type=button]{
+	float: left;
+	width: 90px;
+	height: 30px;
+	border-radius: 6px;
+	background: #E60000;
+	color: #fff;
+	font-size: 14px;
+	margin: 5px 0 0 20px;
+	cursor: pointer;
+}
+.forgPass .forgPassForPhone div input[type=text]{
+	float: left;
+	width: 170px;
+	height: 30px;
+	font-size: 14px;
+	margin: 5px 0 0 20px;
+	border: 1px solid #eee;
+	padding: 0 10px;
+}
+.forgPass .forgPassForPhone .sure{
+	width: 80px;
+	height: 30px;
+	border-radius: 6px;
+	background: #E60000;
+	color: #fff;
+	font-size: 14px;
+	margin: 15px 0 0 350px;
+	cursor: pointer;
+}
+/*通过邮箱找回*/
+.forgPass .forgPassForEmail{
+	width: auto;
+	min-width: 400px;
+	max-width: 54%;
+	height: auto;
+	margin: auto;
+	overflow: hidden;
+}
+.forgPass .forgPassForEmail p{
+	float: left;
+	line-height: 40px;
+	font-size: 14px;
+}
+.forgPass .forgPassForEmail p span{
+	color: #E60000;
+}
+.forgPass .forgPassForEmail input[type=button]{
+	float: left;
+	width: 110px;
+	height: 30px;
+	border-radius: 6px;
+	background: #E60000;
+	color: #fff;
+	font-size: 14px;
+	margin: 5px 0 0 20px;
+	cursor: pointer;
+}
+/*修改登录密码*/
+.forgPass .forgPassReset{
+	width: 860px;
+	height: auto;
+}
+.forgPass .forgPassReset dl{
+	overflow: hidden;
+	width: 300px;
+	height: 40px;
+	margin: auto;
+}
+.forgPass .forgPassReset dl dt{
+	float: left;
+	width: 100px;
+	text-align: right;
+	line-height: 40px;
+	height: 40px;
+	font-size: 14px;
+}
+.forgPass .forgPassReset dl dd{
+	float: left;
+	width: 180px;
+	height: 30px;
+	padding: 5px 0;
+	margin-left: 15px;
+}
+.forgPass .forgPassReset dl dd input[type=password]{
+	width: 160px;
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #eee;
+	padding: 0 5px;
+}
+.forgPass .forgPassReset input[type=button]{
+	width: 90px;
+	height: 30px;
+	border-radius: 6px;
+	background: #E60000;
+	color: #fff;
+	font-size: 14px;
+	margin: 25px 0 0 395px;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
