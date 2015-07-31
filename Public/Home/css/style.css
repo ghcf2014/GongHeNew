@@ -41,9 +41,10 @@ a:hover{color: #e60000; text-decoration: none;}
 /*navL*/
 .nav .navL{float: left; width: 380px; height: 60px; padding-top: 30px;}
 /*navR*/
-.nav .navR{float: right; width: 500px; height: 50px; text-align: center; overflow: hidden; padding-top: 55px;}
-.nav .navR li{float: left; width: 100px; height: 50px; font-size: 16px;}
-.nav .navR li a.cur{color: #E60000;}
+.nav .navR{float: right; width: 670px; height: auto; text-align: center; overflow: hidden; padding-top: 55px;}
+.nav .navR li{float: left; width: 100px; height: 50px; font-size: 16px; line-height: 40px; margin: 0 15px;}
+.nav .navR li.cur{ border-bottom: 3px solid #E60000; }
+.nav .navR li.cur a{color: #E60000;}
 
 
 /*-轮播图	banOut-*/
@@ -86,7 +87,7 @@ a:hover{color: #e60000; text-decoration: none;}
 /*li02*/
 .dataIn .dataR li.li02{background: #fff url(../images/weixin-32x25.png) no-repeat 16px center; border-right: 1px solid #eee;}
 /*li03*/
-.dataIn .dataR li.li03{background: #ff9525 url(../images/HoldingGoldWhite.png) no-repeat 10px center;}
+.dataIn .dataR li.li03{background: #ff9525 url(../images/directionWhite.png) no-repeat 20px center;}
 .dataIn .dataR li.li03 a{color: #fff;}
 /*li04*/
 .dataIn .dataR li.li04{background: #fff url(../images/sina-32x25.png) no-repeat 16px center; border-right: 1px solid #eee;}
@@ -241,15 +242,15 @@ a:hover{color: #e60000; text-decoration: none;}
 .loginIn{width: 640px; height: 524px; background: #fff;}
 .loginIn .loginT{height: 50px; border-bottom: 1px solid #eee; overflow: hidden;}
 .loginIn .loginT h2{float: left; width: auto;line-height: 50px; text-align: left; padding-left: 10px; font-size: 18px; font-weight: normal; color: #555;}
-.loginIn .loginT p{float: right; width: auto;line-height: 60px; padding-right: 10px; cursor: pointer;}
+.loginIn .loginT p{float: right; width: auto; padding-top: 15px; padding-right: 10px; cursor: pointer;}
 /*输入*/
 .loginIn .loginB{width: 100%; height: auto; padding-top: 60px;}
 .loginIn .loginB dl{width: 365px; height: 52px; margin: 0 auto 40px; overflow: hidden;}
 .loginIn .loginB dl dt{float: left; width: 52px; height: 52px;}
 .loginIn .loginB dl dd{float: left;width: 310px; height: 50px; border: 1px solid #ccc; border-left: none; overflow: hidden;}
 .loginIn .loginB dl dd input{width: 290px; height: 40px; line-height: 40px; font-size: 14px; color: #999; padding:5px 10px;}
-.loginIn .loginB dl dd input.yzm{width: 140px; height: 40px; line-height: 40px; font-size: 14px; color: #999; padding:5px 10px;float: left;}
-.loginIn .loginB dl dd img{border-left: 1px solid #ccc; float: left; cursor: pointer;}
+.loginIn .loginB dl dd input.yzm{width: 145px; height: 40px; line-height: 40px; font-size: 14px; color: #999; padding:5px 10px;float: left; border-right: 1px solid #ccc;}
+.loginIn .loginB dl dd img{ float: left; cursor: pointer;}
 .loginIn .loginB .loginBtn{width: 360px; height: 45px; background: url(../images/loginBtn.gif) no-repeat; margin: auto; display: block;}
 .loginIn .loginB p{text-align: center; line-height: 28px;}
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++首页结束++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -528,7 +529,7 @@ a:hover{color: #e60000; text-decoration: none;}
 .guideCon .new li b{ color: #E60000; font-weight: normal;}
 .guideCon .new li.one{background: url(../images/howtoregister.png) no-repeat; width: 1036px; height: 270px; padding: 60px 0 0 30px;}
 .guideCon .new li.two{background: url(../images/authenticate.png) no-repeat; width: 1036px; height: 275px; padding: 60px 0 0 30px;}
-..guideCon .new li p.three{background: url(../images/howtoPurchase.png) no-repeat; width: 1036px; height: 320px; padding: 35px 0 0 30px;}
+.guideCon .new li.three{background: url(../images/howtoPurchase.png) no-repeat; width: 1036px; height: 320px; padding: 35px 0 0 30px;}
 .guideCon .new li.four{background: url(../images/increase.png) no-repeat; width: 1036px; height: 200px; padding: 60px 0 0 30px;}
 .guideCon .new li.five{background: url(../images/order.png) no-repeat; width: 1036px; height: 280px; padding: 60px 0 0 30px;}
 .guideCon .new li.six{background: url(../images/Piggybank.png) no-repeat; width: 1036px; height: 300px; padding: 60px 0 0 30px;}

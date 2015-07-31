@@ -405,8 +405,19 @@ $(function(){
 
 
 
-
-
+//当前导航栏
+$(document).ready(function(){  
+//	alert($(".navR li a").length);
+    $(".navR li a").each(function(){  
+        $this = $(this);  
+        if($this[0].pathname == String(window.location.pathname)){  
+            $this.parent().addClass("cur");  
+            $this.parent().siblings().removeClass("cur");
+        }  
+    });    
+    
+    
+});  
 
 
 
