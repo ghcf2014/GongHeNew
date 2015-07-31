@@ -21,7 +21,19 @@ class IndexController extends Controller {
     public function me(){
       $this->display('Index/me');
     }
-    public function newdetail(){
+    public function newdetail($id=0){
+      $art = M('article');
+      $map['id']=$id;
+      $date_art = $art->where($map)->order('id DESC')->find($id);
+      $this->assign('art', $date_art);
+
       $this->display('Index/newdetail');
+    }
+    public function newlist($id=0){
+      $art = M('article');
+      $date_art = $art->order('id DESC')->select();
+      $this->assign('art', $date_art);
+
+      $this->display('Index/newlist');
     }
 }

@@ -363,10 +363,10 @@
 				<div class="news">
 					<p><img src="__PUBLIC__/Home/images/conRNewsPic01.gif"/></p>
 					<div class="newsCon">
-						<h2><strong>网站公告</strong><a href="javascript:;">more</a></h2>
+						<h2><strong>网站公告</strong><a href="{:U('Index/newlist')}">more</a></h2>
 						<ul>
 						<foreach name='art' item='vo'>
-							<li><a href="javasvript:;">{$vo.title}</a></li>
+							<li><a href="{:U('Index/newdetail?id='.$vo['id'])}">{$vo.title}</a></li>
 						</foreach>
 						</ul>
 					</div>
@@ -376,10 +376,10 @@
 				<div class="news">
 					<p><img src="__PUBLIC__/Home/images/conRNewsPic02.gif"/></p>
 					<div class="newsCon">
-						<h2><strong>行业新闻</strong><a href="javascript:;">more</a></h2>
+						<h2><strong>行业新闻</strong><a href="{:U('Index/newlist')}">more</a></h2>
 						<ul>
 						<foreach name='art' item='vo'>
-							<li><a href="javasvript:;">{$vo.title}</a></li>
+							<li><a href="{:U('Index/newdetail?id='.$vo['id'])}">{$vo.title}</a></li>
 						</foreach>
 						</ul>
 					</div>
