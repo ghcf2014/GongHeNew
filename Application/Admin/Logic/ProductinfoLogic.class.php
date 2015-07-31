@@ -28,7 +28,9 @@ class ProductinfoLogic implements Productinfo {
 	 */
 	public function pro_launch($data) {
 		// TODO 自动生成的方法存根
-		return "产品发布";
+		$pro=M('product_info');
+		$result=$pro->add($data);
+		return $result;
 	}
 
 }

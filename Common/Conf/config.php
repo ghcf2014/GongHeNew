@@ -23,7 +23,7 @@ return array(
 	'__FILE__'		=>__FILE__,
 	'DEFAULT_TIMEZONE'      => 'PRC', // 默认时区
 	
-
+	'UMEDITOR_HOME_URL' => "__PUBLIC__/Static/ue",
 
 	//开启布局
 	// 'LAYOUT_ON'=>false,
