@@ -148,15 +148,17 @@ $(function(){
 
 
 //注册
-//$(function(){
-//      $('.register .registerBot .registerBotL p .registerChe').bind("change",function() {
-//         if($(this).is(':checked')){
-//              $('.register .registerBot .registerBotL .registerBtn').prop( "disabled", false);
-//         }else{
-//              $('.register .registerBot .registerBotL .registerBtn').prop( "disabled", true);
-//         }
-//      });          
-//})
+$(function(){
+    $('.register .registerBot .registerBotL p .registerChe').bind("change",function() {
+       if($(this).is(':checked')){
+            $('.register .registerBot .registerBotL .registerBtn').prop( "disabled", false);
+            $('.register .registerBot .registerBotL .registerBtn').css('cursor','pointer');
+       }else{
+            $('.register .registerBot .registerBotL .registerBtn').prop( "disabled", true);
+            $('.register .registerBot .registerBotL .registerBtn').css('cursor','not-allowed');
+       }
+    });          
+})
 
 
 
