@@ -415,28 +415,6 @@ $(function(){
 	});	
 	
 	
-	//共需投资
-	function myMoney(){
-		var num = parseInt($('#txt').val());//购买数量
-		var price = parseInt($('.prodDet .prodDetConT .prodDetConTL .ul01 li').eq(2).find('span').html());  //Unit price购买单价
-		var IMoney = parseInt($('.prodDet .prodDetConT .prodDetConTR dl').eq(1).find('span').html()); //InvestMoney,共需投资的钱
-	//	alert(IMoney);
-		var rate = parseFloat($('.prodDet .prodDetConT .prodDetConTL .ul01 li').eq(0).find('span').html());  //年华收益率
-	//	alert(rate);
-		var AMoney = parseInt($('.prodDet .prodDetConT .prodDetConTR dl').eq(2).find('span').html());  //年化收益
-		
-		IMoney = num * price;
-		AMoney = num * rate;
-	//	alert(IMoney);
-		$('.prodDet .prodDetConT .prodDetConTR dl').eq(1).find('span').html(''+IMoney);
-		$('.prodDet .prodDetConT .prodDetConTR dl').eq(2).find('span').html(''+AMoney);
-	}
-//	myMoney();
-	
-	
-	
-	
-	
 	//选中选购合同，否则不可购买
 	$('.prodDet .prodDetConT .prodDetConTR p input[type=checkbox]').bind("change",function() {
            if($(this).is(':checked')){
@@ -448,6 +426,40 @@ $(function(){
            }
         });	
 })
+//共需投资
+function myMoney(){
+	var max = parseInt($('.prodDet .prodDetConT .prodDetConTL .ul02 li').eq(1).children('b').html());  //最大购买数量
+	var num = parseInt($('#txt').val());//购买数量
+	var price = parseInt($('.prodDet .prodDetConT .prodDetConTL .ul01 li').eq(2).find('span').html());  //Unit price购买单价
+	var IMoney = parseInt($('.prodDet .prodDetConT .prodDetConTR dl').eq(1).find('span').html()); //InvestMoney,共需投资的钱
+//	alert(IMoney);
+	var rate = parseFloat($('.prodDet .prodDetConT .prodDetConTL .ul01 li').eq(0).find('span').html());  //年华收益率
+//	alert(rate);
+	var AMoney = parseInt($('.prodDet .prodDetConT .prodDetConTR dl').eq(2).find('span').html());  //年化收益
+						
+	if (num > max) {
+		alert('请输入小于等于'+max+'的整数');
+		$('#txt').val(max);
+		num = max;
+		IMoney = num * price;
+		AMoney = num * rate;
+		$('.prodDet .prodDetConT .prodDetConTR dl').eq(1).find('span').html(''+IMoney);
+		$('.prodDet .prodDetConT .prodDetConTR dl').eq(2).find('span').html(''+AMoney);
+	} 
+	else if(num <= 0){
+		alert('请输入大于0的整数');
+		$('#txt').val(0);
+		$('.prodDet .prodDetConT .prodDetConTR dl').eq(1).find('span').html(0);
+		$('.prodDet .prodDetConT .prodDetConTR dl').eq(2).find('span').html(0);
+	}
+	else{
+		IMoney = num * price;
+		AMoney = num * rate;
+		$('.prodDet .prodDetConT .prodDetConTR dl').eq(1).find('span').html(''+IMoney);
+		$('.prodDet .prodDetConT .prodDetConTR dl').eq(2).find('span').html(''+AMoney);
+	}
+}
+
 
 
 
