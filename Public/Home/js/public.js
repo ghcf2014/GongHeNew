@@ -372,17 +372,125 @@ $(function(){
 			$(element).addClass('cur').siblings().removeClass('cur');
 		});
 	});
+	
+	
+		
+	var max = parseInt($('.prodDet .prodDetConT .prodDetConTL .ul02 li').eq(1).children('b').html());
+//	alert(max);
+	//点击"+"
+	$('#plus').click(function(){
+		if( isNaN($('#txt').val()) ){
+			alert('请输入整数');
+		}
+		else if($('#txt').val() >= max){
+			alert('您好！您最多只能购买'+max+'块');
+			$('#txt').val(max);
+		}
+		else if($('#txt').val() <0){
+				alert('请输入大于0的整数');
+				$('#txt').val(0);
+		}
+		else{
+			$('#txt').val(parseInt($('#txt').val())+1);
+		}
+		myMoney();
+	});
+	//点击"-"
+	$('#minus').click(function(){
+		if( isNaN($('#txt').val()) ){
+			alert('请输入整数');
+		}
+		else if($('#txt').val() > max){
+			alert('您好！您最多只能购买'+max+'块');
+			$('#txt').val(max);
+		}
+		else if($('#txt').val() <=0){
+				alert('请输入大于0的整数');
+				$('#txt').val(0);
+		}
+		else{
+			$('#txt').val(parseInt($('#txt').val())-1);
+		}
+		myMoney();
+	});	
+	
+	
+	//共需投资
+	function myMoney(){
+		var num = parseInt($('#txt').val());//购买数量
+		var price = parseInt($('.prodDet .prodDetConT .prodDetConTL .ul01 li').eq(2).find('span').html());  //Unit price购买单价
+		var IMoney = parseInt($('.prodDet .prodDetConT .prodDetConTR dl').eq(1).find('span').html()); //InvestMoney,共需投资的钱
+	//	alert(IMoney);
+		var rate = parseFloat($('.prodDet .prodDetConT .prodDetConTL .ul01 li').eq(0).find('span').html());  //年华收益率
+	//	alert(rate);
+		var AMoney = parseInt($('.prodDet .prodDetConT .prodDetConTR dl').eq(2).find('span').html());  //年化收益
+		
+		IMoney = num * price;
+		AMoney = num * rate;
+	//	alert(IMoney);
+		$('.prodDet .prodDetConT .prodDetConTR dl').eq(1).find('span').html(''+IMoney);
+		$('.prodDet .prodDetConT .prodDetConTR dl').eq(2).find('span').html(''+AMoney);
+	}
+//	myMoney();
+	
+	
+	
+	
+	
+	//选中选购合同，否则不可购买
+	$('.prodDet .prodDetConT .prodDetConTR p input[type=checkbox]').bind("change",function() {
+           if($(this).is(':checked')){
+                $('.prodDet .prodDetConT .prodDetConTR .btn').prop( "disabled", false);
+                $('.prodDet .prodDetConT .prodDetConTR .btn').css('cursor','pointer');
+           }else{
+                $('.prodDet .prodDetConT .prodDetConTR .btn').prop( "disabled", true);
+                $('.prodDet .prodDetConT .prodDetConTR .btn').css('cursor','not-allowed');
+           }
+        });	
 })
 
 
 
 
+//关于公司的--网站公告-新闻动态-行业动态-关于我们-公司简介
+$(function(){
+	//tab切换
+	$('.about .aboutL li').each(function(index,element){
+		$(element).click(function(){
+			$('.about .aboutR .tab').eq($(element).index()).show().siblings().hide();
+			$(element).addClass('cur').siblings().removeClass('cur');
+		});
+	});
+})
 
 
 
 
+//找回密码
+$(function(){
+	$('.forgPass .forgPassWay .byPhone').click(function(){
+		$('.forgPass .forgPassForPhone').show();
+		$('.forgPass .forgPassWay').hide();
+	});
+	$('.forgPass .forgPassWay .byEmail').click(function(){
+		$('.forgPass .forgPassForEmail').show();
+		$('.forgPass .forgPassWay').hide();
+	});
+})
 
 
+
+//当前导航栏
+$(document).ready(function(){  
+//	alert($(".navR li a").length);
+    $(".navR li a").each(function(){  
+        $this = $(this);  
+        if($this[0].pathname == String(window.location.pathname)){  
+            $this.parent().addClass("cur");  
+            $this.parent().siblings().removeClass("cur");
+        }  
+    });       
+});  
 
 
 

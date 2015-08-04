@@ -6,8 +6,8 @@
 		<div class="prodDet">
 			<!--top start-->
 			<ul class="top">
-				<li><a href="xinshouzhinan.html"><img src="images/newhandimg.gif" title="新手指南" alt="新手指南"/></a></li>
-				<li><a href="zhuce.html"><img src="images/newhandZCimg.gif" title="新手注册" alt="新手注册"/></a></li>
+				<li><a href="{:U('Index/newguide')}"><img src="__PUBLIC__/Home/images/newhandimg.gif" title="新手指南" alt="新手指南"/></a></li>
+				<li><a href="{:U('User/register')}"><img src="__PUBLIC__/Home/images/newhandZCimg.gif" title="新手注册" alt="新手注册"/></a></li>
 				<li class="last">
 					<h3>理财攻略</h3>
 					<ul>
@@ -50,11 +50,14 @@
 					<h3>账户可用余额：¥<span>10000.00</span></h3>
 					<dl>
 						<dt>我要认购:</dt>
-						<dd>							
-							<input type="text" value="0" class="txt"/>						
+						<dd>	
+							<input type="button" id="minus" value="-" />
+							<input type="text" value="0" id="txt" onblur="myMoney();"/>		
+							<input type="button" id="plus" value="+" />
 							<b>块</b>
 						</dd>
-					</dl><dl>
+					</dl>
+					<dl>
 						<dt>共需投资:</dt>
 						<dd>
 							<span>0</span>
@@ -70,7 +73,7 @@
 					</dl>
 					<p style="margin-top: 10px;">我已查看并同意按照：</p>
 					<p>
-						<input type="checkbox" name="" id="" value="" />
+						<input type="checkbox" name="" id="" checked="checked"/>
 						<a href="javascript:;">《委托融资租赁合同（自然人）》</a>
 					</p>
 					<p>约定将认购的租赁物出租给承租人</p>
@@ -120,14 +123,13 @@
 					</div>
 					<!--相关资质-->
 					<div class="tab" style="text-align: center;display: none;">
-						<img src="images/20150722085538-44400.jpg"/>
-						<img src="images/20150722085538-47339.jpg"/>
-						<img src="images/20150722085538-50879.jpg"/>
-						<img src="images/20150722085538-92368.jpg"/>
-						<img src="images/20150722085538-94210.jpg"/>
-						<img src="images/20150722085539-28254.jpg"/>
-						<img src="images/20150722085539-42380.jpg"/>
-						<img src="images/20150722085539-76070.jpg"/>
+						<img src="__PUBLIC__/Home/images/20150722085538-47339.jpg"/>
+						<img src="__PUBLIC__/Home/images/20150722085538-50879.jpg"/>
+						<img src="__PUBLIC__/Home/images/20150722085538-92368.jpg"/>
+						<img src="__PUBLIC__/Home/images/20150722085538-94210.jpg"/>
+						<img src="__PUBLIC__/Home/images/20150722085539-28254.jpg"/>
+						<img src="__PUBLIC__/Home/images/20150722085539-42380.jpg"/>
+						<img src="__PUBLIC__/Home/images/20150722085539-76070.jpg"/>
 					</div>
 					<!--收益说明-->
 					<div class="tab" style="display: none;">

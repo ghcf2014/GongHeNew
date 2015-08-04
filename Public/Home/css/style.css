@@ -41,9 +41,10 @@ a:hover{color: #e60000; text-decoration: none;}
 /*navL*/
 .nav .navL{float: left; width: 380px; height: 60px; padding-top: 30px;}
 /*navR*/
-.nav .navR{float: right; width: 500px; height: 50px; text-align: center; overflow: hidden; padding-top: 55px;}
-.nav .navR li{float: left; width: 100px; height: 50px; font-size: 16px;}
-.nav .navR li a.cur{color: #E60000;}
+.nav .navR{float: right; width: 670px; height: auto; text-align: center; overflow: hidden; padding-top: 55px;}
+.nav .navR li{float: left; width: 100px; height: 50px; font-size: 16px; line-height: 40px; margin: 0 15px;}
+.nav .navR li.cur{ border-bottom: 3px solid #E60000; }
+.nav .navR li.cur a{color: #E60000;}
 
 
 /*-轮播图	banOut-*/
@@ -86,7 +87,7 @@ a:hover{color: #e60000; text-decoration: none;}
 /*li02*/
 .dataIn .dataR li.li02{background: #fff url(../images/weixin-32x25.png) no-repeat 16px center; border-right: 1px solid #eee;}
 /*li03*/
-.dataIn .dataR li.li03{background: #ff9525 url(../images/HoldingGoldWhite.png) no-repeat 10px center;}
+.dataIn .dataR li.li03{background: #ff9525 url(../images/directionWhite.png) no-repeat 20px center;}
 .dataIn .dataR li.li03 a{color: #fff;}
 /*li04*/
 .dataIn .dataR li.li04{background: #fff url(../images/sina-32x25.png) no-repeat 16px center; border-right: 1px solid #eee;}
@@ -241,17 +242,41 @@ a:hover{color: #e60000; text-decoration: none;}
 .loginIn{width: 640px; height: 524px; background: #fff;}
 .loginIn .loginT{height: 50px; border-bottom: 1px solid #eee; overflow: hidden;}
 .loginIn .loginT h2{float: left; width: auto;line-height: 50px; text-align: left; padding-left: 10px; font-size: 18px; font-weight: normal; color: #555;}
-.loginIn .loginT p{float: right; width: auto;line-height: 60px; padding-right: 10px; cursor: pointer;}
+.loginIn .loginT p{float: right; width: auto; padding-top: 15px; padding-right: 10px; cursor: pointer;}
 /*输入*/
 .loginIn .loginB{width: 100%; height: auto; padding-top: 60px;}
 .loginIn .loginB dl{width: 365px; height: 52px; margin: 0 auto 40px; overflow: hidden;}
 .loginIn .loginB dl dt{float: left; width: 52px; height: 52px;}
 .loginIn .loginB dl dd{float: left;width: 310px; height: 50px; border: 1px solid #ccc; border-left: none; overflow: hidden;}
 .loginIn .loginB dl dd input{width: 290px; height: 40px; line-height: 40px; font-size: 14px; color: #999; padding:5px 10px;}
-.loginIn .loginB dl dd input.yzm{width: 140px; height: 40px; line-height: 40px; font-size: 14px; color: #999; padding:5px 10px;float: left;}
-.loginIn .loginB dl dd img{border-left: 1px solid #ccc; float: left; cursor: pointer;}
+.loginIn .loginB dl dd input.yzm{width: 145px; height: 40px; line-height: 40px; font-size: 14px; color: #999; padding:5px 10px;float: left; border-right: 1px solid #ccc;}
+.loginIn .loginB dl dd img{ float: left; cursor: pointer;}
 .loginIn .loginB .loginBtn{width: 360px; height: 45px; background: url(../images/loginBtn.gif) no-repeat; margin: auto; display: block;}
 .loginIn .loginB p{text-align: center; line-height: 28px;}
+
+
+
+
+/*返回顶部*/
+.returntop{
+	position: fixed;
+	right: 20px;
+	bottom: 40px;
+	width: 48px;
+	height: 49px;
+}
+.returntop a{
+	display: block;
+	background: url(../images/returnTop.png) no-repeat;
+	width: 48px;
+	height: 49px;
+}
+.returntop a:hover{
+	display: block;
+	background: url(../images/returnTop.png) no-repeat -48px center;
+	width: 48px;
+	height: 49px;
+}
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++首页结束++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
@@ -528,7 +553,7 @@ a:hover{color: #e60000; text-decoration: none;}
 .guideCon .new li b{ color: #E60000; font-weight: normal;}
 .guideCon .new li.one{background: url(../images/howtoregister.png) no-repeat; width: 1036px; height: 270px; padding: 60px 0 0 30px;}
 .guideCon .new li.two{background: url(../images/authenticate.png) no-repeat; width: 1036px; height: 275px; padding: 60px 0 0 30px;}
-..guideCon .new li p.three{background: url(../images/howtoPurchase.png) no-repeat; width: 1036px; height: 320px; padding: 35px 0 0 30px;}
+.guideCon .new li.three{background: url(../images/howtoPurchase.png) no-repeat; width: 1036px; height: 320px; padding: 35px 0 0 30px;}
 .guideCon .new li.four{background: url(../images/increase.png) no-repeat; width: 1036px; height: 200px; padding: 60px 0 0 30px;}
 .guideCon .new li.five{background: url(../images/order.png) no-repeat; width: 1036px; height: 280px; padding: 60px 0 0 30px;}
 .guideCon .new li.six{background: url(../images/Piggybank.png) no-repeat; width: 1036px; height: 300px; padding: 60px 0 0 30px;}
@@ -2154,11 +2179,11 @@ a:hover{color: #e60000; text-decoration: none;}
 	height: 28px;
 	margin-right: 5px;
 }
-/*.prodDet .prodDetConT .prodDetConTR dl dd input[type=button]{
+.prodDet .prodDetConT .prodDetConTR dl dd input[type=button]{
 	width: 28px;
 	color: #999;
 	cursor: pointer;
-}*/
+}
 .prodDet .prodDetConT .prodDetConTR dl dd input[type=text]{
 	width: 100px;
 	margin-top: 6px;
@@ -2243,6 +2268,325 @@ a:hover{color: #e60000; text-decoration: none;}
 .prodDet .prodDetConB .prodDetConBTab .tab p{
 	line-height: 26px;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*-----------有关公司---------------------------------------*/
+.about{
+	width: 1140px;
+	height: auto;
+	margin: 25px auto 50px;
+	overflow: hidden;
+}
+/*aboutL*/
+.about .aboutL{
+	float: left;
+	width: 200px;
+	height: auto;
+}
+.about .aboutL li{
+	width: 195px;
+	height: 60px;
+	border: 1px solid #eee;
+	border-left: 5px solid #E60000;
+	margin-bottom: 5px;
+	background: #fff;
+	line-height: 60px;
+	text-align: center;
+	font-size: 18px;
+}
+.about .aboutL li.cur{
+	border: 1px solid #E60000;
+	border-left: 5px solid #E60000;
+}
+.about .aboutL li a{
+	display: block;
+}
+.about .aboutL li.cur a{
+	color: #E60000;
+}
+/*aboutR*/
+.about .aboutR{
+	float: right;
+	width: 830px;
+	height: auto;
+	padding: 35px;
+	border: 1px solid #eee;
+	background: #fff;
+}
+/*网站公告---新闻动态---行业新闻*/
+.about .aboutR .aboutList li{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	border-bottom: 1px dashed #eee;
+}
+.about .aboutR .aboutList li a{
+	display: block;
+	overflow: hidden;
+}
+.about .aboutR .aboutList li a strong{
+	float: left;
+	width: 85%;
+	font-weight: normal;
+}
+.about .aboutR .aboutList li a b{
+	float: right;
+	width: 12%;
+	font-weight: normal;
+}
+/*关于我们*/
+.about .aboutR .aboutUs h2{
+	font-size: 20px;
+	font-weight: normal;line-height: 60px;
+}
+.about .aboutR .aboutUs p{
+	line-height: 30px;
+	font-size: 16px;
+	margin-bottom: 60px;
+}
+.about .aboutR .aboutCompany p{
+	line-height: 30px;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-------------新闻详情页------------------------*/
+.about .aboutR .newsDetails{
+	padding: 10px;
+}
+.about .aboutR .newsDetails h3{
+	text-align: center;
+	height: 70px;
+	line-height: 50px;
+	font-weight: normal;
+	font-size: 18px;
+}
+.about .aboutR .newsDetails .time{
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-weight: normal;
+	font-size: 14px;
+}
+.about .aboutR .newsDetails p{
+	line-height: 34px;
+	font-weight: normal;
+	font-size: 14px;
+	text-indent: 2em;
+}
+.about .aboutR .upDown{
+	overflow: hidden;
+	height: 30px;
+	padding: 10px 0;
+}
+.about .aboutR .upDown a{
+	display: block;
+	width: 48%;
+	height: 30px;
+	line-height: 30px;
+	color: #E60000;
+}
+.about .aboutR .upDown a:hover{
+	text-decoration: underline;
+}
+.about .aboutR .upDown .up{
+	float: left;
+}
+.about .aboutR .upDown .down{
+	float: right;
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+/*----------------找回登录密码-----------------------------------*/
+.forgPass{
+	width: 860px;
+	height: 400px;
+	margin: 25px auto 50px;
+	border: 1px solid #eee;
+	background: #fff;
+	padding: 0 20px;
+}
+.forgPass h3{
+	border-bottom: 1px solid #eee;
+	height: 50px;
+	line-height: 50px;
+	font-weight: normal;
+	font-size: 18px;
+	color: #E60000;
+	padding-left: 15px;
+	width: 845px;
+	margin-bottom: 60px;
+}
+/*找回方式*/
+.forgPass .forgPassWay{
+	width: 100%;
+	height: auto;
+}
+.forgPass .forgPassWay input[type=button]{
+	width: 240px;
+	height: 60px;
+	border-radius: 6px;
+	color: #fff;
+	line-height: 60px;
+	font-size: 16px;
+	display: block;
+	margin: 0 auto 15px;
+	cursor: pointer;
+}
+.forgPass .forgPassWay .byPhone{
+	background: #E60000 url(../images/byPhone.png) no-repeat 20px center;
+}
+.forgPass .forgPassWay .byEmail{	
+	background: #E60000 url(../images/byEmail.png) no-repeat 20px center;
+}
+/*通过手机号找回*/
+.forgPass .forgPassForPhone div{
+	width: 370px;
+	height: auto;
+	margin: auto;
+	overflow: hidden;
+}
+.forgPass .forgPassForPhone div p{
+	float: left;
+	line-height: 40px;
+	font-size: 14px;
+}
+.forgPass .forgPassForPhone div p span{
+	color: #E60000;
+}
+.forgPass .forgPassForPhone div input[type=button]{
+	float: left;
+	width: 90px;
+	height: 30px;
+	border-radius: 6px;
+	background: #E60000;
+	color: #fff;
+	font-size: 14px;
+	margin: 5px 0 0 20px;
+	cursor: pointer;
+}
+.forgPass .forgPassForPhone div input[type=text]{
+	float: left;
+	width: 170px;
+	height: 30px;
+	font-size: 14px;
+	margin: 5px 0 0 20px;
+	border: 1px solid #eee;
+	padding: 0 10px;
+}
+.forgPass .forgPassForPhone .sure{
+	width: 80px;
+	height: 30px;
+	border-radius: 6px;
+	background: #E60000;
+	color: #fff;
+	font-size: 14px;
+	margin: 15px 0 0 350px;
+	cursor: pointer;
+}
+/*通过邮箱找回*/
+.forgPass .forgPassForEmail{
+	width: auto;
+	min-width: 400px;
+	max-width: 54%;
+	height: auto;
+	margin: auto;
+	overflow: hidden;
+}
+.forgPass .forgPassForEmail p{
+	float: left;
+	line-height: 40px;
+	font-size: 14px;
+}
+.forgPass .forgPassForEmail p span{
+	color: #E60000;
+}
+.forgPass .forgPassForEmail input[type=button]{
+	float: left;
+	width: 110px;
+	height: 30px;
+	border-radius: 6px;
+	background: #E60000;
+	color: #fff;
+	font-size: 14px;
+	margin: 5px 0 0 20px;
+	cursor: pointer;
+}
+/*修改登录密码*/
+.forgPass .forgPassReset{
+	width: 860px;
+	height: auto;
+}
+.forgPass .forgPassReset dl{
+	overflow: hidden;
+	width: 300px;
+	height: 40px;
+	margin: auto;
+}
+.forgPass .forgPassReset dl dt{
+	float: left;
+	width: 100px;
+	text-align: right;
+	line-height: 40px;
+	height: 40px;
+	font-size: 14px;
+}
+.forgPass .forgPassReset dl dd{
+	float: left;
+	width: 180px;
+	height: 30px;
+	padding: 5px 0;
+	margin-left: 15px;
+}
+.forgPass .forgPassReset dl dd input[type=password]{
+	width: 160px;
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #eee;
+	padding: 0 5px;
+}
+.forgPass .forgPassReset input[type=button]{
+	width: 90px;
+	height: 30px;
+	border-radius: 6px;
+	background: #E60000;
+	color: #fff;
+	font-size: 14px;
+	margin: 25px 0 0 395px;
+	cursor: pointer;
+}
+
+
+
+
+
 
 
 
