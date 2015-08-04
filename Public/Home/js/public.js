@@ -425,6 +425,15 @@ $(function(){
                 $('.prodDet .prodDetConT .prodDetConTR .btn').css('cursor','not-allowed');
            }
         });	
+        
+        
+    //支付密码弹出框
+	$('.prodDet .prodDetConT .prodDetConTR .btn').click(function(){
+		$('.prodDet .payOut').show();
+		$('.prodDet .payOut .pay .btn .close').click(function(){
+			$('.prodDet .payOut').hide();
+		});
+	});
 })
 //共需投资
 function myMoney(){

@@ -42,7 +42,7 @@ a:hover{color: #e60000; text-decoration: none;}
 .nav .navL{float: left; width: 380px; height: 60px; padding-top: 30px;}
 /*navR*/
 .nav .navR{float: right; width: 670px; height: auto; text-align: center; overflow: hidden; padding-top: 55px;}
-.nav .navR li{float: left; width: 100px; height: 50px; font-size: 16px; line-height: 40px; margin: 0 15px;}
+.nav .navR li{float: left; width: 80px; height: 50px; font-size: 16px; line-height: 40px; margin: 0 15px;}
 .nav .navR li.cur{ border-bottom: 3px solid #E60000; }
 .nav .navR li.cur a{color: #E60000;}
 
@@ -2022,6 +2022,7 @@ a:hover{color: #e60000; text-decoration: none;}
 	height: auto;
 	margin: auto;
 	padding: 35px 0;
+	position: relative;
 }
 .prodDet .top{
 	width: 100%;
@@ -2268,6 +2269,80 @@ a:hover{color: #e60000; text-decoration: none;}
 .prodDet .prodDetConB .prodDetConBTab .tab p{
 	line-height: 26px;
 }
+/*支付密码支付*/
+.prodDet .payOut{
+	width: 605px;
+	height: 262px;
+	background: rgba(0,0,0,0.3);
+	padding: 15px;
+	position: absolute;
+	z-index: 100;
+	top: 160px;
+	right: 250px;
+	box-shadow: 4px 6px 7px #ccc;
+	display: none;
+}
+.prodDet .payOut .pay{
+	width: 445px;
+	height: 212px;
+	background: #fff;
+	padding:25px 80px;
+}
+.prodDet .payOut .pay p{
+	line-height: 40px;
+	color: #E60000;
+	font-size: 18px;
+}
+.prodDet .payOut .pay dl{
+	overflow: hidden;
+}
+.prodDet .payOut .pay dl dt{
+	float: left;
+	width: 300px;
+	height: 42px;
+}
+.prodDet .payOut .pay dl dt input{
+	width: 280px;
+	height: 40px;
+	border: 1px solid #eee;
+	padding: 0 5px;
+	line-height: 40px;
+}
+.prodDet .payOut .pay dl dd{
+	float: left;
+	line-height: 40px;
+	font-size: 16px;
+	width: 140px;
+	text-align: right;
+}
+.prodDet .payOut .pay dl dd a{
+	color: #E60000;
+}
+.prodDet .payOut .pay dl dd a:hover{
+	text-decoration: underline;
+}
+.prodDet .payOut .pay .btn{
+	overflow: hidden;
+	width: 255px;
+	margin: 65px auto 0;
+}
+.prodDet .payOut .pay .btn input{
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	color: #fff;
+	font-size: 14px;
+	float:left;
+	cursor: pointer;
+}
+.prodDet .payOut .pay .btn .sure{
+	background: #E60000;
+	margin-right: 40px;
+}
+.prodDet .payOut .pay .btn .close{
+	background: #9E9E9E;
+}
+
 
 
 
