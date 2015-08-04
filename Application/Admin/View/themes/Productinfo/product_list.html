@@ -5,14 +5,9 @@
 		<div class="row wrapper border-bottom white-bg page-heading">
 			<div class="col-sm-4">
 				<h2>产品库</h2>
-				<ol class="breadcrumb">
-					<li>
-						<a href="index.html">主页</a>
-					</li>
-					<li>
-						<strong>产品列表</strong>
-					</li>
-				</ol>
+				<div>
+                     <a href="{:U('Productinfo/product_launch')}" style="color:white" class="btn btn-primary">添加产品</a>
+                 </div>
 			</div>
 		</div>
 		<div class="row">
@@ -51,91 +46,50 @@
 
 								<table class="table table-hover">
 									<tbody>
-										<tr>
-											<td class="project-status">
-												<span class="label label-primary">进行中 
-											</td>
-											<td class="project-title">
-												<a href="project_detail.html">LIKE－一款能够让用户快速获得认同感的兴趣社交应用</a>
-												<br />
-												<small>创建于 2014.08.15</small>
-											</td>
-											<td class="project-completion">
-												<small>当前进度： 48%</small>
-												<div class="progress progress-mini">
-													<div style="width: 48%;" class="progress-bar"></div>
-												</div>
-											</td>
-											<td class="project-people">
-												<a href="projects.html">
-													<img alt="image" class="img-circle"
-														src="__PUBLIC__/Admin/img/a3.jpg">
-												</a>
-												<a href="projects.html">
-													<img alt="image" class="img-circle"
-														src="__PUBLIC__/Admin/img/a1.jpg">
-												</a>
-												<a href="projects.html">
-													<img alt="image" class="img-circle"
-														src="__PUBLIC__/Admin/img/a2.jpg">
-												</a>
-												<a href="projects.html">
-													<img alt="image" class="img-circle"
-														src="__PUBLIC__/Admin/img/a4.jpg">
-												</a>
-												<a href="projects.html">
-													<img alt="image" class="img-circle"
-														src="__PUBLIC__/Admin/img/a5.jpg">
-												</a>
-											</td>
-											<td class="project-actions">
-												<a href="projects.html#" class="btn btn-white btn-sm">
-													<i class="fa fa-folder"></i>
-													查看
-												</a>
-												<a href="projects.html#" class="btn btn-white btn-sm">
-													<i class="fa fa-pencil"></i>
-													编辑
-												</a>
-											</td>
-										</tr>
-
-										<tr>
-											<td class="project-status">
-												<span class="label label-default">已取消 
-											</td>
-											<td class="project-title">
-												<a href="project_detail.html">线下超市+线上商城+物流配送互联系统</a>
-												<br />
-												<small>创建于 2014.08.15</small>
-											</td>
-											<td class="project-completion">
-												<small>当前进度： 8%</small>
-												<div class="progress progress-mini">
-													<div style="width: 8%;" class="progress-bar"></div>
-												</div>
-											</td>
-											<td class="project-people">
-												<a href="projects.html">
-													<img alt="image" class="img-circle"
-														src="__PUBLIC__/Admin/img/a5.jpg">
-												</a>
-												<a href="projects.html">
-													<img alt="image" class="img-circle"
-														src="__PUBLIC__/Admin/img/a3.jpg">
-												</a>
-											</td>
-											<td class="project-actions">
-												<a href="projects.html#" class="btn btn-white btn-sm">
-													<i class="fa fa-folder"></i>
-													查看
-												</a>
-												<a href="projects.html#" class="btn btn-white btn-sm">
-													<i class="fa fa-pencil"></i>
-													编辑
-												</a>
-											</td>
-										</tr>
+										<volist name="info" id="data">
+											
+											<tr>
+												<td class="project-status">
+													
+														<if condition="$data['status'] eq 0 ">
+															<span class="label label-primary">锁定期内</span>
+														<elseif condition="$data['status'] eq 1"/>
+															<span class="label label-primary">销售中</span>
+														<elseif condition="$data['status'] eq 2"/>
+															<span class="label label-default">已售罄</span>
+														<elseif condition="$data['status'] eq 3"/>
+															<span class="label label-default">转让中</span>
+														</if>
+													</span>
+												</td>
+												<td class="project-title">
+													<a href="{:U('Productinfo/product_detail')}">{$data.pname}</a>
+													<br />
+													<small>{$data.pro_label}</small>&nbsp;&nbsp;&nbsp;&nbsp;<small>创建于 {$data.add_time}</small>
+												</td>
+												<td class="project-completion">
+													<small>交易模式：{$data.pro_model}</small>
+												</td>
+												<td class="project-completion">
+													<small>单价：{$data.rate}</small>
+												</td>
+												<td class="project-completion">
+													<small>数量：{$data.pro_num}</small>
+													
+												</td>
+												
+												<td class="project-actions">
+													<a href="{:U('Productinfo/product_detail')}" class="btn btn-white btn-sm">
+														<i class="fa fa-folder"></i>
+														查看
+													</a>
+													<a href="{:U('Productinfo/product_edit')}" class="btn btn-white btn-sm">
+														<i class="fa fa-pencil"></i>
+														编辑
+													</a>
+												</td>
+											</tr>
+										</volist>
 									</tbody>
 								</table>
 							</div>

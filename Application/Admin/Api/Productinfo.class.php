@@ -7,7 +7,7 @@ interface Productinfo {
 	// 产品发布
 	public function pro_launch($data);
 	// 产品查询
-	public function pro_serach($arr,$pid);
+	public function pro_search($map);
 	// 产品修改
 	public function pro_change($datas,$pid);
 	// 产品删除

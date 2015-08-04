@@ -1,5 +1,4 @@
-<block name="body">
-<extend name="Base/common" />
+<block name="body"> <extend name="Base/common" />
 <div id="wrapper">
 	<div id="page-wrapper" class="gray-bg dashbard-1">
 		<include file="Public:top" />
@@ -22,18 +21,9 @@
 				<div class="col-lg-7">
 					<div class="ibox float-e-margins">
 						<div class="ibox-title">
-							<h5>产品信息填写</h5>
-							<div class="ibox-tools">
-								<a class="collapse-link">
-									<i class="fa fa-chevron-up"></i>
-								</a>
-								<a class="dropdown-toggle" data-toggle="dropdown"
-									href="form_wizard.html#">
-									<i class="fa fa-wrench"></i>
-								</a>
-								<a class="close-link">
-									<i class="fa fa-times"></i>
-								</a>
+							<div>
+								<a href="{:U('Productinfo/product_list')}" style="color: white"
+									class="btn btn-primary">查看产品库</a>
 							</div>
 						</div>
 						<form method="post" class="form-horizontal">
@@ -51,10 +41,15 @@
 												<div class="form-group">
 													<label class="col-sm-2 control-label">
 														<label style="color: red;">*</label>
-														产品标题：
+														产品标签：
 													</label>
 													<div class="col-sm-10">
-														<input type="text" name="title" class="form-control">
+														<select name="pro_label" class="form-control">
+															<option value="">请选择...</option>
+															<volist name="list" id="data1">
+															<option value="{$data1['tname']}">{$data1.tname}</option>
+															</volist>
+														</select>
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
@@ -74,17 +69,25 @@
 														产品类型：
 													</label>
 													<div class="col-sm-10">
-														<input type="text" name="type" class="form-control">
+														<select name="type" class="form-control">
+															<option value="">请选择...</option>
+															<volist name="list1" id="data2">
+															<option value="{$data2['tname']}">{$data2.tname}</option>
+															</volist>
+														</select>
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
 												<div class="form-group">
 													<label class="col-sm-2 control-label">
 														<label style="color: red;">*</label>
-														产品售价：
+														产品单价：
 													</label>
 													<div class="col-sm-10">
-														<input  class="form-control" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="5" size="14" name="price" type="text" />
+														<input class="form-control" name="price"
+															onkeyup="this.value=this.value.replace(/[^\d.]/g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="9" size="14" name="price" type="text" />
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
@@ -94,7 +97,10 @@
 														产品年化率：
 													</label>
 													<div class="col-sm-10">
-														<input  class="form-control" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="6" name="rate" type="text" />
+														<input class="form-control" name="rate"
+															onkeyup="this.value=this.value.replace(/[^\d.]/g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="6" name="rate" type="text" />
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
@@ -104,7 +110,10 @@
 														产品数量：
 													</label>
 													<div class="col-sm-10">
-														<input  class="form-control" onkeyup="this.value=this.value.replace(/\D./g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="8" name="pro_num" type="text" />
+														<input class="form-control" name="pro_num"
+															onkeyup="this.value=this.value.replace(/\D./g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="8" name="pro_num" type="text" />
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
@@ -114,17 +123,23 @@
 														产品锁定期：
 													</label>
 													<div class="col-sm-10">
-														<input  class="form-control" onkeyup="this.value=this.value.replace(/\D./g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="2" name="lock_time" type="text" />
+														<input class="form-control" name="lock_time"
+															onkeyup="this.value=this.value.replace(/\D./g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="2" name="lock_time" type="text" />
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
 												<div class="form-group">
 													<label class="col-sm-2 control-label">
 														<label style="color: red;">*</label>
-														产品销售周期：
+														产品销售期：
 													</label>
 													<div class="col-sm-10">
-														<input  class="form-control" onkeyup="this.value=this.value.replace(/\D./g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="2" name="sale_time" type="text" />
+														<input class="form-control" name="sale_time"
+															onkeyup="this.value=this.value.replace(/\D./g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="2" name="sale_time" type="text" />
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
@@ -135,9 +150,9 @@
 													</label>
 													<div class="col-sm-10">
 														<select name="pro_model" class="form-control">
-															<option value=""></option>
-															<option value="0">线下</option>
-															<option value="1">线上</option>
+															<option value="">请选择...</option>
+															<option value="线下">线下</option>
+															<option value="线上">线上</option>
 														</select>
 													</div>
 												</div>
@@ -148,7 +163,10 @@
 														最低购买份额：
 													</label>
 													<div class="col-sm-10">
-														<input  class="form-control" onkeyup="this.value=this.value.replace(/\D./g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="2" name="buy-min" type="text" />
+														<input class="form-control" name="buy_min"
+															onkeyup="this.value=this.value.replace(/\D./g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="2" name="buy-min" type="text" />
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
@@ -158,7 +176,10 @@
 														最高购买份额：
 													</label>
 													<div class="col-sm-10">
-														<input  class="form-control" onkeyup="this.value=this.value.replace(/\D./g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="2" name="max-min" type="text" />
+														<input class="form-control" name="buy_max"
+															onkeyup="this.value=this.value.replace(/\D./g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="2" name="max-min" type="text" />
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
@@ -168,12 +189,13 @@
 														产品介绍：
 													</label>
 													<div class="col-sm-10">
-														<textarea name="info" id="" cols="160" rows="30"></textarea>
+														<textarea name="info" id="" cols="80%" rows="10"></textarea>
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
 											</div>
-												<button type="submit" class="btn btn-block btn-outline btn-primary">确认发布</button>
+											<button type="submit"
+												class="btn btn-block btn-outline btn-primary">确认发布</button>
 										</div>
 									</div>
 

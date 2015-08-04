@@ -1,0 +1,85 @@
+<block name="body">
+<extend name="Base/common" />
+<div id="wrapper">
+	<div id="page-wrapper" class="gray-bg dashbard-1">
+		<include file="Public:top" />
+		<div class="row wrapper border-bottom white-bg page-heading">
+			<div class="col-lg-10">
+				<h2>产品类型管理</h2>
+                 <div>
+                     <a href="{:U('Productinfo/product_type_list')}" style="color:white" class="btn btn-primary">产品类型列表</a>
+                 </div>
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+		<div class="wrapper wrapper-content animated fadeInRight">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<h5>产品类型添加</h5>							
+						</div>
+						<form  method="post" class="form-horizontal">
+							<div class="ibox-content">
+								<div id="wizard">
+									<div class="step-content">
+										<div class="text-center m-t-md">
+											<h2>添加类型</h2>
+											<p>
+												带
+												<label style="color: red;">*</label>
+												号的必填
+											</p>
+											<div class="ibox-content">
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品分类级别：
+													</label>
+													<div class="col-sm-10">
+														<select name="level" class="form-control">
+															<option value="">请选择...</option>
+															<option value="0">产品标签名称</option>
+															<option value="1">产品类型名称</option>
+															<option value="2">产品期限设定</option>
+														</select>
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品分类名称：
+													</label>
+													<div class="col-sm-10">
+														<input type="text" name="tname" class="form-control">
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														备注信息：
+													</label>
+													<div class="col-sm-10">
+														<input type="text" name="other" class="form-control">
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+											</div>
+												<button type="submit" class="btn btn-block btn-outline btn-primary">确认添加</button>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<include file="Public:footer" />
+			</div>
+
+
+		</div>
+</block>
+
