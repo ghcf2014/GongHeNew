@@ -3015,7 +3015,8 @@ input[type=search]{
 }
 
 .form-group{
-	margin-bottom:15px
+	margin-bottom:15px;
+	height:30px;
 }
 
 .checkbox,.radio{

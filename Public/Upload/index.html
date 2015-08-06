@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="./css/upload-frame.css" />
+<title>文件上传</title>
+</head>
+<body>
+<script src="js/jquery.js"></script>
+<script src="js/file_manager.min.js"></script>
+<script>
+$(function(){
+hidoger.fileManager.show({
+
+	type : 'Images',//可填值 'Files', 'Images', 'Flash'
+
+	//选中一个文件时调用
+	callback : function(fileUrl, name, allFiles){
+	
+		
+	
+	},
+	
+	//上传时需要的额外额外数据
+	additionalData : {domain : 'hidoger'},
+
+	//上传完成
+	complete : function(file){
+	
+		
+	
+	}
+
+
+});
+});
+</script>
+</body>
+</html>

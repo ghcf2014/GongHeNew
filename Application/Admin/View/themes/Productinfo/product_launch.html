@@ -1,43 +1,85 @@
 <block name="body"> <extend name="Base/common" />
-<div id="wrapper">
-	<div id="page-wrapper" class="gray-bg dashbard-1">
-		<include file="Public:top" />
-		<div class="row wrapper border-bottom white-bg page-heading">
-			<div class="col-lg-10">
-				<h2>产品发布</h2>
-				<ol class="breadcrumb">
-					<li>
-						<a href="index.html">主页</a>
-					</li>
-					<li>
-						<strong>产品信息提交</strong>
-					</li>
-				</ol>
-			</div>
-			<div class="col-lg-2"></div>
-		</div>
-		<div class="wrapper wrapper-content animated fadeInRight">
-			<div class="row">
-				<div class="col-lg-7">
-					<div class="ibox float-e-margins">
-						<div class="ibox-title">
-							<div>
-								<a href="{:U('Productinfo/product_list')}" style="color: white"
-									class="btn btn-primary">查看产品库</a>
-							</div>
-						</div>
-						<form method="post" class="form-horizontal">
-							<div class="ibox-content">
-								<div id="wizard">
-									<div class="step-content">
-										<div class="text-center m-t-md">
-											<h2>产品信息</h2>
-											<p>
-												带
+    <div id="wrapper">
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <include file="Public:top" />
+	            <div class="row wrapper border-bottom white-bg page-heading">
+	                <div class="col-lg-10">
+					<h2>产品发布</h2>
+					<ol class="breadcrumb">
+						<li>
+							<a href="index.html">主页</a>
+						</li>
+						<li>
+							<strong>产品信息提交</strong>
+						</li>
+					</ol>
+				</div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox">
+                            <div class="ibox-title">
+                                <h5>信息填写</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+							
+                                <form  id="form" method="post">
+                                	<h1>资料信息</h1>
+                                    <fieldset>
+                                        <h2>个人资料上传</h2>
+	                                    <p>您可以尝试文件拖拽，使用QQ截屏工具，然后激活窗口后粘贴，或者直接点击添加图片按钮</p>
+	                                    <botton type="button" class="btn btn-primary btn-lg" onclick="file_show();">已经上传过资料</botton>
+										<botton type="button" class="btn btn-primary btn-lg" onclick="upload_show();">重新上传资料</botton>
+										<div id="uploader" >
+											<div class="queueList">
+											<input type="file" name="file" id="filePicker" class="webuploader-container" multiple="multiple" accept="image/*">
+										</div>
+										
+		                                <script type="text/javascript">
+									        // 添加全局站点信息
+									        var BASE_URL = '__PUBLIC__/Admin/js/plugins/webuploader';
+									    </script>
+									    
+									</div>
+									<div class="form-group" id="file_type" style="display:none;">
+											<label class="col-sm-2 control-label">
 												<label style="color: red;">*</label>
-												号的必填
-											</p>
-											<div class="ibox-content">
+												资料类型：<select name="type">
+															<option value="">请选择...</option>
+															<volist name="list1" id="data2">
+															<option value="{$data2['tname']}">{$data2.tname}</option>
+															</volist>
+														</select>
+											</label>
+											<div class="col-sm-10" >
+												资料名称
+												<select name="type" class="form-control required">
+													<option value="">请选择...</option>
+													<volist name="list1" id="data2">
+													<option value="{$data2['tname']}">{$data2.tname}</option>
+													</volist>
+												</select>
+											</div>
+										</div>
+                                    </fieldset>
+                                    <h1>产品基本信息（一）</h1>
+                                    <fieldset>
+                                        <h2>信息提交</h2>
+                                        <div class="row">
+                                            <div class="col-lg-8">
 												<div class="form-group">
 													<label class="col-sm-2 control-label">
 														<label style="color: red;">*</label>
@@ -59,7 +101,7 @@
 														产品名称：
 													</label>
 													<div class="col-sm-10">
-														<input type="text" name="pname" class="form-control">
+														<input type="text" name="pname" class="form-control required">
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
@@ -69,7 +111,7 @@
 														产品类型：
 													</label>
 													<div class="col-sm-10">
-														<select name="type" class="form-control">
+														<select name="type" class="form-control required">
 															<option value="">请选择...</option>
 															<volist name="list1" id="data2">
 															<option value="{$data2['tname']}">{$data2.tname}</option>
@@ -84,7 +126,7 @@
 														产品单价：
 													</label>
 													<div class="col-sm-10">
-														<input class="form-control" name="price"
+														<input class="form-control required" name="price"
 															onkeyup="this.value=this.value.replace(/[^\d.]/g,'')"
 															onafterpaste="this.value=this.value.replace(/\D/g,'')"
 															maxlength="9" size="14" name="price" type="text" />
@@ -97,7 +139,7 @@
 														产品年化率：
 													</label>
 													<div class="col-sm-10">
-														<input class="form-control" name="rate"
+														<input class="form-control required" name="rate"
 															onkeyup="this.value=this.value.replace(/[^\d.]/g,'')"
 															onafterpaste="this.value=this.value.replace(/\D/g,'')"
 															maxlength="6" name="rate" type="text" />
@@ -110,20 +152,29 @@
 														产品数量：
 													</label>
 													<div class="col-sm-10">
-														<input class="form-control" name="pro_num"
+														<input class="form-control required" name="pro_num"
 															onkeyup="this.value=this.value.replace(/\D./g,'')"
 															onafterpaste="this.value=this.value.replace(/\D/g,'')"
 															maxlength="8" name="pro_num" type="text" />
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>                                    
+                                    <h1>产品基本信息（二）</h1>
+                                    <fieldset>
+                                        <h2>信息提交</h2>
+                                        <div class="row">
+                                            <div class="col-lg-8">
 												<div class="form-group">
 													<label class="col-sm-2 control-label">
 														<label style="color: red;">*</label>
 														产品锁定期：
 													</label>
 													<div class="col-sm-10">
-														<input class="form-control" name="lock_time"
+														<input class="form-control required" name="lock_time"
 															onkeyup="this.value=this.value.replace(/\D./g,'')"
 															onafterpaste="this.value=this.value.replace(/\D/g,'')"
 															maxlength="2" name="lock_time" type="text" />
@@ -136,7 +187,7 @@
 														产品销售期：
 													</label>
 													<div class="col-sm-10">
-														<input class="form-control" name="sale_time"
+														<input class="form-control required" name="sale_time"
 															onkeyup="this.value=this.value.replace(/\D./g,'')"
 															onafterpaste="this.value=this.value.replace(/\D/g,'')"
 															maxlength="2" name="sale_time" type="text" />
@@ -149,7 +200,7 @@
 														产品模式：
 													</label>
 													<div class="col-sm-10">
-														<select name="pro_model" class="form-control">
+														<select name="pro_model" class="form-control required">
 															<option value="">请选择...</option>
 															<option value="线下">线下</option>
 															<option value="线上">线上</option>
@@ -163,7 +214,7 @@
 														最低购买份额：
 													</label>
 													<div class="col-sm-10">
-														<input class="form-control" name="buy_min"
+														<input class="form-control required" name="buy_min"
 															onkeyup="this.value=this.value.replace(/\D./g,'')"
 															onafterpaste="this.value=this.value.replace(/\D/g,'')"
 															maxlength="2" name="buy-min" type="text" />
@@ -176,7 +227,7 @@
 														最高购买份额：
 													</label>
 													<div class="col-sm-10">
-														<input class="form-control" name="buy_max"
+														<input class="form-control required" name="buy_max"
 															onkeyup="this.value=this.value.replace(/\D./g,'')"
 															onafterpaste="this.value=this.value.replace(/\D/g,'')"
 															maxlength="2" name="max-min" type="text" />
@@ -193,22 +244,127 @@
 													</div>
 												</div>
 												<div class="hr-line-dashed"></div>
-											</div>
-											<button type="submit"
-												class="btn btn-block btn-outline btn-primary">确认发布</button>
-										</div>
-									</div>
+                                            </div>
+                                        </div>
 
+                                    </fieldset>
+                                    
+                                    <h1>条款信息</h1>
+                                    <fieldset>
+                                        <h2>条款</h2>
+                                        <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">
+                                        <label for="acceptTerms">我同意注册条款</label>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-				<include file="Public:footer" />
-			</div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right">
+                    By：<a href="http://www.zi-han.net" target="_blank">zihan's blog</a>
+                </div>
+                <div>
+                    <strong>Copyright</strong> H+ &copy; 2014
+                </div>
+            </div>
 
+        </div>
+    </div>
+<script type="text/javascript">
+	function file_show(){
+		var file=document.getElementById('file_type').style.display;
+		if(file=='none'){
+			document.getElementById('file_type').style.display="block";
+			document.getElementById('uploader').style.display="none";
+		}else{
+			document.getElementById('file_type').style.display="none";
+			document.getElementById('uploader').style.display="block";
+		}
+	}
+	function upload_show(){
+		var upload=document.getElementById('uploader').style.display;
+		if(upload=='none'){
+			document.getElementById('uploader').style.display="block";
+			document.getElementById('file_type').style.display="none";
+		}else{
+			document.getElementById('uploader').style.display="none";
+			document.getElementById('file_type').style.display="block";
+		}
+	}
+</script>
 
-		</div>
+    <script>
+        $(document).ready(function () {
+            $("#wizard").steps();
+            $("#form").steps({
+                bodyTag: "fieldset",
+                onStepChanging: function (event, currentIndex, newIndex) {
+                    // Always allow going backward even if the current step contains invalid fields!
+                    if (currentIndex > newIndex) {
+                        return true;
+                    }
+
+                    // Forbid suppressing "Warning" step if the user is to young
+                    if (newIndex === 3 && Number($("#age").val()) < 18) {
+                        return false;
+                    }
+
+                    var form = $(this);
+
+                    // Clean up if user went backward before
+                    if (currentIndex < newIndex) {
+                        // To remove error styles
+                        $(".body:eq(" + newIndex + ") label.error", form).remove();
+                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                    }
+
+                    // Disable validation on fields that are disabled or hidden.
+                    form.validate().settings.ignore = ":disabled,:hidden";
+
+                    // Start validation; Prevent going forward if false
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex) {
+                    // Suppress (skip) "Warning" step if the user is old enough.
+                    if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+                        $(this).steps("next");
+                    }
+
+                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                    if (currentIndex === 2 && priorIndex === 3) {
+                        $(this).steps("previous");
+                    }
+                },
+                onFinishing: function (event, currentIndex) {
+                    var form = $(this);
+
+                    // Disable validation on fields that are disabled.
+                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                    form.validate().settings.ignore = ":disabled";
+
+                    // Start validation; Prevent form submission if false
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex) {
+                    var form = $(this);
+
+                    // Submit form input
+                    form.submit();
+                }
+            }).validate({
+                errorPlacement: function (error, element) {
+                    element.before(error);
+                },
+                rules: {
+                    confirm: {
+                        equalTo: "#password"
+                    }
+                }
+            });
+        });
+    </script>
 </block>
 

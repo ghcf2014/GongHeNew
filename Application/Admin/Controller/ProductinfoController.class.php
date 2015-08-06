@@ -3,6 +3,7 @@
 namespace Admin\Controller;
 
 use Admin\Logic\ProductinfoLogic;
+use Admin\Logic\FileuploadLogic;
 use Think\Controller;
 
 class ProductinfoController extends Controller {
@@ -79,6 +80,12 @@ class ProductinfoController extends Controller {
 		}
 		$this->assign("list",$result);
 		$this->display ( 'Productinfo/product_type_list' );
+	}
+	//文件上传
+	public function fileupload($data){
+		$file=new FileuploadLogic();
+		$data=$_REQUEST;
+		$file->fileuploader($data);
 	}
 }
 

@@ -1,0 +1,214 @@
+<block name="body"> <extend name="Base/common" />
+<div id="wrapper">
+	<div id="page-wrapper" class="gray-bg dashbard-1">
+		<include file="Public:top" />
+		<div class="row wrapper border-bottom white-bg page-heading">
+			<div class="col-lg-10">
+				<h2>产品发布</h2>
+				<ol class="breadcrumb">
+					<li>
+						<a href="index.html">主页</a>
+					</li>
+					<li>
+						<strong>产品信息提交</strong>
+					</li>
+				</ol>
+			</div>
+			<div class="col-lg-2"></div>
+		</div>
+		<div class="wrapper wrapper-content animated fadeInRight">
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="ibox float-e-margins">
+						<div class="ibox-title">
+							<div>
+								<a href="{:U('Productinfo/product_list')}" style="color: white"
+									class="btn btn-primary">查看产品库</a>
+							</div>
+						</div>
+						<form method="post" class="form-horizontal">
+							<div class="ibox-content">
+								<div id="wizard">
+									<div class="step-content">
+										<div class="text-center m-t-md">
+											<h2>产品基本介绍</h2>
+											<p>
+												带
+												<label style="color: red;">*</label>
+												号的必填
+											</p>
+											<div class="ibox-content">
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品标签：
+													</label>
+													<div class="col-sm-10">
+														<select name="pro_label" class="form-control">
+															<option value="">请选择...</option>
+															<volist name="list" id="data1">
+															<option value="{$data1['tname']}">{$data1.tname}</option>
+															</volist>
+														</select>
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品名称：
+													</label>
+													<div class="col-sm-10">
+														<input type="text" name="pname" class="form-control">
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品类型：
+													</label>
+													<div class="col-sm-10">
+														<select name="type" class="form-control">
+															<option value="">请选择...</option>
+															<volist name="list1" id="data2">
+															<option value="{$data2['tname']}">{$data2.tname}</option>
+															</volist>
+														</select>
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品单价：
+													</label>
+													<div class="col-sm-10">
+														<input class="form-control" name="price"
+															onkeyup="this.value=this.value.replace(/[^\d.]/g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="9" size="14" name="price" type="text" />
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品年化率：
+													</label>
+													<div class="col-sm-10">
+														<input class="form-control" name="rate"
+															onkeyup="this.value=this.value.replace(/[^\d.]/g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="6" name="rate" type="text" />
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品数量：
+													</label>
+													<div class="col-sm-10">
+														<input class="form-control" name="pro_num"
+															onkeyup="this.value=this.value.replace(/\D./g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="8" name="pro_num" type="text" />
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品锁定期：
+													</label>
+													<div class="col-sm-10">
+														<input class="form-control" name="lock_time"
+															onkeyup="this.value=this.value.replace(/\D./g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="2" name="lock_time" type="text" />
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品销售期：
+													</label>
+													<div class="col-sm-10">
+														<input class="form-control" name="sale_time"
+															onkeyup="this.value=this.value.replace(/\D./g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="2" name="sale_time" type="text" />
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品模式：
+													</label>
+													<div class="col-sm-10">
+														<select name="pro_model" class="form-control">
+															<option value="">请选择...</option>
+															<option value="线下">线下</option>
+															<option value="线上">线上</option>
+														</select>
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														最低购买份额：
+													</label>
+													<div class="col-sm-10">
+														<input class="form-control" name="buy_min"
+															onkeyup="this.value=this.value.replace(/\D./g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="2" name="buy-min" type="text" />
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														最高购买份额：
+													</label>
+													<div class="col-sm-10">
+														<input class="form-control" name="buy_max"
+															onkeyup="this.value=this.value.replace(/\D./g,'')"
+															onafterpaste="this.value=this.value.replace(/\D/g,'')"
+															maxlength="2" name="max-min" type="text" />
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+												<div class="form-group">
+													<label class="col-sm-2 control-label">
+														<label style="color: red;">*</label>
+														产品介绍：
+													</label>
+													<div class="col-sm-10">
+														<textarea name="info" id="" cols="80%" rows="10"></textarea>
+													</div>
+												</div>
+												<div class="hr-line-dashed"></div>
+											</div>
+											<button type="submit"
+												class="btn btn-block btn-outline btn-primary">确认发布</button>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<include file="Public:footer" />
+			</div>
+
+
+		</div>
+</block>
+

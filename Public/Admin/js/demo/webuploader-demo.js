@@ -76,13 +76,13 @@ jQuery(function() {
         },
 
         // swf文件路径
-        swf: BASE_URL + '/Uploader.swf',
+        swf: 'Uploader.swf',
 
         disableGlobalDnd: true,
 
         chunked: true,
         // server: 'http://webuploader.duapp.com/server/fileupload.php',
-        server: 'http://2betop.net/fileupload.php',
+        server: 'http://locallhost/admin.php/Productinfo/fileupload',
         fileNumLimit: 300,
         fileSizeLimit: 5 * 1024 * 1024,    // 200 M
         fileSingleSizeLimit: 1 * 1024 * 1024    // 50 M
