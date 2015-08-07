@@ -42,18 +42,20 @@
                                         <h2>个人资料上传</h2>
 	                                    <p>您可以尝试文件拖拽，使用QQ截屏工具，然后激活窗口后粘贴，或者直接点击添加图片按钮</p>
 	                                    <botton type="button" class="btn btn-primary btn-lg" onclick="file_show();">已经上传过资料</botton>
-										<botton type="button" class="btn btn-primary btn-lg" onclick="upload_show();">重新上传资料</botton>
+										<botton type="button" class="btn btn-primary btn-lg" onclick="upload_show();" style="display:none" >重新上传资料</botton>
 										<div id="uploader" >
 											<div class="queueList">
-											<input type="file" name="file" id="filePicker" class="webuploader-container" multiple="multiple" accept="image/*">
-										</div>
+											<iframe src="__PUBLIC__/Upload/index.php" id="iframepage"
+											name="iframepage" frameBorder=0 scrolling=yes width="100%"
+											height="600" onLoad="iFrameHeight()"></iframe>
+											</div>
 										
-		                                <script type="text/javascript">
-									        // 添加全局站点信息
-									        var BASE_URL = '__PUBLIC__/Admin/js/plugins/webuploader';
-									    </script>
+		                                 <script type="text/javascript">
+									   		//      添加全局站点信息
+									         var BASE_URL = '__PUBLIC__/Admin/js/plugins/webuploader';
+									     </script>
 									    
-									</div>
+										</div>
 									<div class="form-group" id="file_type" style="display:none;">
 											<label class="col-sm-2 control-label">
 												<label style="color: red;">*</label>
@@ -273,26 +275,16 @@
 
         </div>
     </div>
+
+<!-- 上传文件按钮 -->
 <script type="text/javascript">
 	function file_show(){
-		var file=document.getElementById('file_type').style.display;
-		if(file=='none'){
-			document.getElementById('file_type').style.display="block";
-			document.getElementById('uploader').style.display="none";
-		}else{
-			document.getElementById('file_type').style.display="none";
-			document.getElementById('uploader').style.display="block";
-		}
+		document.getElementById('file_type').style.display="block";
+		document.getElementById('uploader').style.display="none";
 	}
 	function upload_show(){
-		var upload=document.getElementById('uploader').style.display;
-		if(upload=='none'){
-			document.getElementById('uploader').style.display="block";
-			document.getElementById('file_type').style.display="none";
-		}else{
-			document.getElementById('uploader').style.display="none";
-			document.getElementById('file_type').style.display="block";
-		}
+		document.getElementById('uploader').style.display="block";
+		document.getElementById('file_type').style.display="none";
 	}
 </script>
 
