@@ -1,9 +1,0 @@
-[ 2015-08-14T12:09:25+08:00 ] 127.0.0.1 /gonghenew/$list
-ERR: 无法加载控制器:$list
-
-[ 2015-08-14T12:09:26+08:00 ] 127.0.0.1 /gonghenew/$list
-ERR: 无法加载控制器:$list
-
-[ 2015-08-14T15:26:26+08:00 ] 127.0.0.1 /gonghenew/Public/Upload/index.php
-ERR: 无法加载控制器:Public
-
