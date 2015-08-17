@@ -2,6 +2,7 @@
 
 namespace Admin\Controller;
 use Think\Controller;
+<<<<<<< HEAD
 use Admin\Logic\ProductinfoLogic;
 class ProductdataController extends  Controller {
 	public function data_add(){
@@ -28,6 +29,16 @@ class ProductdataController extends  Controller {
 		}
 		echo json_encode($result);
 		$this->assign('data',$result);
+=======
+class ProductdataController extends  Controller {
+	public function data_add(){
+		$this->display('Productdata/data_add');
+	}
+	public function data_type(){
+		$this->display('Productdata/data_type');
+	}
+	public function data_list(){
+>>>>>>> origin/master
 		$this->display('Productdata/data_list');
 	}
 }

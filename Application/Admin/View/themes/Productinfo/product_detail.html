@@ -1,9 +1,18 @@
 <block name="body"><extend name="Base/common"/>
+<<<<<<< HEAD
 <div id="wrapper">
+=======
+    <div id="wrapper">
+>>>>>>> origin/master
         <div id="page-wrapper" class="gray-bg dashbard-1">
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-sm-4">
                     <h2>产品详情</h2>
+<<<<<<< HEAD
+=======
+                    <ol class="breadcrumb">
+                    </ol>
+>>>>>>> origin/master
                 </div>
             </div>
             <div class="row">
@@ -14,8 +23,13 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="m-b-md">
+<<<<<<< HEAD
                                             <a href="{:U('Productinfo/product_edit')}" class="btn btn-white btn-xs pull-right">编辑产品</a>
                                             <h2>{$data.pname}</h2>
+=======
+                                            <a href="project_detail.html#" class="btn btn-white btn-xs pull-right">编辑项目</a>
+                                            <h2>{$data.asad }</h2>
+>>>>>>> origin/master
                                         </div>
                                         <dl class="dl-horizontal">
                                             <dt>状态：</dt> 
@@ -34,9 +48,10 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-5">
+                                    <div class="col-lg-5" style="width:40%;">
                                         <dl class="dl-horizontal">
 
+<<<<<<< HEAD
                                             <dt>产品定位：</dt> 
                                             <dd>{$data.pro_label}</dd>
                                             <dt>产品类型：</dt> 
@@ -52,6 +67,16 @@
                                             <dt>产品添加IP：</dt> 
                                             <dd>{$data.add_ip}</dd>
 
+=======
+                                            <dt>产品价格：</dt> 
+                                            <dd>Beaut-zihan</dd>
+                                            <dt>数量：</dt> 
+                                            <dd>162</dd>
+                                            <dt>年收益率：</dt> 
+                                            <dd>12.5%</dd>
+                                            <dt>版本：</dt> 
+                                            <dd>v1.4.2</dd>
+>>>>>>> origin/master
                                         </dl>
 <!-- ["price"] => string(6) "12.000"
     ["pro_num"] => string(8) "48545655"
@@ -70,7 +95,7 @@
     ["turn_count"] => string(1) "0"
     ["fname"] => string(21) "斯顿阿斯蒂芬的" -->
                                     </div>
-                                    <div class="col-lg-7" id="cluster_info">
+                                    <div class="col-lg-7" id="cluster_info" style="width:60%;">
                                         <dl class="dl-horizontal">
 
                                             <dt>产品价格：</dt> 
@@ -271,4 +296,47 @@
 
         </div>
     </div>
+<<<<<<< HEAD
+=======
+
+
+    <!-- Mainly scripts -->
+    <script src="__PUBLIC__/Admin/js/jquery-2.1.1.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/bootstrap.min.js?v=3.4.0"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="__PUBLIC__/Admin/js/hplus.js?v=2.2.0"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/pace/pace.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#loading-example-btn').click(function () {
+                btn = $(this);
+                simpleLoad(btn, true)
+
+                // Ajax example
+                //                $.ajax().always(function () {
+                //                    simpleLoad($(this), false)
+                //                });
+
+                simpleLoad(btn, false)
+            });
+        });
+
+        function simpleLoad(btn, state) {
+            if (state) {
+                btn.children().addClass('fa-spin');
+                btn.contents().last().replaceWith(" Loading");
+            } else {
+                setTimeout(function () {
+                    btn.children().removeClass('fa-spin');
+                    btn.contents().last().replaceWith(" Refresh");
+                }, 2000);
+            }
+        }
+    </script>
+>>>>>>> origin/master
 </block>
