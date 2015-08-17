@@ -12,5 +12,8 @@ interface Productinfo {
 	public function pro_change($datas,$pid);
 	// 产品删除
 	public function pro_delete($arrs,$pid);
+	
+	//产品详情
+	public function pro_detail($id);
 }
 ?>

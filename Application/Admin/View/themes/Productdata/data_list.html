@@ -1,0 +1,192 @@
+<block name="body">
+<extend name="Base/common" />
+<div id="wrapper">
+	<div id="page-wrapper" class="gray-bg dashbard-1">
+		<div class="row wrapper border-bottom white-bg page-heading">
+			<div class="col-sm-4">
+				<h2>产品资料库</h2>
+				<ol class="breadcrumb">
+					<li>
+						<a href="index.html">主页</a>
+					</li>
+					<li>
+						<strong>产品相关资料列表</strong>
+					</li>
+				</ol>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-9">
+				<div class="wrapper wrapper-content animated fadeInUp">
+					<div class="ibox">
+						<div class="ibox-content">
+							<div class="row" style="display: none">
+								<div class="col-lg-12">
+									<div class="m-b-md">
+										<a href="project_detail.html#"
+											class="btn btn-white btn-xs pull-right">更新公司资料</a>
+										<h2>阿里巴巴集团</h2>
+									</div>
+									<dl class="dl-horizontal">
+										<dt>状态：</dt>
+										<dd>
+											<span class="label label-primary">进行中</span>
+										</dd>
+									</dl>
+								</div>
+								<div class="col-lg-5">
+									<dl class="dl-horizontal">
+
+										<dt>项目经理：</dt>
+										<dd>Beaut-zihan</dd>
+										<dt>消息：</dt>
+										<dd>162</dd>
+										<dt>客户：</dt>
+										<dd>
+											<a href="project_detail.html#" class="text-navy"> 百度</a>
+										</dd>
+										<dt>版本：</dt>
+										<dd>v1.4.2</dd>
+									</dl>
+								</div>
+								<div class="col-lg-7" id="cluster_info">
+									<dl class="dl-horizontal">
+
+										<dt>最后更新：</dt>
+										<dd>2014年 11月7日 22:03</dd>
+										<dt>创建于：</dt>
+										<dd>2014年 2月16日 03:01</dd>
+										<dt>团队成员：</dt>
+										<dd class="project-people">
+											<a href="project_detail.html">
+												<img alt="image" class="img-circle" src="img/a3.jpg">
+											</a>
+											<a href="project_detail.html">
+												<img alt="image" class="img-circle" src="img/a1.jpg">
+											</a>
+											<a href="project_detail.html">
+												<img alt="image" class="img-circle" src="img/a2.jpg">
+											</a>
+											<a href="project_detail.html">
+												<img alt="image" class="img-circle" src="img/a4.jpg">
+											</a>
+											<a href="project_detail.html">
+												<img alt="image" class="img-circle" src="img/a5.jpg">
+											</a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="row m-t-sm">
+								<div class="col-lg-12">
+									<div class="panel blank-panel">
+										<div class="panel-heading">
+											<div class="panel-options">
+												<ul class="nav nav-tabs">
+													<li>
+														<a href="project_detail.html#tab-1" data-toggle="tab">全部资料列表</a>
+													</li>
+													<li class="">
+														<a href="project_detail.html#tab-2" data-toggle="tab">最近更新资料</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+										<div class="panel-body">
+
+											<div class="tab-content">
+												<div class="tab-pane active" id="tab-1">
+													<div class="feed-activity-list">
+														<div class="feed-element">
+															<!-- <a href="profile.html#" class="pull-left">
+                                                                    <img alt="image" class="img-circle" src="img/a3.jpg">
+                                                                </a> -->
+															<foreach name="data" item="vo" key="j">
+															<div class="media-body ">
+
+																<strong>{$vo.fname}</strong>
+																上传了图片
+																<small class="pull-right">2天前</small>
+																<br>
+																<small class="text-muted">{$vo.up_time} 来自后台添加</small>
+																<div class="photos">
+																	
+																	<a target="_blank" href={$vo.data_info.0}>
+																		<span id="imgall"></span>
+                                                                         <!-- <img alt="image" class="feed-photo" id="imgall" src={$vo.data_info.0}> -->
+                                                                     </a>
+																	
+																</div>
+															</div>
+															</foreach>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane" id="tab-2">
+
+													<div class="feed-activity-list">
+														<div class="feed-element">
+															<!-- <a href="profile.html#" class="pull-left">
+                                                                    <img alt="image" class="img-circle" src="img/a3.jpg">
+                                                                </a> -->
+															<foreach name="data" item="list" key="k">
+
+															<div class="media-body ">
+																<small class="pull-right">1天前</small>
+																<strong>天猫</strong>
+																上传了2张图片
+																<br>
+																<small class="text-muted">11月7日 11:56 来自 微博
+																	weibo.com</small>
+																<div class="photos">
+																	<!-- <volist name="$img" id="list" key="i">
+	                                                                        <a target="_blank" href="#">
+	                                                                            <img alt="image" class="feed-photo" src="img/p1.jpg">
+	                                                                        </a>
+	                                                                        </volist> -->
+																</div>
+															</div>
+															</foreach>
+
+														</div>
+													</div>
+
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<include file="Public:footer" />
+
+	</div>
+</div>
+<script>
+
+$.ajax({  
+	   type: "POST",//请求方式  
+	   url: "{:U('Productdata/data_list')}",//地址，就是action请求路径  
+	   data: "json",//数据类型text xml json  script  jsonp  
+	   success: function(msg){//返回的参数就是 action里面所有的有get和set方法的参数  
+	      $.each(msg.items, function(i,item){
+	    	  
+	    	  alert(123123);
+	      });  
+	     var dataObj=eval("("+msg+")");    
+	         alert(dataObj.dealers.length);  
+	  
+	     document.getElementById("result").innerHTML=msg;  
+	   }  
+	}); 
+
+</script>
+</block>

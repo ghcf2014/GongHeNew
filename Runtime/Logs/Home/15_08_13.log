@@ -1,0 +1,12 @@
+[ 2015-08-13T16:39:18+08:00 ] 127.0.0.1 /gonghenew/skin-config.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+ERR: 无法加载控制器:Skin-config
+
+[ 2015-08-13T16:40:34+08:00 ] 127.0.0.1 /gonghenew/skin-config.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+ERR: 无法加载控制器:Skin-config
+

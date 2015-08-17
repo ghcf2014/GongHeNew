@@ -8,7 +8,6 @@ use Admin\Api\Userinfo;
 class UserinfoLogic implements Userinfo {
 	public function addUserinfo($data) {
 		$user = D ( 'AdminUser' );
-		dump ( $data ); // 实例化User对象
 		if ($user->create ( $data )) {
 			$user->startTrans ();
 			$userdata = $user->add ( $data );

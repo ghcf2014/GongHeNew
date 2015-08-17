@@ -23,8 +23,9 @@ class UserController extends Controller {
 			$password = $_POST ['password'];
 			$UserInfo = new UserinfoLogic ();
 			$result = $UserInfo->login ( $username, $password );
-			if (empty ( $result )) {
-				$this->error ( '用户名或者密码错误' );
+		
+			if (is_null( $result )) {
+				$this->redirect("User/login");
 			} else {
 				$_SESSION ['username'] = $result ['username'];
 				$_SESSION ['nickname'] = $result ['nickname'];

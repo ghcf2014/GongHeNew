@@ -46,6 +46,11 @@
 
 								<table class="table table-hover">
 									<tbody>
+									<if condition="$info eq null">
+										<tr>
+											<td colspan="6" class="project-title">暂无数据....</td>
+										</tr>
+									<else/>
 										<volist name="info" id="data">
 											
 											<tr>
@@ -63,7 +68,7 @@
 													</span>
 												</td>
 												<td class="project-title">
-													<a href="{:U('Productinfo/product_detail')}">{$data.pname}</a>
+													<a href="{:U('Productinfo/product_detail?id='.$data['id'])}">{$data.pname}</a>
 													<br />
 													<small>{$data.pro_label}</small>&nbsp;&nbsp;&nbsp;&nbsp;<small>创建于 {$data.add_time}</small>
 												</td>
@@ -79,7 +84,7 @@
 												</td>
 												
 												<td class="project-actions">
-													<a href="{:U('Productinfo/product_detail')}" class="btn btn-white btn-sm">
+													<a href="{:U('Productinfo/product_detail?id='.$data['id'])}" class="btn btn-white btn-sm">
 														<i class="fa fa-folder"></i>
 														查看
 													</a>
@@ -90,6 +95,8 @@
 												</td>
 											</tr>
 										</volist>
+									</if>
+										
 									</tbody>
 								</table>
 							</div>
@@ -99,7 +106,6 @@
 			</div>
 		</div>
 		<include file="Public:footer" />
-
 	</div>
 </div>
 </div>
