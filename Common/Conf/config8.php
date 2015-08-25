@@ -4,9 +4,9 @@ return array(
 	'DB_HOST'=>'localhost',//数据库地址
 // 	'DB_HOST'=>'59.188.8.43',//数据库地址
 	'DB_TYPE'=>'mysql',//数据库类型
-	'DB_USER'=>'returnt1_jj',//数据库用户名
-	'DB_PWD'=>'earlyso',//数据库密码
-	'DB_NAME'=>'returnt1_jj',//数据库表名
+	'DB_USER'=>'root',//数据库用户名
+	'DB_PWD'=>'root',//数据库密码
+	'DB_NAME'=>'gonghe_new',//数据库表名
 	'DB_PORT'=>'3306',//数据库端口
 	'DB_PREFIX' => 'gonghe_', // 数据库表前缀
 
